@@ -35,5 +35,8 @@ module.exports = {
       },
     ],
     'react/require-default-props': 0,
+    'prettier/prettier': 'error',
+    'arrow-body-style': 'off',
+    'prefer-arrow-callback': 'off',
   },
 };
