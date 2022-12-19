@@ -4,7 +4,6 @@ import { newsApi } from '../api';
 export const getNewsByQuery = async <T>(query: string) => {
   try {
     const { data } = await newsApi.get<T>(`/everything?q=${query}`, {});
-    console.log('data: ', data);
   } catch (error) {
     console.log(error);
     if (error instanceof Error) {
