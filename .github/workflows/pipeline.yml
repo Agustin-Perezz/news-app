@@ -49,7 +49,7 @@ jobs:
         run: npm run lint:check
 
   deploy:
-    needs: [deploy]
+    needs: [build]
     if: ${{ github.event_name == 'push' }}
     runs-on: ubuntu-latest
     steps:
