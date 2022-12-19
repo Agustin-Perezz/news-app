@@ -6,6 +6,6 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <span> this is a sample </span>
+    <span> this is a sample. </span>
   </React.StrictMode>,
 );

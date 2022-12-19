@@ -22,7 +22,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --fix --ignore-path .gitignore . --ext .ts,.tsx",
-    "lint:check": "npm run lint"
+    "lint:check": "npm run lint",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -51,6 +52,13 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0"
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0"
+  },
+  "lint-staged": {
+    "*.(ts|tsx)": [
+      "npm run lint:check"
+    ]
   }
 }
