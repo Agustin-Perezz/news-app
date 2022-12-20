@@ -8,5 +8,5 @@ export const NewsApp: React.FC = () => {
     };
     getData();
   }, []);
-  return <div> News App Component Main. </div>;
+  return <div> News App Component. </div>;
 };
