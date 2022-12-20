@@ -28,7 +28,7 @@ jobs:
       - name: Install Dependecies
         run: npm ci
       - name: Build
-        run: npm run build
+        run: CI=false npm run build
       - uses: actions/upload-artifact@v2
         with:
           name: production-files
