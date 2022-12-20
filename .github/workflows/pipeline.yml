@@ -58,6 +58,11 @@ jobs:
         with:
           name: production-files
           path: ./build
+      - name: A
+        run: |
+          touch .env
+          echo REACT_APP_API_URL=${{ secrets.REACT_APP_API_URL }} >> .env    
+          echo REACT_APP_API_KEY=${{ secrets.REACT_APP_API_KEY }} >> .env
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
