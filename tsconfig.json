@@ -14,7 +14,15 @@
     "resolveJsonModule": true,
     "isolatedModules": false,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "types": ["cypress", "node"]
   },
-  "include": ["vite.config.ts", ".eslintrc.cjs", "src"]
+  "include": [
+    ".eslintrc.cjs",
+    "src",
+    "../node_modules/cypress",
+    "**/*.ts",
+    "./cypress/**/*.cy.ts",
+    "./support"
+  ]
 }
