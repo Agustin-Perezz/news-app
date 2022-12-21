@@ -1,37 +1,46 @@
 import React from 'react';
-import { AxiosResponse } from 'axios';
-import { loadAbort } from '../utilities';
-import { AxiosCall } from '../types/axios-call.types';
+import { AxiosInstance } from 'axios';
 
 type StateProps = {
   isLoading: boolean;
-  error?: string;
+  isError?: string;
+  data: unknown | null;
 };
 
-export const useAxios = () => {
+type Props = {
+  programApi: AxiosInstance;
+  url: string;
+};
+
+export const useAxios = ({ programApi, url }: Props) => {
   const [state, setState] = React.useState<StateProps>({
+    data: null,
     isLoading: false,
   });
-  let controller = loadAbort();
-
-  const callEndpoint = async <T>(
-    axiosCall?: AxiosCall<T>
-  ): Promise<AxiosResponse<T, any>> => {
-    let result = {} as AxiosResponse<T>;
-    if (axiosCall?.controller) controller = axiosCall.controller;
-    setState({ isLoading: true });
-    if (axiosCall) {
-      result = await axiosCall.call;
-      setState({ isLoading: false });
-    }
-    setState({ isLoading: false });
-    return result;
-  };
 
   React.useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    controller && controller.abort();
-  }, [controller]);
+    const fetchData = async () => {
+      try {
+        setState({ data: null, isLoading: true });
+        programApi
+          .get(url)
+          .then((res) => {
+            setState({ data: res.data, isLoading: false });
+          })
+          // eslint-disable-next-line
+          .catch((error) => {
+            setState({
+              data: null,
+              isLoading: false,
+              isError: error.message,
+            });
+          });
+      } catch (error) {
+        throw new Error('Something work bad!');
+      }
+    };
+    fetchData();
+  }, [programApi, url]);
 
-  return { ...state, callEndpoint };
+  return { ...state };
 };

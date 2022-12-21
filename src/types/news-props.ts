@@ -18,7 +18,7 @@ type ArticleResponse = {
   relevance_score: number;
 };
 
-export type Article = Omit<
+export type NewsProps = Omit<
   ArticleResponse,
   'relevance_score' | 'keywords' | 'snippet' | 'url' | 'language'
 > & {
