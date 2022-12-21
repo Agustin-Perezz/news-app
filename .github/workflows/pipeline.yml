@@ -91,7 +91,7 @@ jobs:
           command: npm run cypress
 
   deploy:
-    needs: [build]
+    needs: [test, e2e]
     if: ${{ github.event_name == 'push' }}
     runs-on: ubuntu-latest
     steps:
