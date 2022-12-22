@@ -25,6 +25,11 @@ export type NewsProps = Omit<
   nameSource: string;
 };
 
+export type CategoriesProps = {
+  type: string;
+  color: string;
+};
+
 type Meta = {
   found: number;
   returned: number;
