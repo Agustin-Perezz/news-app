@@ -1,8 +1,8 @@
 import { ImageListItem, Typography } from '@mui/material';
 import { CustomStack } from '../CustomStack';
+import { SocialMedia } from '../ui/SocialMedia';
 
 import news_logo from '../../assets/images/news-logo.png';
-import { SocialMedia } from '../ui/SocialMedia';
 
 export const NavBar: React.FC = () => {
   return (
