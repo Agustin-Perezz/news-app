@@ -19,13 +19,12 @@ export const Article: React.FC<Props> = ({ dataArticle }) => {
       <Box sx={{ position: 'relative' }}>
         <CardMedia
           component="img"
-          height="auto"
+          height="185px"
           image={dataArticle.image_url}
           alt={dataArticle.nameSource}
-          sx={{ maxHeight: '195px' }}
         />
         <Chip
-          label="Date example"
+          label={dataArticle.published_at}
           sx={{
             position: 'absolute',
             top: '8px',
