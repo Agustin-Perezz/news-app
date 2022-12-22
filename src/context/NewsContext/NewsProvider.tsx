@@ -1,7 +1,8 @@
 import React from 'react';
+import { createAddaptNew } from '../../adapters';
 import { newsApi } from '../../api';
 import { useAxios } from '../../hooks';
-import { NewsProps } from '../../types';
+import { NewsProps, NewsResponseProps } from '../../types';
 import { NewsContext } from './NewsContext';
 
 type Props = {
@@ -9,7 +10,7 @@ type Props = {
 };
 
 type StateProps = {
-  newsData: unknown | null;
+  newsData: NewsProps[] | null;
 };
 
 const API_KEY = process.env.REACT_APP_API_KEY;
@@ -20,11 +21,12 @@ export const NewsProvider: React.FC<Props> = ({ children }) => {
   const { fetchData, isLoading, isError } = useAxios();
 
   const getNewsByQuery = async (query: string) => {
-    const data = await fetchData<NewsProps>({
+    const { data } = await fetchData<NewsResponseProps>({
       programApi: newsApi,
       url: `/all?api_token=${API_KEY}&search=${query}`,
     });
-    console.log('data: ', data);
+    const listNews = createAddaptNew(data);
+    setState({ newsData: listNews });
   };
 
   return (

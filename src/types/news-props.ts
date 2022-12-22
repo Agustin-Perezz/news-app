@@ -1,11 +1,11 @@
 export type NewsResponseProps = {
   meta: Meta;
-  data: ArticleResponse[];
+  data: Article[];
 };
 
-type ArticleResponse = {
-  uuid: string;
+type Article = {
   title: string;
+  uuid: string;
   description: string;
   keywords: string;
   snippet: string;
@@ -19,8 +19,8 @@ type ArticleResponse = {
 };
 
 export type NewsProps = Omit<
-  ArticleResponse,
-  'relevance_score' | 'keywords' | 'snippet' | 'url' | 'language'
+  Article,
+  'relevance_score' | 'keywords' | 'snippet' | 'url' | 'language' | 'source'
 > & {
   nameSource: string;
 };

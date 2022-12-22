@@ -1,5 +1,5 @@
 import React from 'react';
-import { AxiosInstance, AxiosResponse } from 'axios';
+import { AxiosInstance } from 'axios';
 
 type StateProps = {
   isLoading: boolean;
@@ -23,6 +23,10 @@ export const useAxios = () => {
       setState({ isLoading: false });
       return data;
     } catch (error) {
+      if (error instanceof Error) {
+        setState({ isLoading: false, isError: error.message });
+        throw new Error(error.message);
+      }
       throw new Error('Something work bad!');
     }
   };
