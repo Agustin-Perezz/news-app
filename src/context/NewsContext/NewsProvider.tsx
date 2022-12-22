@@ -10,11 +10,11 @@ type Props = {
 };
 
 type StateProps = {
-  newsData: NewsProps[] | null;
+  dataNews?: NewsProps[];
 };
 
 const API_KEY = process.env.REACT_APP_API_KEY;
-const INIT_STATE: StateProps = { newsData: null };
+const INIT_STATE: StateProps = { dataNews: undefined };
 
 export const NewsProvider: React.FC<Props> = ({ children }) => {
   const [state, setState] = React.useState(INIT_STATE);
@@ -26,7 +26,7 @@ export const NewsProvider: React.FC<Props> = ({ children }) => {
       url: `/all?api_token=${API_KEY}&search=${query}`,
     });
     const listNews = createAddaptNew(data);
-    setState({ newsData: listNews });
+    setState({ dataNews: listNews });
   };
 
   return (

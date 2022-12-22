@@ -21,7 +21,7 @@ export const ListArticles: React.FC<Props> = ({
       isError={isError}
       data={dataArticles}
     >
-      <Box sx={{ flexGrow: 1, marginTop: 3 }}>
+      <Box sx={{ flexGrow: 1, my: 3 }}>
         <Typography variant="h5">Results for search:</Typography>
         <Grid
           container
