@@ -1,10 +1,9 @@
 import React from 'react';
-import { AxiosInstance } from 'axios';
+import { AxiosInstance, AxiosResponse } from 'axios';
 
 type StateProps = {
   isLoading: boolean;
   isError?: string;
-  data: unknown | null;
 };
 
 type Props = {
@@ -12,35 +11,21 @@ type Props = {
   url: string;
 };
 
-export const useAxios = ({ programApi, url }: Props) => {
+export const useAxios = () => {
   const [state, setState] = React.useState<StateProps>({
-    data: null,
     isLoading: false,
   });
 
-  React.useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setState({ data: null, isLoading: true });
-        programApi
-          .get(url)
-          .then((res) => {
-            setState({ data: res.data, isLoading: false });
-          })
-          // eslint-disable-next-line
-          .catch((error) => {
-            setState({
-              data: null,
-              isLoading: false,
-              isError: error.message,
-            });
-          });
-      } catch (error) {
-        throw new Error('Something work bad!');
-      }
-    };
-    fetchData();
-  }, [programApi, url]);
+  const fetchData = async <T>({ programApi, url }: Props) => {
+    try {
+      setState({ isLoading: true });
+      const data = await programApi.get<T>(url);
+      setState({ isLoading: false });
+      return data;
+    } catch (error) {
+      throw new Error('Something work bad!');
+    }
+  };
 
-  return { ...state };
+  return { ...state, fetchData };
 };
