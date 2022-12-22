@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { NewsProvider } from './context/NewsContext';
 import { NewsApp } from './NewsApp';
 
 const root = ReactDOM.createRoot(
@@ -7,6 +8,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <NewsApp />
+    <NewsProvider>
+      <NewsApp />
+    </NewsProvider>
   </React.StrictMode>
 );
