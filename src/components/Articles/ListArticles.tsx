@@ -30,7 +30,7 @@ export const ListArticles: React.FC<Props> = ({
           justifyContent="center"
         >
           {dataArticles?.map((article) => (
-            <Grid item xs={2} sm={4} md={3.5} key={article.nameSource}>
+            <Grid item xs={2} sm={4} md={3.5} key={article.uuid}>
               <Article dataArticle={article} />
             </Grid>
           ))}

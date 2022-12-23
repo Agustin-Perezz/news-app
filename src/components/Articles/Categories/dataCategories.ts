@@ -20,7 +20,7 @@ export const dataCategories = [
     color: '#2CBE65 ',
   },
   {
-    type: 'entartainment',
+    type: 'entertainment',
     color: '#CD3C3C',
   },
   {

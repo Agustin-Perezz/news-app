@@ -8,6 +8,7 @@ import {
   Box,
 } from '@mui/material';
 import { NewsProps } from '../../types/news-props';
+import { CategoriesArticles } from './Categories';
 
 interface Props {
   dataArticle: NewsProps;
@@ -42,6 +43,9 @@ export const Article: React.FC<Props> = ({ dataArticle }) => {
         <Typography variant="body2" color="text.secondary">
           {dataArticle.description}
         </Typography>
+        {dataArticle.categories && (
+          <CategoriesArticles listCategories={dataArticle.categories} />
+        )}
         {dataArticle.nameSource && (
           <Box sx={{ display: 'flex', marginTop: '10px' }}>
             <Typography variant="subtitle2" mr={1}>
