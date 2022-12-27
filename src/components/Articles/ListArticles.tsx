@@ -22,7 +22,9 @@ export const ListArticles: React.FC<Props> = ({
       data={dataArticles}
     >
       <Box sx={{ flexGrow: 1, my: 3 }}>
-        <Typography variant="h5">Results for search:</Typography>
+        <Typography variant="h5" mb={3}>
+          Results for search:
+        </Typography>
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}
