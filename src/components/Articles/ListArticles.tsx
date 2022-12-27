@@ -26,7 +26,7 @@ export const ListArticles: React.FC<Props> = ({
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 0, sm: 8, md: 12 }}
+          columns={{ xs: 0, sm: 8, md: 13 }}
           justifyContent="center"
         >
           {dataArticles?.map((article) => (

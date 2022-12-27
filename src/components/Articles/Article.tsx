@@ -10,19 +10,25 @@ import {
 import { NewsProps } from '../../types/news-props';
 import { CategoriesArticles } from './Categories';
 
+import not_found from '../../assets/images/not-found-image.png';
+
 interface Props {
   dataArticle: NewsProps;
 }
 
 export const Article: React.FC<Props> = ({ dataArticle }) => {
   return (
-    <Card sx={{ maxHeight: 'auto', minHeight: '447px' }}>
+    <Card sx={{ maxHeight: 'auto', minHeight: '447px', width: '278px' }}>
       <Box sx={{ position: 'relative' }}>
         <CardMedia
           component="img"
           height="185px"
           image={dataArticle.image_url}
           alt={dataArticle.nameSource}
+          onError={({ currentTarget }) => {
+            currentTarget.onerror = null;
+            currentTarget.src = `${not_found}`;
+          }}
         />
         <Chip
           label={dataArticle.published_at}

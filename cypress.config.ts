@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 import { defineConfig } from 'cypress';
 
 import * as dotenv from 'dotenv';

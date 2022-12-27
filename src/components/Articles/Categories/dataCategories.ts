@@ -28,7 +28,7 @@ export const dataCategories = [
     color: '#9D2672 ',
   },
   {
-    type: 'pilitics',
+    type: 'politics',
     color: '#269D98 ',
   },
   {
