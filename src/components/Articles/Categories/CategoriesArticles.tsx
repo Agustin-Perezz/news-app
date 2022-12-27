@@ -1,6 +1,7 @@
-import { Box, Chip, Typography } from '@mui/material';
 import React from 'react';
+import { Box, Typography } from '@mui/material';
 import { CategoriesProps } from '../../../types';
+import { Categori } from './Categori';
 
 interface Props {
   listCategories: CategoriesProps[];
@@ -22,17 +23,7 @@ export const CategoriesArticles: React.FC<Props> = ({ listCategories }) => {
         Categories:
       </Typography>
       {listCategories.map((categori) => (
-        <Chip
-          label={categori.type}
-          key={categori.color}
-          sx={{
-            color: categori.color,
-            backgroundColor: '#0A1929',
-            height: '25px',
-            border: `1px solid ${categori.color}`,
-            marginRight: '5px',
-          }}
-        />
+        <Categori categori={categori} key={categori.color} />
       ))}
     </Box>
   );
