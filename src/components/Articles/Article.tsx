@@ -27,7 +27,7 @@ export const Article: React.FC<Props> = ({ dataArticle }) => {
           alt={dataArticle.nameSource}
           onError={({ currentTarget }) => {
             currentTarget.onerror = null;
-            currentTarget.src = `${not_found}`;
+            currentTarget.src = not_found;
           }}
         />
         <Chip
