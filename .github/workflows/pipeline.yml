@@ -74,22 +74,24 @@ jobs:
     needs: [linter, build]
     name: Cypress run
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        containers: [1, 2, 3]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Dowload Build
-        uses: actions/download-artifact@v2
-        with:
-          name: production-files
-          path: ./dist
+      - name: Install modules
+        run: npm ci
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
           browser: chrome
-          start: npm start
-          wait-on: http://localhost:3000/news-app-two/
-          command: npm run cypress
+          headless: true
           record: true
+          start: npm start
+          wait-on: http://localhost:3000/news-app-two
+          parallel: true
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
