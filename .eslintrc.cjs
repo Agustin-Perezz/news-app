@@ -27,6 +27,8 @@ module.exports = {
     'react/jsx-props-no-spreading': 0,
     '@typescript-eslint/no-namespace': 0,
     'import/no-extraneous-dependencies': 0,
+    'react/prop-types': 0,
+    'no-param-reassign': 0,
     'react/function-component-definition': [
       2,
       {

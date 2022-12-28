@@ -53,6 +53,7 @@ jobs:
 
   test:
     needs: [linter, build]
+    name: unit-test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -72,12 +73,12 @@ jobs:
 
   e2e:
     needs: [linter, build]
-    name: Cypress run
+    name: cypress-run
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Dowload Build
+      - name: Download Build
         uses: actions/download-artifact@v2
         with:
           name: production-files
@@ -85,11 +86,16 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          start: npm start
-          wait-on: http://localhost:3000/news-app-two/
           browser: chrome
+          record: true
+          start: npm start
+          wait-on: http://localhost:3000/news-app-two
           command: npm run cypress
-
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
+          REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
   deploy:
     needs: [test, e2e]
     if: ${{ github.event_name == 'push' }}
