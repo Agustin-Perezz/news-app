@@ -26,7 +26,7 @@
     "build:production": "react-scripts build",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "cypress": "npx cypress run --record",
+    "cypress": "npx cypress run",
     "cypress:open": "cypress open --browser chrome --e2e",
     "pre-push": "npm run test && npm run cypress",
     "eject": "react-scripts eject",
