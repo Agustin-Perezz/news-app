@@ -94,6 +94,8 @@ jobs:
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
+          REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
   deploy:
     needs: [test, e2e]
     if: ${{ github.event_name == 'push' }}
