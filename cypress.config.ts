@@ -12,6 +12,7 @@ export default defineConfig({
     viewportHeight: 700,
     viewportWidth: 1180,
     requestTimeout: 50000,
+    //
   },
   env: {
     API_URL: process.env.REACT_APP_API_URL,
