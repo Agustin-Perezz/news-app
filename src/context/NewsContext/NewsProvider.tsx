@@ -24,6 +24,7 @@ export const NewsProvider: React.FC<Props> = ({ children }) => {
     const data = await fetchData<NewsResponseProps>({
       programApi: newsApi,
       url: `/all?api_token=${API_KEY}&search=${query}`,
+      urlParameter: query,
     });
     const listNews = createAddaptNew(data);
     setState({ dataNews: listNews });

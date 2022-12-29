@@ -10,6 +10,7 @@ type StateProps = {
 type Props = {
   programApi: AxiosInstance;
   url: string;
+  urlParameter: string;
 };
 
 export const useAxios = () => {
@@ -19,16 +20,16 @@ export const useAxios = () => {
 
   const { setCache, cache } = useContext(CacheContext);
 
-  const fetchData = async <T>({ programApi, url }: Props) => {
+  const fetchData = async <T>({ programApi, url, urlParameter }: Props) => {
     try {
       let data: T;
       setState({ isLoading: true });
-      if (cache?.value) {
+      if (cache?.key === urlParameter) {
         data = JSON.parse(cache.value);
       } else {
         const { data: response } = await programApi.get<T>(url);
         data = response;
-        setCache({ key: 'API_CACHE', value: JSON.stringify(data) });
+        setCache({ key: urlParameter, value: JSON.stringify(data) });
       }
       setState({ isLoading: false });
       return data;

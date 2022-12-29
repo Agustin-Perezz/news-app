@@ -10,8 +10,7 @@ type StateProps = { cache?: CacheProps };
 export const CacheProvider: React.FC<Props> = ({ children }) => {
   const [{ cache }, setState] = React.useState<StateProps>({
     cache: {
-      key: 'API_CACHE',
-      value: localStorage.getItem('API_CACHE') || '',
+      ...JSON.parse(localStorage.getItem('NEWS_API') || ''),
     },
   });
 
@@ -20,9 +19,8 @@ export const CacheProvider: React.FC<Props> = ({ children }) => {
   };
 
   React.useEffect(() => {
-    if (cache) {
-      localStorage.setItem(cache.key, cache.value);
-    }
+    const cacheState = JSON.stringify(cache);
+    localStorage.setItem('NEWS_API', cacheState);
   }, [cache]);
 
   return (
