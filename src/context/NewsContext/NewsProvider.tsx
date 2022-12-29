@@ -21,7 +21,7 @@ export const NewsProvider: React.FC<Props> = ({ children }) => {
   const { fetchData, isLoading, isError } = useAxios();
 
   const getNewsByQuery = async (query: string) => {
-    const { data } = await fetchData<NewsResponseProps>({
+    const data = await fetchData<NewsResponseProps>({
       programApi: newsApi,
       url: `/all?api_token=${API_KEY}&search=${query}`,
     });

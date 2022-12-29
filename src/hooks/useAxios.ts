@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { AxiosInstance } from 'axios';
+import { CacheContext } from '../context/CacheContext';
 
 type StateProps = {
   isLoading: boolean;
@@ -16,10 +17,19 @@ export const useAxios = () => {
     isLoading: false,
   });
 
+  const { setCache, cache } = useContext(CacheContext);
+
   const fetchData = async <T>({ programApi, url }: Props) => {
     try {
+      let data: T;
       setState({ isLoading: true });
-      const data = await programApi.get<T>(url);
+      if (cache?.value) {
+        data = JSON.parse(cache.value);
+      } else {
+        const { data: response } = await programApi.get<T>(url);
+        data = response;
+        setCache({ key: 'API_CACHE', value: JSON.stringify(data) });
+      }
       setState({ isLoading: false });
       return data;
     } catch (error) {
