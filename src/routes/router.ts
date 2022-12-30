@@ -1,4 +1,4 @@
-import { NewsApp } from '../NewsApp';
+import { ArticlesPage } from '../pages/Articles';
 
 export interface RoutesProps {
   path: string;
@@ -7,7 +7,7 @@ export interface RoutesProps {
 
 export const routes: RoutesProps[] = [
   {
-    path: '/',
-    Component: NewsApp,
+    path: 'search',
+    Component: ArticlesPage,
   },
 ];

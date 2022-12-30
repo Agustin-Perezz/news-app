@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
-import { NavBar } from '../components/NavBar';
+import { HeaderPage } from '../pages/Search';
 import { routes } from './router';
 
-export const AppRoutes: React.FC = () => {
+const AppRouter: React.FC = () => {
   return (
     <BrowserRouter basename="/news-app-two/">
-      <NavBar />
+      <HeaderPage />
       <Routes>
         {routes.map(({ path, Component }) => (
           <Route key={path} path={path} element={<Component />} />
@@ -15,3 +15,5 @@ export const AppRoutes: React.FC = () => {
     </BrowserRouter>
   );
 };
+
+export default AppRouter;
