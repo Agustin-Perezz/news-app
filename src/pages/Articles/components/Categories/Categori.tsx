@@ -1,5 +1,5 @@
 import { Chip } from '@mui/material';
-import { CategoriesProps } from '../../../types';
+import { CategoriesProps } from '../../../../types';
 
 interface Props {
   categori: CategoriesProps;

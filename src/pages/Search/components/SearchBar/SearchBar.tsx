@@ -2,7 +2,7 @@ import React from 'react';
 import { Box } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import { Search, SearchIconWrapper, StyledInputBase } from './CustomStyles';
-import { useForm } from '../../hooks';
+import { useForm } from '../../../../hooks';
 
 type Props = {
   handleSubmit: (query: string) => void;

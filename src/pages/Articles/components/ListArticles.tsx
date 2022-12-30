@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
-import { NewsProps } from '../../types/news-props';
+import { NewsProps } from '../../../types/news-props';
 import { Article } from './Article';
-import { RenderController } from '../ui/RenderController';
+import { RenderController } from '../../../components/ui/RenderController';
 
 interface Props {
   dataArticles?: NewsProps[];

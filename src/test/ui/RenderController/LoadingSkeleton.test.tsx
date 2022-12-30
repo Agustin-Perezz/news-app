@@ -12,6 +12,6 @@ describe('Test in <LoadingSkeleton/>', () => {
     expect(classSkeletons[0].className).toBe(
       'MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-wave css-1kcnzpi-MuiSkeleton-root'
     );
-    expect(classSkeletons.length).toBe(36);
+    expect(classSkeletons.length).toBe(30);
   });
 });

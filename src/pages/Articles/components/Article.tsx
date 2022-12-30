@@ -7,10 +7,10 @@ import {
   Chip,
   Box,
 } from '@mui/material';
-import { NewsProps } from '../../types/news-props';
+import { NewsProps } from '../../../types/news-props';
 import { CategoriesArticles } from './Categories';
 
-import not_found from '../../assets/images/not-found-image.png';
+import not_found from '../../../assets/images/not-found-image.png';
 
 interface Props {
   dataArticle: NewsProps;

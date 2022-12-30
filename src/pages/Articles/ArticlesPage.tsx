@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import { ListArticles } from '../../components/Articles';
 import { NewsContext } from '../../context/NewsContext';
+import { ListArticles } from './components';
 
 const ArticlesPage: React.FC = () => {
   const { dataNews, isLoading, isError } = useContext(NewsContext);

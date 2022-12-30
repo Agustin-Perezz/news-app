@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import { CategoriesProps } from '../../../types';
+import { CategoriesProps } from '../../../../types';
 import { Categori } from './Categori';
 
 interface Props {

@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { Article } from '../../../components/Articles';
+import { Article } from '../../../../pages/Articles/components';
 import { mockArticle } from './mockArticles';
 
 describe('Test in <Article />', () => {

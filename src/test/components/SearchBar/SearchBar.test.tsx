@@ -1,5 +1,11 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { SearchBar } from '../../../components/SearchBar';
+import { SearchBar } from '../../../pages/Search/components/SearchBar';
+
+const mockedUsedNavigate = jest.fn();
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => mockedUsedNavigate,
+}));
 
 describe('Test in <SearchBar />', () => {
   const handleSubmit: (query: string) => void = jest.fn();
