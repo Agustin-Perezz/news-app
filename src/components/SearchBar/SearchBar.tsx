@@ -25,7 +25,7 @@ export const SearchBar: React.FC = () => {
             inputMode: 'search',
           }}
           type="input"
-          onChange={(event) => onChange({ event })}
+          onChange={(event) => onChange(event.target.value)}
         />
       </Search>
     </Box>

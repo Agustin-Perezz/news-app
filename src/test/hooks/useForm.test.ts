@@ -3,28 +3,23 @@ import { useForm } from '../../hooks';
 
 describe('Test in useForm', () => {
   function setup(param: string) {
-    const {
-      result: { current },
-      rerender,
-    } = renderHook(() => useForm(param));
-    return { current, rerender };
+    const result = renderHook(() => useForm(param));
+    return result;
   }
 
   it('should get initial value from props', () => {
-    const { current } = setup('test');
-    expect(current.query).toBe('test');
+    const { result } = setup('test');
+    expect(result.current.query).toBe('test');
   });
-  it('should get initial value when call function rerender', () => {
-    let initialValue = 'test';
+  it('should change te value at call onChange', () => {
+    const { result } = setup('');
 
-    const { current, rerender } = setup(initialValue);
+    expect(result.current.query).toBe('');
 
-    initialValue = 'new_value';
-    rerender();
     act(() => {
-      current.reset();
+      result.current.onChange('test');
     });
 
-    expect(current.query).toBe('test');
+    expect(result.current.query).toBe('test');
   });
 });
