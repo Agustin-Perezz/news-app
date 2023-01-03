@@ -20,25 +20,22 @@ export const useAxios = () => {
 
   const { setCache, cache } = useContext(CacheContext);
 
+  // eslint-disable-next-line consistent-return
   const fetchData = async <T>({ programApi, url, urlParameter }: Props) => {
     try {
-      let data: T;
       setState({ isLoading: true });
       if (cache?.key === urlParameter) {
-        data = JSON.parse(cache.value);
-      } else {
-        const { data: response } = await programApi.get<T>(url);
-        data = response;
-        setCache({ key: urlParameter, value: JSON.stringify(data) });
+        return JSON.parse(cache.value);
       }
+      const { data: response } = await programApi.get<T>(url);
+      setCache({ key: urlParameter, value: JSON.stringify(response) });
       setState({ isLoading: false });
-      return data;
+      return response;
     } catch (error) {
       if (error instanceof Error) {
         setState({ isLoading: false, isError: error.message });
-        throw new Error(error.message);
       }
-      throw new Error('Something work bad!');
+      setState({ isLoading: false, isError: 'Something work bad :(' });
     }
   };
 

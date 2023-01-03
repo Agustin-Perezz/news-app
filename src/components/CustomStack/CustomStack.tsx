@@ -6,6 +6,7 @@ type CustomStackProps = {
   justifyContent: StackProps['justifyContent'];
   alignItems: StackProps['alignItems'];
   marginBottom: number;
+  backgroundColor?: string;
 };
 
 type Props = {

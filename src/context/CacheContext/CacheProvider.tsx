@@ -10,7 +10,7 @@ type StateProps = { cache?: CacheProps };
 export const CacheProvider: React.FC<Props> = ({ children }) => {
   const [{ cache }, setState] = React.useState<StateProps>({
     cache: {
-      ...JSON.parse(localStorage.getItem('NEWS_API') || ''),
+      ...JSON.parse(localStorage.getItem('NEWS_API') || '{}'),
     },
   });
 

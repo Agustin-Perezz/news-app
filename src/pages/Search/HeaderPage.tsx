@@ -5,13 +5,13 @@ import { SearchBar } from './components/SearchBar';
 import { NewsContext } from '../../context/NewsContext';
 
 const HeaderPage: React.FC = () => {
-  const { getNewsByQuery } = useContext(NewsContext);
+  const { setState } = useContext(NewsContext);
   return (
-    <>
+    <div style={{ backgroundColor: '#313131' }}>
       <NavBar />
       <Divider />
-      <SearchBar handleSubmit={getNewsByQuery} />
-    </>
+      {/* <SearchBar handleSubmit={getNewsByQuery} /> */}
+    </div>
   );
 };
 

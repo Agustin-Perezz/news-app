@@ -1,31 +1,24 @@
 import React from 'react';
-import { Box } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import { Search, SearchIconWrapper, StyledInputBase } from './CustomStyles';
-import { useForm } from '../../../../hooks';
+import { Box } from '@mui/material';
+import { useForm, useSearchBar } from '../../../../hooks';
+import { Search, StyledInputBase, CustomButton } from './CustomStyles';
 
-type Props = {
-  handleSubmit: (query: string) => void;
-};
-
-export const SearchBar: React.FC<Props> = ({ handleSubmit }) => {
+export const SearchBar: React.FC = () => {
   const { onChange, query } = useForm('');
+  const { handleSubmit } = useSearchBar();
 
   return (
     <Box
-      width={300}
-      margin="auto"
-      marginTop={3}
+      sx={{ width: '500px' }}
       component="form"
-      onSubmit={(e) => {
+      onSubmit={async (e) => {
         e.preventDefault();
-        handleSubmit(query);
+        await handleSubmit(query);
       }}
     >
       <Search>
-        <SearchIconWrapper>
-          <SearchIcon />
-        </SearchIconWrapper>
+        <CustomButton startIcon={<SearchIcon />} />
         <StyledInputBase
           placeholder="Search any news.."
           inputProps={{

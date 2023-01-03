@@ -1,12 +1,14 @@
 import { createContext } from 'react';
 import { NewsProps } from '../../types/news-props';
 
-export type NewsContextProps = {
+export type ContextTypeData = {
   dataNews?: NewsProps[];
   isLoading: boolean;
   isError?: string;
+};
 
-  getNewsByQuery: (query: string) => void;
+export type NewsContextProps = ContextTypeData & {
+  setState: React.Dispatch<React.SetStateAction<ContextTypeData>>;
 };
 
 export const NewsContext = createContext<NewsContextProps>(

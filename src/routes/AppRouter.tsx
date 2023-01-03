@@ -7,7 +7,11 @@ const AppRouter: React.FC = () => {
     <BrowserRouter basename="/news-app-two">
       <HeaderPage />
       <Routes>
-        <Route key="test" path="/" element={<h2>home test</h2>} />
+        <Route
+          key="test"
+          path="/"
+          element={<div style={{ minHeight: '100%' }}>home test</div>}
+        />
         {routes.map(({ path, Component }) => (
           <Route key={path} path={path} element={<Component />} />
         ))}
