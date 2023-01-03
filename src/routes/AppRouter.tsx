@@ -9,11 +9,6 @@ const AppRouter: React.FC = () => {
       <NavBar />
       <Divider />
       <Routes>
-        <Route
-          key="test"
-          path="/"
-          element={<div style={{ minHeight: '100%' }}>home test</div>}
-        />
         {routes.map(({ path, Component }) => (
           <Route key={path} path={path} element={<Component />} />
         ))}
