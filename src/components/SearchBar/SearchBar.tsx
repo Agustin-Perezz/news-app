@@ -10,7 +10,7 @@ export const SearchBar: React.FC = () => {
 
   return (
     <Box
-      sx={{ width: '500px' }}
+      sx={{ width: '500px', margin: '0px 40px' }}
       component="form"
       onSubmit={async (e) => {
         e.preventDefault();

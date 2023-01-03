@@ -3,15 +3,17 @@ import { InputBase } from '@mui/material';
 import MuiButton from '@mui/material/Button';
 
 export const Search = styled('div')(({ theme }) => ({
-  position: 'relative',
+  display: 'flex',
+  justifyContent: 'flex-start',
+  alignItems: 'center',
   borderRadius: '11px',
   borderInlineColor: 'FFFFFF',
-  backgroundColor: alpha(theme.palette.common.white, 0.18),
+  backgroundColor: alpha(theme.palette.common.white, 0.15),
   '&:hover': {
     backgroundColor: alpha(theme.palette.common.white, 0.1),
   },
   marginRight: theme.spacing(2),
-  marginLeft: 0,
+  margin: '0px !important',
   width: '100%',
   [theme.breakpoints.up('sm')]: {
     marginLeft: theme.spacing(3),
@@ -19,17 +21,18 @@ export const Search = styled('div')(({ theme }) => ({
   },
 }));
 
-export const SearchIconWrapper = styled('div')(({ theme }) => ({
-  padding: theme.spacing(0, 2),
+export const CustomButton = styled(MuiButton)(({ theme }) => ({
   height: '100%',
-  position: 'absolute',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-}));
-
-export const CustomButton = styled(MuiButton)(() => ({
-  borderRadius: '50$',
+  backgroundColor: alpha(theme.palette.common.black, 0.0),
+  '&:hover': {
+    backgroundColor: alpha(theme.palette.common.white, 0.0),
+  },
+  borderRadius: '50%',
+  width: '10px',
+  minWidth: '10px',
+  padding: '0px',
+  marginLeft: '28px',
+  verticalAlign: 'center',
 }));
 
 export const StyledInputBase = styled(InputBase)(({ theme }) => ({
@@ -38,7 +41,7 @@ export const StyledInputBase = styled(InputBase)(({ theme }) => ({
   borderColor: '#FFFFFF',
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    paddingLeft: '10px',
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('md')]: {
