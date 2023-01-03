@@ -28,7 +28,7 @@ export const SearchIconWrapper = styled('div')(({ theme }) => ({
   justifyContent: 'center',
 }));
 
-export const CustomButton = styled(MuiButton)(({ theme }) => ({
+export const CustomButton = styled(MuiButton)(() => ({
   borderRadius: '50$',
 }));
 

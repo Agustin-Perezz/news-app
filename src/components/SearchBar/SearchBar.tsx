@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import { Box } from '@mui/material';
-import { useForm, useSearchBar } from '../../../../hooks';
+import { useForm, useSearchBar } from '../../hooks';
 import { Search, StyledInputBase, CustomButton } from './CustomStyles';
 
 export const SearchBar: React.FC = () => {

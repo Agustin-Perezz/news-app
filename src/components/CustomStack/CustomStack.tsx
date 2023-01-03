@@ -5,7 +5,7 @@ type CustomStackProps = {
   direction: StackProps['direction'];
   justifyContent: StackProps['justifyContent'];
   alignItems: StackProps['alignItems'];
-  marginBottom: number;
+  marginBottom?: number;
   backgroundColor?: string;
 };
 
@@ -15,5 +15,5 @@ type Props = {
 };
 
 export const CustomStack: React.FC<Props> = ({ stackProps, children }) => {
-  return <Stack {...stackProps}> {children} </Stack>;
+  return <Stack {...stackProps}>{children}</Stack>;
 };

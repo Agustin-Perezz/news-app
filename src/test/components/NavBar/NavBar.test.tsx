@@ -1,5 +1,11 @@
 import { render, screen } from '@testing-library/react';
-import { NavBar } from '../../../pages/Search/components/NavBar/NavBar';
+import { NavBar } from '../../../components/NavBar/NavBar';
+
+const mockedUsedNavigate = jest.fn();
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => mockedUsedNavigate,
+}));
 
 describe('Test in <Navbar />', () => {
   beforeEach(() => {
@@ -9,7 +15,6 @@ describe('Test in <Navbar />', () => {
     expect(screen).toMatchSnapshot();
   });
   it('should contain main icons and titles in navbar', () => {
-    expect(screen.getByText('The power of information')).toBeInTheDocument();
     expect(screen.getByTestId('GitHubIcon')).toBeInTheDocument();
     expect(screen.getByTestId('LinkedInIcon')).toBeInTheDocument();
     expect(screen.getByTestId('TwitterIcon')).toBeInTheDocument();
