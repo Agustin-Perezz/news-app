@@ -4,7 +4,8 @@ describe('News app test', () => {
   });
 
   it('should render app', () => {
-    cy.contains('The power of information');
+    cy.get('.MuiImageListItem-img').should('be.visible');
+    cy.get('[style="overflow: hidden;"] > :nth-child(3)').should('be.visible');
   });
   it('should show result', () => {
     const query = 'messi';
@@ -24,5 +25,8 @@ describe('News app test', () => {
     cy.get(
       ':nth-child(1) > .MuiPaper-root > .MuiCardContent-root > .MuiTypography-subtitle1'
     ).should('have.text', 'Messi test');
+    cy.get(
+      ':nth-child(1) > .MuiPaper-root > .MuiCardContent-root > .css-3yoo1r > .MuiChip-root'
+    ).should('be.visible');
   });
 });
