@@ -1,16 +1,10 @@
 import React, { useContext } from 'react';
-import { AxiosInstance } from 'axios';
 import { CacheContext } from '../context/CacheContext';
+import { ParametersFetchData } from '../types';
 
 type StateProps = {
   isLoading: boolean;
   isError?: string;
-};
-
-type Props = {
-  programApi: AxiosInstance;
-  url: string;
-  urlParameter: string;
 };
 
 export const useAxios = () => {
@@ -20,14 +14,18 @@ export const useAxios = () => {
 
   const { setCache, cache } = useContext(CacheContext);
 
-  // eslint-disable-next-line consistent-return
-  const fetchData = async <T>({ programApi, url, urlParameter }: Props) => {
+  const fetchData = async <T>({
+    programApi,
+    endpoint,
+    urlParameter,
+  }: // eslint-disable-next-line consistent-return
+  ParametersFetchData) => {
     try {
       setState({ isLoading: true });
       if (cache?.key === urlParameter) {
         return JSON.parse(cache.value);
       }
-      const { data: response } = await programApi.get<T>(url);
+      const { data: response } = await programApi.get<T>(endpoint);
       setCache({ key: urlParameter, value: JSON.stringify(response) });
       setState({ isLoading: false });
       return response;

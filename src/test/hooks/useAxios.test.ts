@@ -22,7 +22,7 @@ describe('Test in useAxios', () => {
 
     const parameters = {
       programApi: newsApi,
-      url: `/all?api_token=${API_KEY}&search=messi`,
+      endpoint: `/all?api_token=${API_KEY}&search=messi`,
       urlParameter: 'messi',
     };
 
