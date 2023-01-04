@@ -4,3 +4,6 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 import '@testing-library/jest-dom/extend-expect';
+
+process.env.REACT_APP_API_URL = 'https://api.thenewsapi.com/v1/news';
+process.env.REACT_APP_API_TOKEN = 'token_test';

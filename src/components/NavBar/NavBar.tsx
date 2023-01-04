@@ -1,26 +1,36 @@
-import { ImageListItem, Typography } from '@mui/material';
+import Box from '@mui/material/Box';
+import { ImageListItem } from '@mui/material';
 import { CustomStack } from '../CustomStack';
 import { SocialMedia } from '../ui/SocialMedia';
+import { SearchBar } from '../SearchBar';
 
 import news_logo from '../../assets/images/news-logo.png';
 
 export const NavBar: React.FC = () => {
   return (
-    <CustomStack
-      stackProps={{
-        direction: 'row',
-        justifyContent: 'space-around',
+    <Box
+      sx={{
+        backgroundColor: '#292929',
+        display: 'flex',
+        justifyContent: 'center',
         alignItems: 'center',
-        marginBottom: -1.5,
+        minHeight: '120px',
       }}
     >
-      <ImageListItem sx={{ width: 190 }}>
-        <img src={news_logo} alt="news-logo" />
-      </ImageListItem>
-      <Typography color="#686975" variant="h6">
-        The power of information
-      </Typography>
-      <SocialMedia />
-    </CustomStack>
+      <CustomStack
+        stackProps={{
+          direction: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: '1000px',
+        }}
+      >
+        <ImageListItem sx={{ width: 150 }}>
+          <img src={news_logo} alt="news-logo" />
+        </ImageListItem>
+        <SearchBar />
+        <SocialMedia />
+      </CustomStack>
+    </Box>
   );
 };

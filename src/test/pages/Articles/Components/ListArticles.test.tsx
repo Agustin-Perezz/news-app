@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import { ListArticles } from '../../../components/Articles';
-import { NewsProps } from '../../../types/news-props';
+import { ListArticles } from '../../../../pages/Articles/components';
+import { NewsProps } from '../../../../types/news-props';
 import { mockArticles as data } from './mockArticles';
 
 type Props = {

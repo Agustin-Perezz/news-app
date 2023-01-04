@@ -1,14 +1,10 @@
-import React from 'react';
-import { AxiosInstance } from 'axios';
+import React, { useContext } from 'react';
+import { CacheContext } from '../context/CacheContext';
+import { ParametersFetchData } from '../types';
 
 type StateProps = {
   isLoading: boolean;
   isError?: string;
-};
-
-type Props = {
-  programApi: AxiosInstance;
-  url: string;
 };
 
 export const useAxios = () => {
@@ -16,18 +12,29 @@ export const useAxios = () => {
     isLoading: false,
   });
 
-  const fetchData = async <T>({ programApi, url }: Props) => {
+  const { setCache, cache } = useContext(CacheContext);
+
+  const fetchData = async <T>({
+    programApi,
+    endpoint,
+    urlParameter,
+  }: // eslint-disable-next-line consistent-return
+  ParametersFetchData) => {
     try {
       setState({ isLoading: true });
-      const data = await programApi.get<T>(url);
+      if (cache?.key === urlParameter) {
+        setState({ isLoading: false });
+        return JSON.parse(cache.value);
+      }
+      const { data: response } = await programApi.get<T>(endpoint);
+      setCache({ key: urlParameter, value: JSON.stringify(response) });
       setState({ isLoading: false });
-      return data;
+      return response;
     } catch (error) {
       if (error instanceof Error) {
         setState({ isLoading: false, isError: error.message });
-        throw new Error(error.message);
       }
-      throw new Error('Something work bad!');
+      setState({ isLoading: false, isError: 'Something work bad :(' });
     }
   };
 

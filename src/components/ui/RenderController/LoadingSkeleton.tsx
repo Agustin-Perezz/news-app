@@ -15,13 +15,17 @@ export const LoadingSkeleton: React.FC = () => {
         spacing={{ xs: 2, md: 3 }}
         columns={{ xs: 0, sm: 8, md: 12 }}
         justifyContent="center"
+        sx={{
+          maxWidth: '1200px',
+          margin: '68px auto 20px auto !important',
+        }}
       >
-        {Array(6)
+        {Array(5)
           .fill(0)
           .map((__, index) => (
             // eslint-disable-next-line react/no-array-index-key
             <Grid item xs={2} sm={4} md={3.5} key={index}>
-              <Card sx={{ height: '448px' }}>
+              <Card sx={{ height: '448px', width: '278px' }}>
                 <CardMedia>
                   <Skeleton
                     variant="rectangular"

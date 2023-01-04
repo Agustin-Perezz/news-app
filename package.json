@@ -2,7 +2,7 @@
   "name": "news-app-two",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://agustin-perezz.github.io/news-app-two",
+  "homepage": "https://agustin-perezz.github.io/news-app",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -17,6 +17,7 @@
     "dotenv": "^16.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.4",
     "web-vitals": "^2.1.4"
@@ -87,7 +88,7 @@
       "^.+\\.ts$": "ts-jest"
     },
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/test/mocks/assets_mock.ts"
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/test/__mocks__/assets_mock.ts"
     },
     "testEnvironment": "jsdom",
     "setupFilesAfterEnv": [
