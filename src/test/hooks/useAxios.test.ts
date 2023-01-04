@@ -1,4 +1,4 @@
-import { act, renderHook } from '@testing-library/react';
+import { renderHook, act } from '@testing-library/react';
 import { useAxios } from '../../hooks';
 import { newsApi } from '../../api';
 
@@ -13,6 +13,8 @@ describe('Test in useAxios', () => {
   it('should init default values', () => {
     const { result } = setup();
     expect(result.current.isLoading).toBe(false);
+    expect(result.current.isError).toBe(undefined);
+    expect(result.current.fetchData).toBeInstanceOf(Function);
   });
   it('should call fetchData with correctly arguments', async () => {
     const { result } = setup();
