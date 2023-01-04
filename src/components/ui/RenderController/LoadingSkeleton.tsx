@@ -15,6 +15,10 @@ export const LoadingSkeleton: React.FC = () => {
         spacing={{ xs: 2, md: 3 }}
         columns={{ xs: 0, sm: 8, md: 12 }}
         justifyContent="center"
+        sx={{
+          maxWidth: '1200px',
+          margin: '68px auto 20px auto !important',
+        }}
       >
         {Array(5)
           .fill(0)

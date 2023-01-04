@@ -4,8 +4,10 @@ import { AppRouter } from './routes';
 
 export const NewsApp: React.FC = () => {
   return (
-    <AppTheme>
-      <AppRouter />
-    </AppTheme>
+    <div style={{ overflow: 'hidden' }}>
+      <AppTheme>
+        <AppRouter />
+      </AppTheme>
+    </div>
   );
 };
