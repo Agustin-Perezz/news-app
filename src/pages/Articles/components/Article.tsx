@@ -9,10 +9,10 @@ import {
 } from '@mui/material';
 import { NewsProps } from '../../../types/news-props';
 import { CategoriesArticles } from './Categories';
+import { useLoadImage } from '../../../hooks';
 
 import not_found from '../../../assets/images/not-found-image.png';
 import load_image from '../../../assets/images/load-image.jpg';
-import { useLoadImage } from '../../../hooks';
 
 interface Props {
   dataArticle: NewsProps;
