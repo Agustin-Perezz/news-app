@@ -5,7 +5,7 @@ import { routes } from './router';
 
 const AppRouter: React.FC = () => {
   return (
-    <BrowserRouter basename="/news-app-two">
+    <BrowserRouter basename="/news-app">
       <NavBar />
       <Divider />
       <Routes>
