@@ -18,7 +18,7 @@ export const SearchBar: React.FC = () => {
       }}
     >
       <Search>
-        <CustomButton startIcon={<SearchIcon />} />
+        <CustomButton type="submit" startIcon={<SearchIcon />} />
         <StyledInputBase
           placeholder="Search any news.."
           inputProps={{

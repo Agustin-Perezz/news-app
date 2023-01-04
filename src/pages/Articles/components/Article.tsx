@@ -11,23 +11,30 @@ import { NewsProps } from '../../../types/news-props';
 import { CategoriesArticles } from './Categories';
 
 import not_found from '../../../assets/images/not-found-image.png';
+import load_image from '../../../assets/images/load-image.jpg';
+import { useLoadImage } from '../../../hooks';
 
 interface Props {
   dataArticle: NewsProps;
 }
 
 export const Article: React.FC<Props> = ({ dataArticle }) => {
+  const { loaded, setLoaded } = useLoadImage();
+
   return (
     <Card sx={{ maxHeight: 'auto', minHeight: '447px', width: '278px' }}>
       <Box sx={{ position: 'relative' }}>
         <CardMedia
           component="img"
           height="185px"
-          image={dataArticle.image_url}
+          image={loaded ? dataArticle.image_url : load_image}
           alt={dataArticle.nameSource}
           onError={({ currentTarget }) => {
             currentTarget.onerror = null;
             currentTarget.src = not_found;
+          }}
+          onLoad={() => {
+            setLoaded(true);
           }}
         />
         <Chip

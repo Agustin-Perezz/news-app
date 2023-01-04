@@ -23,6 +23,7 @@ export const useAxios = () => {
     try {
       setState({ isLoading: true });
       if (cache?.key === urlParameter) {
+        setState({ isLoading: false });
         return JSON.parse(cache.value);
       }
       const { data: response } = await programApi.get<T>(endpoint);
