@@ -1,12 +1,21 @@
 import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import { Box } from '@mui/material';
-import { useForm, useSearchBar } from '../../hooks';
+import { SubmitProps, useForm } from '../../hooks';
 import { Search, StyledInputBase, CustomButton } from './CustomStyles';
 
-export const SearchBar: React.FC = () => {
+const API_KEY = process.env.REACT_APP_API_KEY;
+
+type Props = {
+  handleSubmit: ({
+    navigateUrl,
+    endpoint,
+    urlParameter,
+  }: SubmitProps) => Promise<void>;
+};
+
+export const SearchBar: React.FC<Props> = ({ handleSubmit }) => {
   const { onChange, query } = useForm('');
-  const { handleSubmit } = useSearchBar();
 
   return (
     <Box
@@ -14,7 +23,11 @@ export const SearchBar: React.FC = () => {
       component="form"
       onSubmit={async (e) => {
         e.preventDefault();
-        await handleSubmit(query);
+        await handleSubmit({
+          urlParameter: query,
+          endpoint: `/all?api_token=${API_KEY}&search=${query}`,
+          navigateUrl: `search?q=${query}`,
+        });
       }}
     >
       <Search>

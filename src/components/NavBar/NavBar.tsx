@@ -3,10 +3,12 @@ import { ImageListItem } from '@mui/material';
 import { CustomStack } from '../CustomStack';
 import { SocialMedia } from '../ui/SocialMedia';
 import { SearchBar } from '../SearchBar';
+import { useSearch } from '../../hooks';
 
 import news_logo from '../../assets/images/news-logo.png';
 
 export const NavBar: React.FC = () => {
+  const { handleSubmit } = useSearch();
   return (
     <Box
       sx={{
@@ -28,7 +30,7 @@ export const NavBar: React.FC = () => {
         <ImageListItem sx={{ width: 150 }}>
           <img src={news_logo} alt="news-logo" />
         </ImageListItem>
-        <SearchBar />
+        <SearchBar handleSubmit={handleSubmit} />
         <SocialMedia />
       </CustomStack>
     </Box>
