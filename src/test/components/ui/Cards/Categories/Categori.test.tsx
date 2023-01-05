@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { Categori } from '../../../../../pages/Articles/components/Categories';
+import { Categori } from '../../../../../components/ui/Cards/Categories';
 import { listCategories } from './categoriesMock';
 
 describe('Test in <Categori.test />', () => {

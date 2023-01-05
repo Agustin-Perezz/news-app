@@ -1,4 +1,4 @@
-import { dataCategories } from '../pages/Articles/components/Categories';
+import { dataCategories } from '../components/ui/Cards/Categories';
 
 export const categoriesFormat = (categories: string[]) => {
   return categories.map((type_categori) => {

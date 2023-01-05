@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
 import { NewsProps } from '../../../types/news-props';
-import { Article } from './Article';
-import { RenderController } from '../../../components/ui/RenderController';
+import { GeneralCard } from './GeneralCard';
+import { RenderController } from '../RenderController';
 
 interface Props {
   dataArticles?: NewsProps[];
@@ -10,7 +10,7 @@ interface Props {
   isError?: string;
 }
 
-export const ListArticles: React.FC<Props> = ({
+export const ListCards: React.FC<Props> = ({
   dataArticles,
   isLoading,
   isError,
@@ -37,7 +37,7 @@ export const ListArticles: React.FC<Props> = ({
         >
           {dataArticles?.map((article) => (
             <Grid item xs={2} sm={4} md={3.5} key={article.uuid}>
-              <Article dataArticle={article} />
+              <GeneralCard dataArticle={article} />
             </Grid>
           ))}
         </Grid>

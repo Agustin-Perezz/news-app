@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react';
-import { Article } from '../../../../pages/Articles/components';
+import { GeneralCard } from '../../../../pages/News/components';
 import { mockArticle } from './mockArticles';
 
-describe('Test in <Article />', () => {
+describe('Test in <GeneralCard />', () => {
   beforeEach(() => {
-    render(<Article dataArticle={mockArticle} />);
+    render(<GeneralCard dataArticle={mockArticle} />);
   });
 
   it('shuold match snapshot', () => {

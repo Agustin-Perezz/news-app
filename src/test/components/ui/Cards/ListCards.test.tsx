@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import { ListArticles } from '../../../../pages/Articles/components';
-import { NewsProps } from '../../../../types/news-props';
+import { ListCards } from '../../../../pages/News/components';
+import { NewsProps } from '../../../../types';
 import { mockArticles as data } from './mockArticles';
 
 type Props = {
@@ -9,9 +9,9 @@ type Props = {
   isError?: string;
 };
 
-describe('Test in <ListArticles/>', () => {
+describe('Test in <ListCards/>', () => {
   function setup(props: Props) {
-    const { container } = render(<ListArticles {...props} />);
+    const { container } = render(<ListCards {...props} />);
     return container;
   }
 

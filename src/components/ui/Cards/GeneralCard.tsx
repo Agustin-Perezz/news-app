@@ -18,7 +18,7 @@ interface Props {
   dataArticle: NewsProps;
 }
 
-export const Article: React.FC<Props> = ({ dataArticle }) => {
+export const GeneralCard: React.FC<Props> = ({ dataArticle }) => {
   const { loaded, setLoaded } = useLoadImage();
 
   return (

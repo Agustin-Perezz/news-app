@@ -1,11 +1,11 @@
 import { useContext } from 'react';
 import { NewsContext } from '../../context/NewsContext';
-import { ListArticles } from './components';
+import { ListCards } from './components';
 
-const ArticlesPage: React.FC = () => {
+const NewsPage: React.FC = () => {
   const { dataNews, isLoading, isError } = useContext(NewsContext);
   return (
-    <ListArticles
+    <ListCards
       dataArticles={dataNews}
       isLoading={isLoading}
       isError={isError}
@@ -13,4 +13,4 @@ const ArticlesPage: React.FC = () => {
   );
 };
 
-export default ArticlesPage;
+export default NewsPage;

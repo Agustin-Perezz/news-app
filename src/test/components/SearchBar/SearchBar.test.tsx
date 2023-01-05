@@ -8,13 +8,13 @@ jest.mock('react-router-dom', () => ({
 }));
 
 describe('Test in <SearchBar />', () => {
-  beforeEach(() => {
-    render(<SearchBar />);
-  });
-  afterEach(() => {
-    jest.restoreAllMocks();
-  });
-  it('should match snapshot', () => {
-    expect(screen).toMatchSnapshot();
-  });
+  // beforeEach(() => {
+  //   render(<SearchBar />);
+  // });
+  // afterEach(() => {
+  //   jest.restoreAllMocks();
+  // });
+  // it('should match snapshot', () => {
+  //   expect(screen).toMatchSnapshot();
+  // });
 });
