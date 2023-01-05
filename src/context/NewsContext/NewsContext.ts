@@ -2,7 +2,7 @@ import { createContext } from 'react';
 import { NewsProps } from '../../types/news-props';
 
 export type ContextTypeData = {
-  dataNews?: NewsProps[];
+  data?: NewsProps[];
   isLoading: boolean;
   isError?: string;
 };

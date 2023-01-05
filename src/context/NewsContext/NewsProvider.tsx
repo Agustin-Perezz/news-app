@@ -7,7 +7,7 @@ type Props = {
 
 type StateProps = Omit<NewsContextProps, 'setState'>;
 
-const INIT_STATE: StateProps = { dataNews: undefined, isLoading: false };
+const INIT_STATE: StateProps = { data: undefined, isLoading: false };
 
 export const NewsProvider: React.FC<Props> = ({ children }) => {
   const [state, setState] = React.useState(INIT_STATE);

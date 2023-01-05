@@ -29,8 +29,8 @@ export const useSearch = () => {
       programApi: newsApi,
       urlParameter,
     });
-    const dataNews = createAddaptNew(response);
-    setState({ dataNews, isLoading, isError });
+    const data = createAddaptNew(response);
+    setState({ data, isLoading, isError });
   };
 
   return { handleSubmit };

@@ -3,13 +3,9 @@ import { NewsContext } from '../../context/NewsContext';
 import { ListCards } from './components';
 
 const NewsPage: React.FC = () => {
-  const { dataNews, isLoading, isError } = useContext(NewsContext);
+  const { data, isLoading, isError } = useContext(NewsContext);
   return (
-    <ListCards
-      dataArticles={dataNews}
-      isLoading={isLoading}
-      isError={isError}
-    />
+    <ListCards dataArticles={data} isLoading={isLoading} isError={isError} />
   );
 };
 
