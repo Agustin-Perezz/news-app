@@ -1,4 +1,5 @@
 import { ArticlesPage } from '../pages/Articles';
+import { CategoriesPage } from '../pages/Categories';
 import { HomePage } from '../pages/Home';
 
 export interface RoutesProps {
@@ -14,5 +15,9 @@ export const routes: RoutesProps[] = [
   {
     path: 'search',
     Component: ArticlesPage,
+  },
+  {
+    path: 'category',
+    Component: CategoriesPage,
   },
 ];
