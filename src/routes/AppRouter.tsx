@@ -1,6 +1,6 @@
 import { Divider } from '@mui/material';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
-import { NavBar } from '../components/NavBar';
+import { NavBar } from '../pages/Header';
 import { routes } from './router';
 
 const AppRouter: React.FC = () => {
