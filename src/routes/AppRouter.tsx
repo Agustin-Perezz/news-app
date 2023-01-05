@@ -1,12 +1,12 @@
 import { Divider } from '@mui/material';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
-import { NavBar } from '../pages/Header';
+import { HeaderPage } from '../pages/Header';
 import { routes } from './router';
 
 const AppRouter: React.FC = () => {
   return (
     <BrowserRouter basename="/news-app">
-      <NavBar />
+      <HeaderPage />
       <Divider />
       <Routes>
         {routes.map(({ path, Component }) => (

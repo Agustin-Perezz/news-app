@@ -5,7 +5,7 @@ import { CustomStack } from '../../../../components/CustomStack';
 import { SocialMedia } from '../../../../components/ui/SocialMedia';
 import { useSearch } from '../../../../hooks';
 
-import news_logo from '../../assets/images/news-logo.png';
+import news_logo from '../../../../assets/images/news-logo.png';
 
 export const NavBar: React.FC = () => {
   const { handleSubmit } = useSearch();
