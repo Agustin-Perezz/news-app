@@ -1,5 +1,4 @@
-import { HomePage } from '../pages/Home';
-import { NewsPage } from '../pages/News';
+import { CategoriesPage, HomePage, NewsPage } from '../pages';
 
 export interface RoutesProps {
   path: string;
@@ -14,5 +13,9 @@ export const routes: RoutesProps[] = [
   {
     path: 'search',
     Component: NewsPage,
+  },
+  {
+    path: 'category/:id_category',
+    Component: CategoriesPage,
   },
 ];

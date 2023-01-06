@@ -44,7 +44,7 @@ export const CategoriesNavBar: React.FC<Props> = ({ handleClick }) => {
                   handleClick({
                     urlParameter: category,
                     endpoint: `/top?api_token=${API_KEY}&categories=${category}`,
-                    navigateUrl: `search?q=${category}`,
+                    navigateUrl: `category/${category}`,
                   });
                 }}
               />
