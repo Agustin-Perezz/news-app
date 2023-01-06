@@ -36,15 +36,15 @@ export const CategoriesNavBar: React.FC<Props> = ({ handleClick }) => {
             aria-label="category-tabs"
             indicatorColor="secondary"
           >
-            {listCategories.map(({ category }) => (
+            {listCategories.map(({ category, endpoint, url }) => (
               <CustomTab
                 label={category}
                 key={category}
                 onClick={() => {
                   handleClick({
                     urlParameter: category,
-                    endpoint: `/top?api_token=${API_KEY}&categories=${category}`,
-                    navigateUrl: `category/${category}`,
+                    endpoint,
+                    navigateUrl: url,
                   });
                 }}
               />
