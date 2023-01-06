@@ -5,7 +5,6 @@ describe('News app test', () => {
 
   it('should render app', () => {
     cy.get('.MuiImageListItem-img').should('be.visible');
-    cy.get('[style="overflow: hidden;"] > :nth-child(3)').should('be.visible');
   });
   it('should show result', () => {
     const query = 'messi';

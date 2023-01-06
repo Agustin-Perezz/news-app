@@ -1,5 +1,5 @@
-import { ArticlesPage } from '../pages/Articles';
 import { HomePage } from '../pages/Home';
+import { NewsPage } from '../pages/News';
 
 export interface RoutesProps {
   path: string;
@@ -13,6 +13,6 @@ export const routes: RoutesProps[] = [
   },
   {
     path: 'search',
-    Component: ArticlesPage,
+    Component: NewsPage,
   },
 ];
