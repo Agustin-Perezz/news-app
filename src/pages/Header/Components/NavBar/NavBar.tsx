@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box';
 import { ImageListItem } from '@mui/material';
 import { SearchBar } from '../SearchBar';
+import { CategoriesNavBar } from '../CategoriesNavBar';
 import { CustomStack } from '../../../../components/CustomStack';
 import { SocialMedia } from '../../../../components/ui/SocialMedia';
 import { useSearch } from '../../../../hooks';
@@ -16,7 +17,9 @@ export const NavBar: React.FC = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        minHeight: '120px',
+        height: 'max-content',
+        flexWrap: 'wrap',
+        paddingTop: '20px',
       }}
     >
       <CustomStack
@@ -33,6 +36,7 @@ export const NavBar: React.FC = () => {
         <SearchBar handleSubmit={handleSubmit} />
         <SocialMedia />
       </CustomStack>
+      <CategoriesNavBar handleClick={handleSubmit} />
     </Box>
   );
 };
