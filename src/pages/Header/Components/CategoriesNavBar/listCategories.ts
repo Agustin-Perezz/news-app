@@ -2,9 +2,14 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 
 export const listCategories = [
   {
-    category: 'general',
+    category: 'home',
     endpoint: `/top?api_token=${API_KEY}`,
-    url: '/',
+    url: '/home',
+  },
+  {
+    category: 'general',
+    endpoint: `/top?api_token=${API_KEY}&categories=general`,
+    url: 'category/general',
   },
   {
     category: 'science',

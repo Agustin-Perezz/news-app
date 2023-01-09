@@ -7,7 +7,7 @@ export interface RoutesProps {
 
 export const routes: RoutesProps[] = [
   {
-    path: '/',
+    path: 'home',
     Component: HomePage,
   },
   {

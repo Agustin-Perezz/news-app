@@ -1,11 +1,8 @@
-import React from 'react';
-import { Box, Tabs, ThemeProvider } from '@mui/material';
+import { Box, Tabs, ThemeProvider, Tab } from '@mui/material';
 import { listCategories } from './listCategories';
 import { useTab } from '../../hooks';
 import { SubmitProps } from '../../../../hooks';
 import { CustomTab, tabFont } from './customStyleTab';
-
-const API_KEY = process.env.REACT_APP_API_KEY;
 
 type Props = {
   handleClick: ({
@@ -16,7 +13,7 @@ type Props = {
 };
 
 export const CategoriesNavBar: React.FC<Props> = ({ handleClick }) => {
-  const { valueTab, handleChange } = useTab();
+  const { valueTab, handleChange } = useTab({ handleClick });
 
   return (
     <Box sx={{ width: '100%', marginTop: '15px' }}>
@@ -36,6 +33,7 @@ export const CategoriesNavBar: React.FC<Props> = ({ handleClick }) => {
             aria-label="category-tabs"
             indicatorColor="secondary"
           >
+            <Tab label="default-tab" sx={{ display: 'none' }} />
             {listCategories.map(({ category, endpoint, url }) => (
               <CustomTab
                 label={category}
