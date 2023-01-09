@@ -14,6 +14,7 @@ export const createAddaptNew = (
       image_url: data.image_url,
       published_at: dateFormated,
       nameSource: data.source,
+      url: data.url,
       categories: categories.length > 0 ? categories : undefined,
     };
   });
