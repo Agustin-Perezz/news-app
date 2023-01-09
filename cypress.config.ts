@@ -6,7 +6,7 @@ dotenv.config();
 
 export default defineConfig({
   e2e: {
-    baseUrl: 'http://localhost:3000/news-app/',
+    baseUrl: 'http://localhost:3000/news-app/home',
     supportFile: 'cypress/support/index.ts',
     projectId: '54a2nh',
     viewportHeight: 700,

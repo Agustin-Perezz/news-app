@@ -45,8 +45,14 @@ export const GeneralCard: React.FC<Props> = ({ dataArticle }) => {
           <CustomChip label={dataArticle.published_at} />
         </Box>
         <CardContent>
-          <Typography variant="subtitle1">{dataArticle.title}</Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography data-testid="card-title" variant="subtitle1">
+            {dataArticle.title}
+          </Typography>
+          <Typography
+            data-testid="card-description"
+            variant="body2"
+            color="text.secondary"
+          >
             {dataArticle.description}
           </Typography>
           {dataArticle.categories && (

@@ -1,0 +1,80 @@
+{
+  "meta": { "found": 104435, "returned": 5, "limit": 5, "page": 1 },
+  "data": [
+    {
+      "uuid": "9aaa0d19-30d8-4b74-a87f-5c0899b3def4",
+      "title": "Dembele delights but frustrates in pivotal Barcelona win",
+      "description": "Barcelona took advantage of an opening that Real Madrid left at the top of LaLiga and beat Atletico Madrid to move up.",
+      "keywords": "",
+      "snippet": "Ousmane Dembele scores the lone goal to give Barcelona a 1-0 win. Stefan Savic and Ferran Torres also are sent off with red cards following an on-field scuffle....",
+      "url": "https://www.espn.co.uk/football/spanish-laliga/story/4848268/dembele-delights-but-frustrates-in-pivotal-barcelona-win",
+      "image_url": "https://a1.espncdn.com/combiner/i?img=%2Fphoto%2F2023%2F0108%2Fr1115165_1296x729_16%2D9.jpg",
+      "language": "en",
+      "published_at": "2023-01-09T19:08:24.000000Z",
+      "source": "espn.co.uk",
+      "categories": ["sports"],
+      "relevance_score": null,
+      "locale": "gb"
+    },
+    {
+      "uuid": "a6931c28-b6be-4632-a9a1-2d913707b443",
+      "title": "Carlos Alcaraz: Southampton have signed midfielder for £12m, say Racing Club",
+      "description": "Southampton have signed midfielder Carlos Alcaraz for £12m from Racing Club, says the Argentine club.",
+      "keywords": "",
+      "snippet": "Last updated on .From the section Southampton\n\nAlcaraz has scored 13 goals in 83 appearances for Racing Club\n\nSouthampton have signed midfielder Carlos Alcaraz ...",
+      "url": "https://www.bbc.co.uk/sport/football/64216310?at_medium=RSS&at_campaign=KARANGA",
+      "image_url": "https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/155E4/production/_128242578_gettyimages-1241110045.jpg",
+      "language": "en",
+      "published_at": "2023-01-09T18:43:58.000000Z",
+      "source": "bbc.co.uk",
+      "categories": ["sports"],
+      "relevance_score": null,
+      "locale": "gb"
+    },
+    {
+      "uuid": "437ab128-51ec-4030-ab6c-16fbac1a84aa",
+      "title": "Ligue 1: OGC Nizza trennt sich nach Cup-Aus von Lucien Favre",
+      "description": "Lucien Favre (65) ist nicht mehr Trainer von Nizza. Der Klub bestätigt am Abend die Entlassung, welche die Zeitung «L'Équipe» bereits am Nachmittag vermelde...",
+      "keywords": "",
+      "snippet": "Lucien Favre (65) ist nicht mehr Trainer von Nizza. Der Klub bestätigt am Abend die Entlassung, welche die Zeitung «L'Équipe» bereits am Nachmittag vermelde...",
+      "url": "https://www.blick.ch/sport/fussball/international/klub-bestaetigt-lucien-favre-bei-nizza-entlassen-id18212272.html",
+      "image_url": "https://img.blick.ch/incoming/18211822-v3-1245668976.jpg?imwidth=2000&ratio=16_9&x=0&y=0&width=5568&height=3135",
+      "language": "de",
+      "published_at": "2023-01-09T18:39:27.000000Z",
+      "source": "blick.ch",
+      "categories": ["sports", "general"],
+      "relevance_score": null,
+      "locale": "ch"
+    },
+    {
+      "uuid": "9d18685a-11ee-4d85-b3f0-53a285d96cf7",
+      "title": "Ideson to skip Canadian entry at 2023 world wheelchair curling championship",
+      "description": "Mark Ideson will skip the Canadian entry at the 2023 world wheelchair curling championship. He will be joined by Jon Thurston, Ina Forrest, Gil Dash and Marie W...",
+      "keywords": "",
+      "snippet": "Mark Ideson will skip the Canadian entry at the 2023 world wheelchair curling championship, while Collinda Joseph (Stittsville, Ont.) and Dennis Thiessen (Cryst...",
+      "url": "https://www.cbc.ca/sports/paralympics/winter-sports/wheelchair-curling/ideson-skips-canada-at-world-wheelchair-curling-championship-jan-9-1.6707928?cmp=rss",
+      "image_url": "https://i.cbc.ca/1.6707959.1673288775!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_620/china-wheelchair-curling-worlds.jpg",
+      "language": "en",
+      "published_at": "2023-01-09T18:32:59.000000Z",
+      "source": "cbc.ca",
+      "categories": ["sports"],
+      "relevance_score": null,
+      "locale": "ca"
+    },
+    {
+      "uuid": "732df593-f044-4a56-bbdb-0a84e1f15700",
+      "title": "Langlauf: Nadine Fähndrich sahnt im Weltcup ab wie nie",
+      "description": "Langlauf-Überfliegerin Nadine Fähndrich bestreitet die erfolgreichste Saison ihrer Karriere – das macht sich auch auf dem Konto bezahlt.",
+      "keywords": "",
+      "snippet": "Langlauf-Überfliegerin Nadine Fähndrich bestreitet die erfolgreichste Saison ihrer Karriere – das macht sich auch auf dem Konto bezahlt.\n\n1/6 Nadine Fähndr...",
+      "url": "https://www.blick.ch/sport/wintersport/langlauf/vorsaison-verdienst-schon-fast-verdoppelt-faehndrich-sahnt-im-weltcup-ab-wie-nie-zuvor-id18209735.html",
+      "image_url": "https://img.blick.ch/incoming/18189474-v2-freshfocus-1247588.jpg?imwidth=2000&ratio=16_9&x=240&y=1778&width=5332&height=3002",
+      "language": "de",
+      "published_at": "2023-01-09T18:31:48.000000Z",
+      "source": "blick.ch",
+      "categories": ["sports", "general"],
+      "relevance_score": null,
+      "locale": "ch"
+    }
+  ]
+}
