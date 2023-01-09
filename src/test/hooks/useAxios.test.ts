@@ -1,6 +1,6 @@
 import { renderHook, act } from '@testing-library/react';
-import { useAxios } from '../../hooks';
 import { newsApi } from '../../api';
+import { useAxios } from '../../hooks/useAxios';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 

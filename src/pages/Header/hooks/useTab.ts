@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import { CacheContext } from '../../../context/CacheContext';
-import { SubmitProps } from '../../../hooks';
 import { getPreviusCategoryParameters } from '../../../utilities';
 import { listCategories } from '../Components/CategoriesNavBar';
+import { SubmitProps } from './useSearch';
 
 type Props = {
   handleClick: ({

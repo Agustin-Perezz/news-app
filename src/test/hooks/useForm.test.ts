@@ -1,5 +1,5 @@
 import { renderHook, act } from '@testing-library/react';
-import { useForm } from '../../hooks';
+import { useForm } from '../../pages/Header/hooks';
 
 describe('Test in useForm', () => {
   function setup(param: string) {

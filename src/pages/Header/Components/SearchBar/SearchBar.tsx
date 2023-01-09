@@ -2,7 +2,7 @@ import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import { Box } from '@mui/material';
 import { Search, StyledInputBase, CustomButton } from './CustomStyles';
-import { SubmitProps, useForm } from '../../../../hooks';
+import { SubmitProps, useForm } from '../../hooks';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 

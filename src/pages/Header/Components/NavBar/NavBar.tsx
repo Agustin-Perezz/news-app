@@ -4,7 +4,7 @@ import { SearchBar } from '../SearchBar';
 import { CategoriesNavBar } from '../CategoriesNavBar';
 import { CustomStack } from '../../../../components/CustomStack';
 import { SocialMedia } from '../../../../components/ui/SocialMedia';
-import { useSearch } from '../../../../hooks';
+import { useSearch } from '../../hooks';
 
 import news_logo from '../../../../assets/images/news-logo.png';
 

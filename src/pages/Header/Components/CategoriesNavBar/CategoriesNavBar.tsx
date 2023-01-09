@@ -1,7 +1,6 @@
 import { Box, Tabs, ThemeProvider, Tab } from '@mui/material';
 import { listCategories } from './listCategories';
-import { useTab } from '../../hooks';
-import { SubmitProps } from '../../../../hooks';
+import { SubmitProps, useTab } from '../../hooks';
 import { CustomTab, tabFont } from './customStyleTab';
 
 type Props = {
