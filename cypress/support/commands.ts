@@ -28,7 +28,6 @@ const awaitInitialData = () => {
 
 type Props = { url: string; nameFixture: string };
 const interceptFetch = ({ url, nameFixture }: Props) => {
-  console.log('url: ', `${Cypress.env('API_URL')}${url}`);
   cy.intercept('GET', `${Cypress.env('API_URL')}${url}`, {
     fixture: nameFixture,
   }).as(`${nameFixture}Success`);
