@@ -6,13 +6,9 @@ export const getPreviusCategoryParameters = (pathname: string) => {
   const idxOldCategory = listCategories.findIndex(
     (cat) => cat.category === keyCategory
   );
+
   return {
     keyCategory,
     idxOldCategory,
-    oldCategoryParameters: {
-      urlParameter: listCategories[idxOldCategory].category,
-      endpoint: listCategories[idxOldCategory].endpoint,
-      navigateUrl: listCategories[idxOldCategory].url,
-    },
   };
 };

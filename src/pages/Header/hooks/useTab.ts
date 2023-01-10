@@ -27,12 +27,14 @@ export const useTab = ({ handleClick: handleSubmit }: Props) => {
     if (pathname === '/search') {
       return;
     }
-    const { keyCategory, oldCategoryParameters, idxOldCategory } =
+
+    const { keyCategory, idxOldCategory } =
       getPreviusCategoryParameters(pathname);
-    if (cache?.key === keyCategory) {
-      setValueTab(idxOldCategory + 1);
+    if (keyCategory !== undefined && cache?.key === keyCategory) {
       handleSubmit({
-        ...oldCategoryParameters,
+        urlParameter: listCategories[idxOldCategory].category,
+        endpoint: listCategories[idxOldCategory].endpoint,
+        navigateUrl: listCategories[idxOldCategory].url,
       });
       return;
     }
