@@ -32,11 +32,9 @@ export const GeneralCard: React.FC<Props> = ({ dataArticle }) => {
           <CardMedia
             component="img"
             height="185px"
-            image={loaded ? dataArticle.image_url : load_image}
+            src={loaded ? dataArticle.image_url : load_image}
             alt={dataArticle.nameSource}
-            onError={({ currentTarget }) => {
-              onError({ currentTarget });
-            }}
+            onError={({ currentTarget }) => onError({ currentTarget })}
             onLoad={() => {
               onLoad();
             }}
