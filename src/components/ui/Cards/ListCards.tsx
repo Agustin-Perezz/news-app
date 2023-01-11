@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import { NewsProps } from '../../../types/news-props';
 import { GeneralCard } from './GeneralCard';
 import { RenderController } from '../RenderController';
@@ -22,9 +22,6 @@ export const ListCards: React.FC<Props> = ({
       data={dataArticles}
     >
       <Box sx={{ flexGrow: 1, my: 3 }}>
-        <Typography variant="h5" mb={3} textAlign="center" color="snow">
-          Results for search:
-        </Typography>
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}
