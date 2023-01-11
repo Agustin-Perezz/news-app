@@ -5,6 +5,7 @@ import {
   Card,
   CardContent,
   CardMedia,
+  Fade,
 } from '@mui/material';
 
 export const LoadingSkeleton: React.FC = () => {
@@ -25,43 +26,45 @@ export const LoadingSkeleton: React.FC = () => {
           .map((__, index) => (
             // eslint-disable-next-line react/no-array-index-key
             <Grid item xs={2} sm={4} md={3.5} key={index}>
-              <Card sx={{ height: '448px', width: '278px' }}>
-                <CardMedia>
-                  <Skeleton
-                    variant="rectangular"
-                    animation="wave"
-                    width="100%"
-                    height="170px"
-                  />
-                </CardMedia>
-                <CardContent>
-                  <Skeleton
-                    variant="rounded"
-                    animation="wave"
-                    width="90%"
-                    height="25px"
-                    sx={{ marginTop: '10px' }}
-                  />
-                  <Skeleton
-                    animation="wave"
-                    width="100%"
-                    height="18px"
-                    sx={{ marginY: '5px', marginTop: '18px' }}
-                  />
-                  <Skeleton animation="wave" width="90%" height="18px" />
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      justifyContent: 'flex-start',
-                      gap: '5px',
-                      marginTop: '15px',
-                    }}
-                  >
-                    <Skeleton animation="wave" width="20%" height="18px" />
-                    <Skeleton animation="wave" width="40%" height="18px" />
-                  </Box>
-                </CardContent>
-              </Card>
+              <Fade timeout={1500} in>
+                <Card sx={{ height: '448px', width: '278px' }}>
+                  <CardMedia>
+                    <Skeleton
+                      variant="rectangular"
+                      animation="wave"
+                      width="100%"
+                      height="170px"
+                    />
+                  </CardMedia>
+                  <CardContent>
+                    <Skeleton
+                      variant="rounded"
+                      animation="wave"
+                      width="90%"
+                      height="25px"
+                      sx={{ marginTop: '10px' }}
+                    />
+                    <Skeleton
+                      animation="wave"
+                      width="100%"
+                      height="18px"
+                      sx={{ marginY: '5px', marginTop: '18px' }}
+                    />
+                    <Skeleton animation="wave" width="90%" height="18px" />
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        justifyContent: 'flex-start',
+                        gap: '5px',
+                        marginTop: '15px',
+                      }}
+                    >
+                      <Skeleton animation="wave" width="20%" height="18px" />
+                      <Skeleton animation="wave" width="40%" height="18px" />
+                    </Box>
+                  </CardContent>
+                </Card>
+              </Fade>
             </Grid>
           ))}
       </Grid>
