@@ -1,3 +1,4 @@
+// eslint-disabled import/first
 import React from 'react';
 import {
   CardActionArea,
@@ -8,18 +9,17 @@ import {
 } from '@mui/material';
 import { NewsProps } from '../../../types/news-props';
 import { CategoriesArticles } from './Categories';
+import { CustomCard, CustomChip } from './customStyleCard';
 import { useLoadImage } from '../../../hooks';
 
-import not_found from '../../../assets/images/not-found-image.png';
 import load_image from '../../../assets/images/load-image.jpg';
-import { CustomCard, CustomChip } from './customStyleCard';
 
 interface Props {
   dataArticle: NewsProps;
 }
 
 export const GeneralCard: React.FC<Props> = ({ dataArticle }) => {
-  const { loaded, setLoaded } = useLoadImage();
+  const { loaded, onError, onLoad } = useLoadImage();
 
   return (
     <CustomCard>
@@ -35,11 +35,10 @@ export const GeneralCard: React.FC<Props> = ({ dataArticle }) => {
             image={loaded ? dataArticle.image_url : load_image}
             alt={dataArticle.nameSource}
             onError={({ currentTarget }) => {
-              currentTarget.onerror = null;
-              currentTarget.src = not_found;
+              onError({ currentTarget });
             }}
             onLoad={() => {
-              setLoaded(true);
+              onLoad();
             }}
           />
           <CustomChip label={dataArticle.published_at} />
