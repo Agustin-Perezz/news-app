@@ -21,24 +21,22 @@ export const ListCards: React.FC<Props> = ({
       isError={isError}
       data={dataArticles}
     >
-      <Box sx={{ flexGrow: 1, my: 3 }}>
-        <Grid
-          container
-          spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 0, sm: 8, md: 13 }}
-          justifyContent="center"
-          sx={{
-            maxWidth: '1200px',
-            margin: '0px auto 20px auto !important',
-          }}
-        >
-          {dataArticles?.map((article) => (
-            <Grid item xs={2} sm={4} md={3.5} key={article.uuid}>
-              <GeneralCard dataArticle={article} />
-            </Grid>
-          ))}
+      <Grid sx={{ flexGrow: 1 }} spacing={2}>
+        <Grid item xs={12} sx={{ justifyContent: 'center', display: 'flex' }}>
+          <Grid
+            container
+            spacing={2}
+            justifyContent="center"
+            sx={{ maxWidth: '900px' }}
+          >
+            {dataArticles?.map((article) => (
+              <Grid key={article.uuid} item>
+                <GeneralCard dataArticle={article} />
+              </Grid>
+            ))}
+          </Grid>
         </Grid>
-      </Box>
+      </Grid>
     </RenderController>
   );
 };
