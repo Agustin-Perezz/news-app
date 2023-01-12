@@ -27,6 +27,7 @@
     "build:production": "react-scripts build",
     "test": "jest",
     "test:watch": "jest --watchAll",
+    "test:coverage": "jest --coverage",
     "cypress": "npx cypress run --record --key b97e5b16-85c6-43b7-9284-fc9e7726fe22",
     "cypress:open": "cypress open --browser chrome --e2e",
     "pre-push": "npm run test && npm run cypress",
@@ -93,6 +94,11 @@
     "testEnvironment": "jsdom",
     "setupFilesAfterEnv": [
       "<rootDir>/src/setupTests.ts"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "html"
     ]
   }
 }
