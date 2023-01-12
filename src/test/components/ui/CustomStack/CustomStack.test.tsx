@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { CustomStack } from '../../../components/CustomStack';
+import { CustomStack } from '../../../../components/ui/CustomStack';
 
 describe('Test in <CustomStack />', () => {
   let globalContainer: HTMLElement;
