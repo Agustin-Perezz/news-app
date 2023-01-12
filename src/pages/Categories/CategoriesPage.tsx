@@ -18,7 +18,7 @@ export const CategoriesPage: React.FC = () => {
         dataArticles={data}
         isLoading={isLoading}
         isError={isError}
-        titleText="Results for search."
+        titleText="Results from the category."
       />
     </Box>
   );
