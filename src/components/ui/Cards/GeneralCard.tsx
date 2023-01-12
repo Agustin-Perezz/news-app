@@ -26,7 +26,7 @@ export const GeneralCard: React.FC<Props> = ({ dataArticle }) => {
       <CardActionArea
         target="_blank"
         href={dataArticle.url}
-        sx={{ minHeight: 'inherit' }}
+        sx={{ height: '470px' }}
       >
         <Box sx={{ position: 'relative' }}>
           <CardMedia

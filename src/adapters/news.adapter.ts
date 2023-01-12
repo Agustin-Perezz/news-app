@@ -9,7 +9,10 @@ export const createAddaptNew = (
     const dateFormated = dateFormat(data.published_at);
     return {
       uuid: data.uuid,
-      title: data.title,
+      title:
+        data.title.length >= 80
+          ? `${data.title.substring(0, 80)}...`
+          : data.title,
       description: data.description,
       image_url: data.image_url,
       published_at: dateFormated,
