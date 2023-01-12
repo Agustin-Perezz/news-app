@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { SocialMedia } from '../../../components/ui/SocialMedia';
+import { SocialMedia } from '../../../../components/ui/SocialMedia';
 
 describe('Test in <SocialMedia />', () => {
   let globalContainer: HTMLElement;
