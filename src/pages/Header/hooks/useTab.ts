@@ -31,6 +31,7 @@ export const useTab = ({ handleClick: handleSubmit }: Props) => {
     const { keyCategory, idxOldCategory } =
       getPreviusCategoryParameters(pathname);
     if (keyCategory !== undefined && cache?.key === keyCategory) {
+      setValueTab(idxOldCategory + 1);
       handleSubmit({
         urlParameter: listCategories[idxOldCategory].category,
         endpoint: listCategories[idxOldCategory].endpoint,
