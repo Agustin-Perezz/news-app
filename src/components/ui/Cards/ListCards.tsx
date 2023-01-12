@@ -24,7 +24,7 @@ export const ListCards: React.FC<Props> = ({
       isError={isError}
       data={dataArticles}
     >
-      <Grid sx={{ flexGrow: 1 }}>
+      <Grid sx={{ flexGrow: 1, margin: '25px 0px' }}>
         <Grid
           item
           xs={12}
