@@ -23,7 +23,8 @@ describe('Test in <HomePage />', () => {
   });
   it('should show initial messages', () => {
     setup();
-    screen.getByText('Results for search:');
+    screen.debug();
+    screen.getByText('More recent top news.');
     screen.getByText('Welcome.');
   });
   it('should show defaults top news in view', async () => {
@@ -32,6 +33,6 @@ describe('Test in <HomePage />', () => {
       expect(screen.getByText(article.title)).toBeInTheDocument();
     });
     const cards = container.getElementsByClassName('MuiGrid-item');
-    expect(cards.length).toBe(2);
+    expect(cards.length).toBe(3);
   });
 });

@@ -38,7 +38,7 @@ export const CustomGrid = styled(MuiGrid)(() => ({
   '& > :first-of-type': {
     position: 'relative',
   },
-  maxWidth: '900px',
+  maxWidth: '950px',
   justifyContent: 'center',
   marginTop: '10px',
 }));
@@ -46,5 +46,5 @@ export const CustomGrid = styled(MuiGrid)(() => ({
 export const CustomTitle = styled(MuiTypography)(() => ({
   position: 'absolute',
   top: '-20px',
-  left: '15px',
+  left: '25px',
 }));

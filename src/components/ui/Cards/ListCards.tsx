@@ -24,7 +24,7 @@ export const ListCards: React.FC<Props> = ({
       isError={isError}
       data={dataArticles}
     >
-      <Grid sx={{ flexGrow: 1 }} spacing={2}>
+      <Grid sx={{ flexGrow: 1 }}>
         <Grid
           item
           xs={12}
@@ -34,7 +34,7 @@ export const ListCards: React.FC<Props> = ({
             position: 'relative',
           }}
         >
-          <CustomGrid container spacing={2}>
+          <CustomGrid container spacing={3}>
             {dataArticles?.map((article, index) => (
               <Grid key={article.uuid} item>
                 <GeneralCard dataArticle={article} />
