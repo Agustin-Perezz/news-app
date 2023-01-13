@@ -4,7 +4,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { dataMedia } from './data-media';
-import { CustomStack } from '../../CustomStack';
+import { CustomStack } from '../CustomStack';
 
 export const SocialMedia: React.FC = () => {
   return (

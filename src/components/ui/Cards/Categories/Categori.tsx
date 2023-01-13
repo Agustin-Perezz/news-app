@@ -15,6 +15,7 @@ export const Categori: React.FC<Props> = ({ categori }) => {
         height: '25px',
         border: `1px solid ${categori.color}`,
         marginRight: '5px',
+        marginBottom: '5px',
       }}
     />
   );

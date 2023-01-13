@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { GeneralCard } from '../../../../pages/News/components';
+import { GeneralCard } from '../../../../components/ui/Cards/GeneralCard';
 import { mockArticle } from './mockArticles';
 
 describe('Test in <GeneralCard />', () => {

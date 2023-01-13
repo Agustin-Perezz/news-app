@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { ListCards } from '../../../../pages/News/components';
+import { ListCards } from '../../../../components/ui/Cards';
 import { NewsProps } from '../../../../types';
 import { mockArticles as data } from './mockArticles';
 

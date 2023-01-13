@@ -1,10 +1,10 @@
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { createAddaptNew } from '../adapters';
-import { newsApi } from '../api';
-import { NewsContext } from '../context/NewsContext';
-import { NewsResponseProps } from '../types';
-import { useAxios } from './useAxios';
+import { createAddaptNew } from '../../../adapters';
+import { newsApi } from '../../../api';
+import { NewsContext } from '../../../context/NewsContext';
+import { NewsResponseProps } from '../../../types';
+import { useAxios } from '../../../hooks/useAxios';
 
 export type SubmitProps = {
   endpoint: string;

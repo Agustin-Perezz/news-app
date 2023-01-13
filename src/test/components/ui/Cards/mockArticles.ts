@@ -6,6 +6,7 @@ export const mockArticle = {
     'http://resource.calcionapoli24.it/www/thumbs/643x350/1669410893_106.jpg',
   published_at: '11/25/2022',
   nameSource: 'calcionapoli24.it',
+  url: 'https://google.com',
   categories: [
     {
       type: 'sports',
@@ -22,6 +23,7 @@ export const mockArticles = [
       'http://resource.calcionapoli24.it/www/thumbs/643x350/1669410893_106.jpg',
     published_at: '11/25/2022',
     nameSource: 'calcionapoli24.it',
+    url: 'https://google.com',
     categories: [
       {
         type: 'tech',
@@ -37,6 +39,7 @@ export const mockArticles = [
       'http://resource.calcionapoli24.it/www/thumbs/643x350/1669410893_106.jpg',
     published_at: '11/25/2022',
     nameSource: 'calcionapoli24.it',
+    url: 'https://google.com',
     categories: [
       {
         type: 'sports',

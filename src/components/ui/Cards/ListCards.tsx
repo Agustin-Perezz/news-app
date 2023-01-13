@@ -1,19 +1,22 @@
 import React from 'react';
-import { Box, Grid, Typography } from '@mui/material';
+import { Grid } from '@mui/material';
 import { NewsProps } from '../../../types/news-props';
 import { GeneralCard } from './GeneralCard';
 import { RenderController } from '../RenderController';
+import { CustomGrid, CustomTitle } from './customStyleCard';
 
 interface Props {
   dataArticles?: NewsProps[];
   isLoading: boolean;
   isError?: string;
+  titleText?: string;
 }
 
 export const ListCards: React.FC<Props> = ({
   dataArticles,
   isLoading,
   isError,
+  titleText,
 }) => {
   return (
     <RenderController
@@ -21,27 +24,28 @@ export const ListCards: React.FC<Props> = ({
       isError={isError}
       data={dataArticles}
     >
-      <Box sx={{ flexGrow: 1, my: 3 }}>
-        <Typography variant="h5" mb={3} textAlign="center" color="snow">
-          Results for search:
-        </Typography>
+      <Grid sx={{ flexGrow: 1, margin: '25px 0px' }}>
         <Grid
-          container
-          spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 0, sm: 8, md: 13 }}
-          justifyContent="center"
+          item
+          xs={12}
           sx={{
-            maxWidth: '1200px',
-            margin: '0px auto 20px auto !important',
+            justifyContent: 'center',
+            display: 'flex',
+            position: 'relative',
           }}
         >
-          {dataArticles?.map((article) => (
-            <Grid item xs={2} sm={4} md={3.5} key={article.uuid}>
-              <GeneralCard dataArticle={article} />
-            </Grid>
-          ))}
+          <CustomGrid container spacing={3}>
+            {dataArticles?.map((article, index) => (
+              <Grid key={article.uuid} item>
+                <GeneralCard dataArticle={article} />
+                {index === 0 && (
+                  <CustomTitle variant="h6"> {titleText} </CustomTitle>
+                )}
+              </Grid>
+            ))}
+          </CustomGrid>
         </Grid>
-      </Box>
+      </Grid>
     </RenderController>
   );
 };

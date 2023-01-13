@@ -23,7 +23,6 @@ export type NewsProps = Omit<
   | 'relevance_score'
   | 'keywords'
   | 'snippet'
-  | 'url'
   | 'language'
   | 'source'
   | 'categories'

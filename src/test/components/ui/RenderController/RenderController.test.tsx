@@ -2,8 +2,8 @@ import { render, screen } from '@testing-library/react';
 import {
   PropsRender,
   RenderController,
-} from '../../../components/ui/RenderController';
-import { NewsProps } from '../../../types';
+} from '../../../../components/ui/RenderController';
+import { NewsProps } from '../../../../types';
 
 describe('Test in <RenderController />', () => {
   function setup(params: PropsRender) {
