@@ -23,7 +23,6 @@ describe('Test in <HomePage />', () => {
   });
   it('should show initial messages', () => {
     setup();
-    screen.debug();
     screen.getByText('More recent top news.');
     screen.getByText('Welcome.');
   });

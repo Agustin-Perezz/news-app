@@ -4,7 +4,7 @@ import { categoriesFormat, dateFormat } from '../utilities';
 export const createAddaptNew = (
   newResponse: NewsResponseProps
 ): NewsProps[] => {
-  const listArticles: NewsProps[] = newResponse.data.map((data) => {
+  const listArticles: NewsProps[] = newResponse?.data.map((data) => {
     const categories = categoriesFormat(data.categories);
     const dateFormated = dateFormat(data.published_at);
     return {
