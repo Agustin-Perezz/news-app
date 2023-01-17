@@ -25,11 +25,20 @@ export const CategoryProvider: React.FC<Props> = ({ children }) => {
     setActiveCategory((prev) => ({ ...prev, activeCategoryTab: newValue }));
   };
 
+  const handleClickDrawer = (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>,
+    category: string
+  ) => {
+    setActiveCategory((prev) => ({ ...prev, activeCategoryDrawer: category }));
+  };
+
   useCacheCategory({ setActiveCategory });
 
   return (
-    // eslint-disable-next-line react/jsx-no-constructed-context-values
-    <CategoryContext.Provider value={{ ...activeCategory, handleChangeTab }}>
+    <CategoryContext.Provider
+      // eslint-disable-next-line react/jsx-no-constructed-context-values
+      value={{ ...activeCategory, handleChangeTab, handleClickDrawer }}
+    >
       {children}
     </CategoryContext.Provider>
   );
