@@ -12,7 +12,7 @@ export const CategoriesNavBar: React.FC<Props> = ({
   activeCategoryTab,
 }) => {
   return (
-    <Box sx={{ width: '100%', marginTop: '15px' }}>
+    <Box sx={{ width: '100%' }}>
       <Box
         sx={{
           borderBottom: 1,

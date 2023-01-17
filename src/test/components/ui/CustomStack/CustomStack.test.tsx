@@ -10,7 +10,6 @@ describe('Test in <CustomStack />', () => {
           alignItems: 'center',
           direction: 'row',
           justifyContent: 'space-around',
-          marginBottom: 2,
         }}
       >
         <h2> Title example </h2>

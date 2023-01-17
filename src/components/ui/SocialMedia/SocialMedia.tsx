@@ -13,7 +13,7 @@ export const SocialMedia: React.FC = () => {
         alignItems: 'center',
         justifyContent: 'center',
         direction: 'row',
-        marginBottom: 0,
+        margin: '0',
       }}
     >
       <a href={dataMedia[0].url} target="_black">

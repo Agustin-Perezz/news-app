@@ -5,7 +5,7 @@ type CustomStackProps = {
   direction: StackProps['direction'];
   justifyContent: StackProps['justifyContent'];
   alignItems: StackProps['alignItems'];
-  marginBottom?: number;
+  margin?: string;
   width?: string;
 };
 

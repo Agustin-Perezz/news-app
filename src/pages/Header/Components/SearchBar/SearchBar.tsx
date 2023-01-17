@@ -1,7 +1,11 @@
 import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
-import { Box } from '@mui/material';
-import { Search, StyledInputBase, CustomButton } from './CustomStyles';
+import {
+  Search,
+  StyledInputBase,
+  CustomButton,
+  CustomBox,
+} from './CustomStyles';
 import { useForm } from '../../hooks';
 import { HandleSubmitProps } from '../../../../types';
 
@@ -11,8 +15,7 @@ export const SearchBar: React.FC<HandleSubmitProps> = ({ handleSubmit }) => {
   const { onChange, query } = useForm('');
 
   return (
-    <Box
-      sx={{ width: '500px', margin: '0px 40px' }}
+    <CustomBox
       component="form"
       onSubmit={async (e) => {
         e.preventDefault();
@@ -34,6 +37,6 @@ export const SearchBar: React.FC<HandleSubmitProps> = ({ handleSubmit }) => {
           onChange={(event) => onChange(event.target.value)}
         />
       </Search>
-    </Box>
+    </CustomBox>
   );
 };

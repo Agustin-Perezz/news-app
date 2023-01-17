@@ -1,6 +1,7 @@
 import { styled, alpha } from '@mui/material/styles';
 import { InputBase } from '@mui/material';
 import MuiButton from '@mui/material/Button';
+import MuiBox from '@mui/material/Box';
 
 export const Search = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -48,4 +49,10 @@ export const StyledInputBase = styled(InputBase)(({ theme }) => ({
       width: '40ch',
     },
   },
+}));
+
+export const CustomBox = styled(MuiBox)(() => ({
+  maxWidth: '480px',
+  width: '100%',
+  marginRight: '10px',
 }));
