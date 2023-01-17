@@ -3,9 +3,14 @@ import { listCategories } from './listCategories';
 import { CustomTab, tabFont } from './customStyleTab';
 import { HandleChangeTabProps, HandleClickProps } from '../../../../types';
 
-type Props = HandleClickProps & HandleChangeTabProps;
+type Props = HandleClickProps &
+  HandleChangeTabProps & { activeCategoryTab: number };
 
-export const CategoriesNavBar: React.FC<Props> = ({ handleClick }) => {
+export const CategoriesNavBar: React.FC<Props> = ({
+  handleClick,
+  handleChangeTab,
+  activeCategoryTab,
+}) => {
   return (
     <Box sx={{ width: '100%', marginTop: '15px' }}>
       <Box
@@ -19,8 +24,8 @@ export const CategoriesNavBar: React.FC<Props> = ({ handleClick }) => {
       >
         <ThemeProvider theme={tabFont}>
           <Tabs
-            value={0}
-            // onChange={handleChange}
+            value={activeCategoryTab}
+            onChange={handleChangeTab}
             aria-label="category-tabs"
             indicatorColor="secondary"
           >
