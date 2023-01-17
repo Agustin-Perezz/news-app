@@ -1,11 +1,14 @@
 import React, { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import { CacheContext } from '../../../context/CacheContext';
+import { SetActiveCategoryProps } from '../../../context/CategoryContext';
 import { getPreviusCategoryParameters } from '../../../utilities';
 import { listCategories } from '../Components/CategoriesNavBar';
 import { useSearch } from './useSearch';
 
-export const useCacheCategory = () => {
+export const useCacheCategory = ({
+  setActiveCategory,
+}: SetActiveCategoryProps) => {
   const { handleSubmit } = useSearch();
   const { cache } = useContext(CacheContext);
   const { pathname } = useLocation();
@@ -18,6 +21,10 @@ export const useCacheCategory = () => {
     const { keyCategory, idxOldCategory } =
       getPreviusCategoryParameters(pathname);
     if (keyCategory !== undefined && cache?.key === keyCategory) {
+      setActiveCategory((prev) => ({
+        ...prev,
+        activeCategoryTab: idxOldCategory + 1,
+      }));
       handleSubmit({
         urlParameter: listCategories[idxOldCategory].category,
         endpoint: listCategories[idxOldCategory].endpoint,

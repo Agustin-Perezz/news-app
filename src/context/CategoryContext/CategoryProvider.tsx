@@ -8,6 +8,10 @@ type Props = {
 
 type StateProps = { activeCategoryTab: number; activeCategoryDrawer: string };
 
+export type SetActiveCategoryProps = {
+  setActiveCategory: (value: React.SetStateAction<StateProps>) => void;
+};
+
 const INIT_STATE: StateProps = {
   activeCategoryTab: 1,
   activeCategoryDrawer: 'home',
@@ -21,7 +25,7 @@ export const CategoryProvider: React.FC<Props> = ({ children }) => {
     setActiveCategory((prev) => ({ ...prev, activeCategoryTab: newValue }));
   };
 
-  useCacheCategory();
+  useCacheCategory({ setActiveCategory });
 
   return (
     // eslint-disable-next-line react/jsx-no-constructed-context-values
