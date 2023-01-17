@@ -1,19 +1,11 @@
 import { Box, Tabs, ThemeProvider, Tab } from '@mui/material';
 import { listCategories } from './listCategories';
-import { SubmitProps } from '../../hooks';
 import { CustomTab, tabFont } from './customStyleTab';
+import { HandleChangeTabProps, HandleClickProps } from '../../../../types';
 
-type Props = {
-  handleClick: ({
-    navigateUrl,
-    endpoint,
-    urlParameter,
-  }: SubmitProps) => Promise<void>;
-};
+type Props = HandleClickProps & HandleChangeTabProps;
 
 export const CategoriesNavBar: React.FC<Props> = ({ handleClick }) => {
-  // const { valueTab, handleChange } = useTab();
-
   return (
     <Box sx={{ width: '100%', marginTop: '15px' }}>
       <Box

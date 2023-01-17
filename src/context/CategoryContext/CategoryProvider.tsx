@@ -16,15 +16,16 @@ const INIT_STATE: StateProps = {
 export const CategoryProvider: React.FC<Props> = ({ children }) => {
   const [activeCategory, setActiveCategory] =
     React.useState<StateProps>(INIT_STATE);
-  // const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-  //   setValueTab(newValue);
-  // };
+
+  const handleChangeTab = (event: React.SyntheticEvent, newValue: number) => {
+    setActiveCategory((prev) => ({ ...prev, activeCategoryTab: newValue }));
+  };
 
   useCacheCategory();
 
   return (
     // eslint-disable-next-line react/jsx-no-constructed-context-values
-    <CategoryContext.Provider value={{ ...activeCategory }}>
+    <CategoryContext.Provider value={{ ...activeCategory, handleChangeTab }}>
       {children}
     </CategoryContext.Provider>
   );

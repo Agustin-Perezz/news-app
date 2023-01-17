@@ -2,19 +2,12 @@ import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import { Box } from '@mui/material';
 import { Search, StyledInputBase, CustomButton } from './CustomStyles';
-import { SubmitProps, useForm } from '../../hooks';
+import { useForm } from '../../hooks';
+import { HandleSubmitProps } from '../../../../types';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-type Props = {
-  handleSubmit: ({
-    navigateUrl,
-    endpoint,
-    urlParameter,
-  }: SubmitProps) => Promise<void>;
-};
-
-export const SearchBar: React.FC<Props> = ({ handleSubmit }) => {
+export const SearchBar: React.FC<HandleSubmitProps> = ({ handleSubmit }) => {
   const { onChange, query } = useForm('');
 
   return (

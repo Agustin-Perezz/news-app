@@ -3,14 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { createAddaptNew } from '../../../adapters';
 import { newsApi } from '../../../api';
 import { NewsContext } from '../../../context/NewsContext';
-import { NewsResponseProps } from '../../../types';
+import { NewsResponseProps, SubmitProps } from '../../../types';
 import { useAxios } from '../../../hooks/useAxios';
-
-export type SubmitProps = {
-  endpoint: string;
-  urlParameter: string;
-  navigateUrl: string;
-};
 
 export const useSearch = () => {
   const { fetchData, isLoading, isError } = useAxios();

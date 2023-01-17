@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+
 import Box from '@mui/material/Box';
 import { ImageListItem } from '@mui/material';
 import { SearchBar } from '../SearchBar';
@@ -7,8 +9,10 @@ import { SocialMedia } from '../../../../components/ui/SocialMedia';
 import { useSearch } from '../../hooks';
 
 import news_logo from '../../../../assets/images/news-logo.png';
+import { CategoryContext } from '../../../../context/CategoryContext';
 
 export const NavBar: React.FC = () => {
+  const { handleChangeTab } = useContext(CategoryContext);
   const { handleSubmit } = useSearch();
 
   return (
@@ -37,7 +41,10 @@ export const NavBar: React.FC = () => {
         <SearchBar handleSubmit={handleSubmit} />
         <SocialMedia />
       </CustomStack>
-      <CategoriesNavBar handleClick={handleSubmit} />
+      <CategoriesNavBar
+        handleClick={handleSubmit}
+        handleChangeTab={handleChangeTab}
+      />
     </Box>
   );
 };
