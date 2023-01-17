@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import Box from '@mui/material/Box';
 import { ImageListItem } from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery/useMediaQuery';
 import { SearchBar } from '../SearchBar';
 import { CategoriesNavBar } from '../CategoriesNavBar';
 import { CustomStack } from '../../../../components/ui/CustomStack';
@@ -9,10 +10,12 @@ import { useSearch } from '../../hooks';
 import { CategoryContext } from '../../../../context/CategoryContext';
 
 import news_logo from '../../../../assets/images/news-logo.png';
+import { NavBarDrawer } from '../Drawer';
 
 export const NavBar: React.FC = () => {
   const { handleChangeTab, activeCategoryTab } = useContext(CategoryContext);
   const { handleSubmit } = useSearch();
+  const matches = useMediaQuery('(max-width:1000px)');
 
   return (
     <Box
@@ -40,11 +43,15 @@ export const NavBar: React.FC = () => {
         <SearchBar handleSubmit={handleSubmit} />
         <SocialMedia />
       </CustomStack>
-      <CategoriesNavBar
-        handleClick={handleSubmit}
-        handleChangeTab={handleChangeTab}
-        activeCategoryTab={activeCategoryTab}
-      />
+      {matches ? (
+        <NavBarDrawer handleSubmit={handleSubmit} />
+      ) : (
+        <CategoriesNavBar
+          handleClick={handleSubmit}
+          handleChangeTab={handleChangeTab}
+          activeCategoryTab={activeCategoryTab}
+        />
+      )}
     </Box>
   );
 };

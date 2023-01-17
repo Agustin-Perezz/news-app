@@ -7,10 +7,15 @@ import {
 
 describe('Test in <CategoriesNavBar.test />', () => {
   const handleClick = jest.fn();
+  const handleChangeTab = jest.fn();
   function setup() {
     const { container } = render(
       <MemoryRouter initialEntries={['/home']}>
-        <CategoriesNavBar handleClick={handleClick} />
+        <CategoriesNavBar
+          handleClick={handleClick}
+          handleChangeTab={handleChangeTab}
+          activeCategoryTab={1}
+        />
       </MemoryRouter>
     );
     return container;
