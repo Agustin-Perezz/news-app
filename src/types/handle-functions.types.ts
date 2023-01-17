@@ -2,6 +2,11 @@ export type HandleChangeTabProps = {
   handleChangeTab: (event: React.SyntheticEvent, newValue: number) => void;
 };
 
+export type ParamsHandleChangeTab = {
+  event: React.SyntheticEvent;
+  newValue: number;
+};
+
 export type SubmitProps = {
   endpoint: string;
   urlParameter: string;
@@ -22,4 +27,16 @@ export type HandleSubmitProps = {
     endpoint,
     urlParameter,
   }: SubmitProps) => Promise<void>;
+};
+
+export type HandleClickDrawerProps = {
+  handleClickDrawer: (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>,
+    category: string
+  ) => void;
+};
+
+export type ParamsHandleClickDrawer = {
+  event: React.MouseEvent<HTMLDivElement, MouseEvent>;
+  category: string;
 };
