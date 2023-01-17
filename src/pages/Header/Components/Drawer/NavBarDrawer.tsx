@@ -17,7 +17,7 @@ export const NavBarDrawer: React.FC<HandleSubmitProps> = ({ handleSubmit }) => {
           sx: { width: '70%' },
         }}
       >
-        <DrawerCategories handleClick={handleSubmit} />
+        <DrawerCategories handleClick={handleSubmit} handleSet={handleSet} />
       </Drawer>
       <IconButton onClick={handleSet}>
         <MenuRoundedIcon />

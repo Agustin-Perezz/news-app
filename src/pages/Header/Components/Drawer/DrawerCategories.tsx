@@ -6,8 +6,11 @@ import { drawerIcons } from './drawerIcons';
 import { CategoryContext } from '../../../../context/CategoryContext';
 import { HandleClickProps } from '../../../../types';
 
-export const DrawerCategories: React.FC<HandleClickProps> = ({
+type Props = HandleClickProps & { handleSet: () => void };
+
+export const DrawerCategories: React.FC<Props> = ({
   handleClick,
+  handleSet,
 }) => {
   const { activeCategoryDrawer, handleClickDrawer } =
     useContext(CategoryContext);
@@ -19,6 +22,7 @@ export const DrawerCategories: React.FC<HandleClickProps> = ({
           key={category}
           onClick={() => {
             handleClick({ urlParameter: category, endpoint, navigateUrl: url });
+            handleSet();
           }}
         >
           <DrawerCategory
