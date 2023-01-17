@@ -10,6 +10,7 @@ import news_logo from '../../../../assets/images/news-logo.png';
 
 export const NavBar: React.FC = () => {
   const { handleSubmit } = useSearch();
+
   return (
     <Box
       sx={{

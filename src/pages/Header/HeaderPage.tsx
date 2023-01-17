@@ -1,8 +1,13 @@
 import React from 'react';
 import { NavBar } from './Components/NavBar';
+import { CategoryProvider } from '../../context/CategoryContext';
 
 const HeaderPage: React.FC = () => {
-  return <NavBar />;
+  return (
+    <CategoryProvider>
+      <NavBar />
+    </CategoryProvider>
+  );
 };
 
 export default HeaderPage;

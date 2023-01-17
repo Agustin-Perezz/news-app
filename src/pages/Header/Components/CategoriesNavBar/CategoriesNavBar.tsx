@@ -12,7 +12,7 @@ type Props = {
 };
 
 export const CategoriesNavBar: React.FC<Props> = ({ handleClick }) => {
-  const { valueTab, handleChange } = useTab({ handleClick });
+  const { valueTab, handleChange } = useTab();
 
   return (
     <Box sx={{ width: '100%', marginTop: '15px' }}>
