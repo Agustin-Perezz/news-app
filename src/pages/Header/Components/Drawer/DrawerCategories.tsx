@@ -15,6 +15,7 @@ export const DrawerCategories: React.FC<HandleClickProps> = ({
     <List>
       {listCategories.map(({ category, endpoint, url }, idx) => (
         <ListItem
+          sx={{ padding: '3px 8px 3px 8px' }}
           key={category}
           onClick={() => {
             handleClick({ urlParameter: category, endpoint, navigateUrl: url });

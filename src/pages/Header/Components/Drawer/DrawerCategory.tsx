@@ -1,6 +1,7 @@
 import React from 'react';
-import { ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
+import { ListItemText } from '@mui/material';
 import { HandleClickDrawerProps } from '../../../../types';
+import { CustomListItemButton, CustomListItemIcon } from './customStyleDrawer';
 
 type Props = HandleClickDrawerProps & {
   text: string;
@@ -15,14 +16,18 @@ export const DrawerCategory: React.FC<Props> = ({
   handleClickDrawer,
 }) => {
   return (
-    <ListItemButton
+    <CustomListItemButton
       selected={activeCategoryDrawer === text}
       onClick={(event) => {
         handleClickDrawer(event, text);
       }}
     >
-      <ListItemIcon>{icon}</ListItemIcon>
+      <CustomListItemIcon
+        className={activeCategoryDrawer === text ? 'Mui-selected' : undefined}
+      >
+        {icon}
+      </CustomListItemIcon>
       <ListItemText primary={text} />
-    </ListItemButton>
+    </CustomListItemButton>
   );
 };
