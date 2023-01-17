@@ -21,10 +21,10 @@ export const useCacheCategory = ({
     const { keyCategory, idxOldCategory } =
       getPreviusCategoryParameters(pathname);
     if (keyCategory !== undefined && cache?.key === keyCategory) {
-      setActiveCategory((prev) => ({
-        ...prev,
+      setActiveCategory({
         activeCategoryTab: idxOldCategory + 1,
-      }));
+        activeCategoryDrawer: keyCategory,
+      });
       handleSubmit({
         urlParameter: listCategories[idxOldCategory].category,
         endpoint: listCategories[idxOldCategory].endpoint,
