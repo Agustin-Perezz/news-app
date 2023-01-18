@@ -22,9 +22,7 @@ export const DrawerCategory: React.FC<Props> = ({
         handleClickDrawer(event, text);
       }}
     >
-      <CustomListItemIcon
-        className={activeCategoryDrawer === text ? 'Mui-selected' : undefined}
-      >
+      <CustomListItemIcon className={activeCategoryDrawer === text ? 'Mui-selected' : undefined}>
         {icon}
       </CustomListItemIcon>
       <ListItemText primary={text} />

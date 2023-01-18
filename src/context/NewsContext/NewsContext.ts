@@ -11,6 +11,4 @@ export type NewsContextProps = ContextTypeData & {
   setState: React.Dispatch<React.SetStateAction<ContextTypeData>>;
 };
 
-export const NewsContext = createContext<NewsContextProps>(
-  {} as NewsContextProps
-);
+export const NewsContext = createContext<NewsContextProps>({} as NewsContextProps);

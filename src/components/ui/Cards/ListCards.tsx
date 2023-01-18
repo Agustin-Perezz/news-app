@@ -12,18 +12,9 @@ interface Props {
   titleText?: string;
 }
 
-export const ListCards: React.FC<Props> = ({
-  dataArticles,
-  isLoading,
-  isError,
-  titleText,
-}) => {
+export const ListCards: React.FC<Props> = ({ dataArticles, isLoading, isError, titleText }) => {
   return (
-    <RenderController
-      isLoading={isLoading}
-      isError={isError}
-      data={dataArticles}
-    >
+    <RenderController isLoading={isLoading} isError={isError} data={dataArticles}>
       <Grid sx={{ flexGrow: 1, margin: '25px 0px' }}>
         <Grid
           item
@@ -38,9 +29,7 @@ export const ListCards: React.FC<Props> = ({
             {dataArticles?.map((article, index) => (
               <Grid key={article.uuid} item>
                 <GeneralCard dataArticle={article} />
-                {index === 0 && (
-                  <CustomTitle variant="h6"> {titleText} </CustomTitle>
-                )}
+                {index === 0 && <CustomTitle variant="h6"> {titleText} </CustomTitle>}
               </Grid>
             ))}
           </CustomGrid>

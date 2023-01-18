@@ -7,16 +7,11 @@ describe('Test in <CacheContext.test />', () => {
     const { setCache, cache } = useContext(CacheContext);
     return (
       <div>
-        <button
-          onClick={() => setCache({ key: 'test', value: 'test-value' })}
-          type="button"
-        >
+        <button onClick={() => setCache({ key: 'test', value: 'test-value' })} type="button">
           setCache
         </button>
         <span data-testid="cache-value">
-          {cache?.key === 'test'
-            ? `${cache?.key} - ${cache?.value}`
-            : 'empity-cache'}
+          {cache?.key === 'test' ? `${cache?.key} - ${cache?.value}` : 'empity-cache'}
         </span>
       </div>
     );
@@ -37,8 +32,6 @@ describe('Test in <CacheContext.test />', () => {
   it('should set key and value in context at call function onClick', async () => {
     setup();
     fireEvent.click(screen.getByRole('button'));
-    expect(screen.getByTestId('cache-value').textContent).toBe(
-      'test - test-value'
-    );
+    expect(screen.getByTestId('cache-value').textContent).toBe('test - test-value');
   });
 });

@@ -11,11 +11,7 @@ export const useSearch = () => {
   const { setState } = useContext(NewsContext);
   const navigate = useNavigate();
 
-  const handleSubmit = async ({
-    navigateUrl,
-    endpoint,
-    urlParameter,
-  }: SubmitProps) => {
+  const handleSubmit = async ({ navigateUrl, endpoint, urlParameter }: SubmitProps) => {
     setState({ isLoading: true });
     navigate(`/${navigateUrl}`);
     const response = await fetchData<NewsResponseProps>({

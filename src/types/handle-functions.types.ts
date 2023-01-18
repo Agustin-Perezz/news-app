@@ -9,19 +9,11 @@ export type SubmitProps = {
 };
 
 export type HandleClickProps = {
-  handleClick: ({
-    navigateUrl,
-    endpoint,
-    urlParameter,
-  }: SubmitProps) => Promise<void>;
+  handleClick: ({ navigateUrl, endpoint, urlParameter }: SubmitProps) => Promise<void>;
 };
 
 export type HandleSubmitProps = {
-  handleSubmit: ({
-    navigateUrl,
-    endpoint,
-    urlParameter,
-  }: SubmitProps) => Promise<void>;
+  handleSubmit: ({ navigateUrl, endpoint, urlParameter }: SubmitProps) => Promise<void>;
 };
 
 export type HandleClickDrawerProps = {

@@ -1,12 +1,6 @@
 // eslint-disabled import/first
 import React from 'react';
-import {
-  CardActionArea,
-  CardContent,
-  Typography,
-  CardMedia,
-  Box,
-} from '@mui/material';
+import { CardActionArea, CardContent, Typography, CardMedia, Box } from '@mui/material';
 import { NewsProps } from '../../../types/news-props';
 import { CategoriesArticles } from './Categories';
 import { CustomCard, CustomChip } from './CustomStyleCard';
@@ -23,11 +17,7 @@ export const GeneralCard: React.FC<Props> = ({ dataArticle }) => {
 
   return (
     <CustomCard>
-      <CardActionArea
-        target="_blank"
-        href={dataArticle.url}
-        sx={{ height: '470px' }}
-      >
+      <CardActionArea target="_blank" href={dataArticle.url} sx={{ height: '470px' }}>
         <Box sx={{ position: 'relative' }}>
           <CardMedia
             component="img"
@@ -45,26 +35,16 @@ export const GeneralCard: React.FC<Props> = ({ dataArticle }) => {
           <Typography data-testid="card-title" variant="subtitle1">
             {dataArticle.title}
           </Typography>
-          <Typography
-            data-testid="card-description"
-            variant="body2"
-            color="text.secondary"
-          >
+          <Typography data-testid="card-description" variant="body2" color="text.secondary">
             {dataArticle.description}
           </Typography>
-          {dataArticle.categories && (
-            <CategoriesArticles listCategories={dataArticle.categories} />
-          )}
+          {dataArticle.categories && <CategoriesArticles listCategories={dataArticle.categories} />}
           {dataArticle.nameSource && (
             <Box sx={{ display: 'flex', marginTop: '10px' }}>
               <Typography variant="subtitle2" mr={1}>
                 Source:
               </Typography>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{ lineHeight: '1.57' }}
-              >
+              <Typography variant="body2" color="text.secondary" sx={{ lineHeight: '1.57' }}>
                 {dataArticle.nameSource}
               </Typography>
             </Box>

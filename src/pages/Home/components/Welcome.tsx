@@ -14,10 +14,7 @@ export const Welcome: React.FC = () => {
         flexWrap: 'wrap',
       }}
     >
-      <Typography
-        sx={{ marginBottom: '20px', width: '100%', textAlign: 'center' }}
-        variant="h4"
-      >
+      <Typography sx={{ marginBottom: '20px', width: '100%', textAlign: 'center' }} variant="h4">
         Welcome.
       </Typography>
       <ListCards

@@ -15,9 +15,7 @@ const searchNew = (value: string) => {
 };
 
 const awaitInitialData = () => {
-  const url = `${Cypress.env('API_URL')}/top?api_token=${Cypress.env(
-    'API_KEY'
-  )}`;
+  const url = `${Cypress.env('API_URL')}/top?api_token=${Cypress.env('API_KEY')}`;
 
   cy.intercept('GET', url, {
     fixture: 'home',

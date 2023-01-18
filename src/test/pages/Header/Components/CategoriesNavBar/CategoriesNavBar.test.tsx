@@ -1,9 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import {
-  CategoriesNavBar,
-  listCategories,
-} from '../../../../../pages/Header/Components';
+import { CategoriesNavBar, listCategories } from '../../../../../pages/Header/Components';
 
 describe('Test in <CategoriesNavBar.test />', () => {
   const handleClick = jest.fn();

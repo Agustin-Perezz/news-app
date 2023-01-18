@@ -25,8 +25,6 @@ export const CacheProvider: React.FC<Props> = ({ children }) => {
 
   return (
     // eslint-disable-next-line react/jsx-no-constructed-context-values
-    <CacheContext.Provider value={{ cache, setCache }}>
-      {children}
-    </CacheContext.Provider>
+    <CacheContext.Provider value={{ cache, setCache }}>{children}</CacheContext.Provider>
   );
 };

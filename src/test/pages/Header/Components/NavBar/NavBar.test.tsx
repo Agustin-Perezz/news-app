@@ -23,8 +23,6 @@ describe('Test in <Navbar />', () => {
   });
   it('should contain news logo and search-bar', () => {
     expect(screen.getByAltText('news-logo')).toBeInTheDocument();
-    expect(
-      screen.getByPlaceholderText('Search any news..')
-    ).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('Search any news..')).toBeInTheDocument();
   });
 });

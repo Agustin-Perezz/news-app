@@ -7,9 +7,5 @@ export type ParametersFetchData = {
 };
 
 export type FetchDataProps = {
-  fetchData: <T>({
-    programApi,
-    endpoint,
-    urlParameter,
-  }: ParametersFetchData) => Promise<any>;
+  fetchData: <T>({ programApi, endpoint, urlParameter }: ParametersFetchData) => Promise<any>;
 };

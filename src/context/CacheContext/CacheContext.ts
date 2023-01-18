@@ -11,6 +11,4 @@ export type CacheContextProps = {
   setCache: (cacheData: CacheProps) => void;
 };
 
-export const CacheContext = createContext<CacheContextProps>(
-  {} as CacheContextProps
-);
+export const CacheContext = createContext<CacheContextProps>({} as CacheContextProps);

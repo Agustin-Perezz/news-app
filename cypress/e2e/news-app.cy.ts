@@ -37,10 +37,7 @@ describe('News app test', () => {
     cy.wait('@articlesSuccess');
 
     cy.get('.MuiPaper-root > .MuiButtonBase-root').should('have.length', 5);
-    cy.get('[data-testid=card-title]')
-      .first()
-      .should('be.visible')
-      .and('have.text', 'Messi test');
+    cy.get('[data-testid=card-title]').first().should('be.visible').and('have.text', 'Messi test');
   });
 
   it('should show results when the user click in the sports category', () => {
@@ -53,19 +50,11 @@ describe('News app test', () => {
     cy.get('.MuiTabs-flexContainer > :nth-child(5)').click();
     cy.wait('@sportsCategorySuccess');
 
-    cy.url().should(
-      'contain',
-      'http://localhost:3000/news-app/category/sports'
-    );
-    cy.get('.Mui-selected')
-      .should('be.visible')
-      .and('have.css', 'color', 'rgb(255, 255, 255)');
+    cy.url().should('contain', 'http://localhost:3000/news-app/category/sports');
+    cy.get('.Mui-selected').should('be.visible').and('have.css', 'color', 'rgb(255, 255, 255)');
     cy.get('[data-testid=card-title]')
       .first()
       .should('be.visible')
-      .and(
-        'have.text',
-        'Dembele delights but frustrates in pivotal Barcelona win'
-      );
+      .and('have.text', 'Dembele delights but frustrates in pivotal Barcelona win');
   });
 });

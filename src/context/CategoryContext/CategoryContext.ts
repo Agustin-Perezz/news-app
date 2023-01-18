@@ -9,6 +9,4 @@ export type CategoryPropsContext = HandleChangeTabProps &
     handleChangeTab: (event: React.SyntheticEvent, newValue: number) => void;
   };
 
-export const CategoryContext = createContext<CategoryPropsContext>(
-  {} as CategoryPropsContext
-);
+export const CategoryContext = createContext<CategoryPropsContext>({} as CategoryPropsContext);

@@ -3,8 +3,7 @@ import { listCategories } from './listCategories';
 import { CustomTab, tabFont } from './CustomStyleTab';
 import { HandleChangeTabProps, HandleClickProps } from '../../../../types';
 
-type Props = HandleClickProps &
-  HandleChangeTabProps & { activeCategoryTab: number };
+type Props = HandleClickProps & HandleChangeTabProps & { activeCategoryTab: number };
 
 export const CategoriesNavBar: React.FC<Props> = ({
   handleClick,

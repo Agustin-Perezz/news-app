@@ -20,12 +20,7 @@ type Article = {
 
 export type NewsProps = Omit<
   Article,
-  | 'relevance_score'
-  | 'keywords'
-  | 'snippet'
-  | 'language'
-  | 'source'
-  | 'categories'
+  'relevance_score' | 'keywords' | 'snippet' | 'language' | 'source' | 'categories'
 > & {
   nameSource: string;
   categories?: CategoriesProps[];
