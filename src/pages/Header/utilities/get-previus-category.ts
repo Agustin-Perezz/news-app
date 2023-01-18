@@ -1,4 +1,4 @@
-import { listCategories } from '../Components';
+import { listCategories } from '../Components/CategoriesNavBar';
 
 export const getPreviusCategory = (pathname: string) => {
   const result = pathname.split('/');
@@ -10,5 +10,10 @@ export const getPreviusCategory = (pathname: string) => {
   return {
     keyCategory,
     idxOldCategory,
+    previusCategory: {
+      urlParameter: listCategories[idxOldCategory].category,
+      endpoint: listCategories[idxOldCategory].endpoint,
+      navigateUrl: listCategories[idxOldCategory].url,
+    },
   };
 };

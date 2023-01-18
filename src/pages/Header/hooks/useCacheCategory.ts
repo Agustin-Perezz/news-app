@@ -18,16 +18,15 @@ export const useCacheCategory = ({
       return;
     }
 
-    const { keyCategory, idxOldCategory } = getPreviusCategory(pathname);
+    const { keyCategory, idxOldCategory, previusCategory } =
+      getPreviusCategory(pathname);
     if (keyCategory !== undefined && cache?.key === keyCategory) {
       setActiveCategory({
         activeCategoryTab: idxOldCategory + 1,
         activeCategoryDrawer: keyCategory,
       });
       handleSubmit({
-        urlParameter: listCategories[idxOldCategory].category,
-        endpoint: listCategories[idxOldCategory].endpoint,
-        navigateUrl: listCategories[idxOldCategory].url,
+        ...previusCategory,
       });
       return;
     }
