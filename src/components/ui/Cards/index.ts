@@ -1,2 +1,2 @@
 export * from './ListCards';
-export * from './customStyleCard';
+export * from './CustomStyleCard';

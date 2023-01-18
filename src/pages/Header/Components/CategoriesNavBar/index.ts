@@ -1,3 +1,3 @@
 export * from './CategoriesNavBar';
-export * from './customStyleTab';
+export * from './CustomStyleTab';
 export * from './listCategories';

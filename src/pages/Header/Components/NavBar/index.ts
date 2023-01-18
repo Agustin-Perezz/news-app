@@ -1,2 +1,2 @@
 export * from './NavBar';
-export * from './customStylesNavBar';
+export * from './CustomStylesNavBar';

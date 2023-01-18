@@ -1,7 +1,7 @@
 import React from 'react';
 import { ListItemText } from '@mui/material';
 import { HandleClickDrawerProps } from '../../../../types';
-import { CustomListItemButton, CustomListItemIcon } from './customStyleDrawer';
+import { CustomListItemButton, CustomListItemIcon } from './CustomStyleDrawer';
 
 type Props = HandleClickDrawerProps & {
   text: string;

@@ -1,6 +1,6 @@
 import { Box, Tabs, ThemeProvider, Tab } from '@mui/material';
 import { listCategories } from './listCategories';
-import { CustomTab, tabFont } from './customStyleTab';
+import { CustomTab, tabFont } from './CustomStyleTab';
 import { HandleChangeTabProps, HandleClickProps } from '../../../../types';
 
 type Props = HandleClickProps &

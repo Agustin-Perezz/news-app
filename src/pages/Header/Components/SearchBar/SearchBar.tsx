@@ -5,7 +5,7 @@ import {
   StyledInputBase,
   CustomButton,
   CustomBox,
-} from './CustomStyles';
+} from './CustomStylesSearchBar';
 import { useForm } from '../../hooks';
 import { HandleSubmitProps } from '../../../../types';
 

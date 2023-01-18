@@ -9,7 +9,7 @@ import {
 } from '@mui/material';
 import { NewsProps } from '../../../types/news-props';
 import { CategoriesArticles } from './Categories';
-import { CustomCard, CustomChip } from './customStyleCard';
+import { CustomCard, CustomChip } from './CustomStyleCard';
 import { useLoadImage } from '../../../hooks';
 
 import load_image from '../../../assets/images/load-image.jpg';

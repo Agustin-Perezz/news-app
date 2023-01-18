@@ -9,7 +9,7 @@ import { CategoryContext } from '../../../../context/CategoryContext';
 
 import news_logo from '../../../../assets/images/news-logo.png';
 import { NavBarDrawer } from '../Drawer';
-import { CustomBoxContainer, CustomNavBarBox } from './customStylesNavBar';
+import { CustomBoxContainer, CustomNavBarBox } from './CustomStylesNavBar';
 
 export const NavBar: React.FC = () => {
   const { handleChangeTab, activeCategoryTab } = useContext(CategoryContext);

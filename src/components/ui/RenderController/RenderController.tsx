@@ -16,7 +16,6 @@ export const RenderController: React.FC<PropsRender> = ({
   isLoading,
   isError,
 }) => {
-  // console.log('controller-isloading: ', isLoading);
   if (isLoading) return <LoadingSkeleton />;
 
   if (isError) return <ErrorBox errorMessage={isError} />;
