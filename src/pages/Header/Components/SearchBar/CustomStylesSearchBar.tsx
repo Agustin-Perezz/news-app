@@ -52,6 +52,7 @@ export const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export const CustomBox = styled(MuiBox)(() => ({
+  minWidth: '285px',
   maxWidth: '480px',
   width: '100%',
   marginRight: '10px',
