@@ -1,1 +1,1 @@
-export { default as HeaderPage } from './HeaderPage';
+export { default as HeaderPage } from './Components/HeaderPage';
