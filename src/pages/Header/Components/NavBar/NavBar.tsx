@@ -12,7 +12,7 @@ import { NavBarDrawer } from '../Drawer';
 import { CustomBoxContainer, CustomNavBarBox } from './CustomStylesNavBar';
 
 export const NavBar: React.FC = () => {
-  const { handleChangeTab, activeCategoryTab } = useContext(CategoryContext);
+  const { activeCategory, handleSetTab } = useContext(CategoryContext);
   const { handleSubmit } = useSearch();
   const matches = useMediaQuery('(max-width:1000px)');
 
@@ -32,8 +32,8 @@ export const NavBar: React.FC = () => {
       {!matches && (
         <CategoriesNavBar
           handleClick={handleSubmit}
-          handleChangeTab={handleChangeTab}
-          activeCategoryTab={activeCategoryTab}
+          handleSetTab={handleSetTab}
+          activeCategoryTab={activeCategory}
         />
       )}
     </CustomBoxContainer>

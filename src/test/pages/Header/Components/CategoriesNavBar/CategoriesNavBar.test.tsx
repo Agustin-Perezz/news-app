@@ -4,13 +4,13 @@ import { CategoriesNavBar, listCategories } from '../../../../../pages/Header/Co
 
 describe('Test in <CategoriesNavBar.test />', () => {
   const handleClick = jest.fn();
-  const handleChangeTab = jest.fn();
+  const handleSetTab = jest.fn();
   function setup() {
     const { container } = render(
       <MemoryRouter initialEntries={['/home']}>
         <CategoriesNavBar
           handleClick={handleClick}
-          handleChangeTab={handleChangeTab}
+          handleSetTab={handleSetTab}
           activeCategoryTab={1}
         />
       </MemoryRouter>

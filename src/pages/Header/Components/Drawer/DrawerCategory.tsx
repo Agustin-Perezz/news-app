@@ -1,30 +1,30 @@
 import React from 'react';
 import { ListItemText } from '@mui/material';
-import { HandleClickDrawerProps } from '../../../../types';
+import { HandleSetTabProps } from '../../../../types';
 import { CustomListItemButton, CustomListItemIcon } from './CustomStyleDrawer';
 
-type Props = HandleClickDrawerProps & {
+type Props = HandleSetTabProps & {
   text: string;
   icon: JSX.Element;
-  activeCategoryDrawer: string;
+  idxCategory: number;
+  activeCategory: number;
 };
 
 export const DrawerCategory: React.FC<Props> = ({
   icon,
   text,
-  activeCategoryDrawer,
-  handleClickDrawer,
+  idxCategory,
+  activeCategory,
+  handleSetTab,
 }) => {
   return (
     <CustomListItemButton
-      selected={activeCategoryDrawer === text}
+      selected={activeCategory === idxCategory}
       onClick={(event) => {
-        handleClickDrawer(event, text);
+        handleSetTab(event, idxCategory);
       }}
     >
-      <CustomListItemIcon className={activeCategoryDrawer === text ? 'Mui-selected' : undefined}>
-        {icon}
-      </CustomListItemIcon>
+      <CustomListItemIcon>{icon}</CustomListItemIcon>
       <ListItemText primary={text} />
     </CustomListItemButton>
   );

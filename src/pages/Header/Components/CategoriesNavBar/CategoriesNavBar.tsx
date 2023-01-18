@@ -1,13 +1,13 @@
 import { Box, Tabs, ThemeProvider, Tab } from '@mui/material';
 import { listCategories } from './listCategories';
 import { CustomTab, tabFont } from './CustomStyleTab';
-import { HandleChangeTabProps, HandleClickProps } from '../../../../types';
+import { HandleClickProps, HandleSetTabProps } from '../../../../types';
 
-type Props = HandleClickProps & HandleChangeTabProps & { activeCategoryTab: number };
+type Props = HandleClickProps & HandleSetTabProps & { activeCategoryTab: number };
 
 export const CategoriesNavBar: React.FC<Props> = ({
   handleClick,
-  handleChangeTab,
+  handleSetTab,
   activeCategoryTab,
 }) => {
   return (
@@ -24,7 +24,7 @@ export const CategoriesNavBar: React.FC<Props> = ({
         <ThemeProvider theme={tabFont}>
           <Tabs
             value={activeCategoryTab}
-            onChange={handleChangeTab}
+            onChange={handleSetTab}
             aria-label="category-tabs"
             indicatorColor="secondary"
           >

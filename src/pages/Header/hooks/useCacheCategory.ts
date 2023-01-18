@@ -18,10 +18,7 @@ export const useCacheCategory = ({ setActiveCategory }: SetActiveCategoryProps) 
 
     const { keyCategory, idxOldCategory, previusCategory } = getPreviusCategory(pathname);
     if (keyCategory !== undefined && cache?.key === keyCategory) {
-      setActiveCategory({
-        activeCategoryTab: idxOldCategory + 1,
-        activeCategoryDrawer: keyCategory,
-      });
+      setActiveCategory(idxOldCategory);
       handleSubmit({
         ...previusCategory,
       });

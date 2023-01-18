@@ -1,7 +1,3 @@
-export type HandleChangeTabProps = {
-  handleChangeTab: (event: React.SyntheticEvent, newValue: number) => void;
-};
-
 export type SubmitProps = {
   endpoint: string;
   urlParameter: string;
@@ -16,9 +12,13 @@ export type HandleSubmitProps = {
   handleSubmit: ({ navigateUrl, endpoint, urlParameter }: SubmitProps) => Promise<void>;
 };
 
-export type HandleClickDrawerProps = {
-  handleClickDrawer: (
-    event: React.MouseEvent<HTMLDivElement, MouseEvent>,
-    category: string
+type HandleEvent = { event: React.MouseEvent<HTMLDivElement, MouseEvent> | React.SyntheticEvent };
+
+export type HandleSetTabParameters = HandleEvent & { idxCategory: number };
+
+export type HandleSetTabProps = {
+  handleSetTab: (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent> | React.SyntheticEvent,
+    idxCategory: number
   ) => void;
 };

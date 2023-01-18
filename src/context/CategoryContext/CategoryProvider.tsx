@@ -6,29 +6,18 @@ type Props = {
   children: JSX.Element | JSX.Element[];
 };
 
-type StateProps = { activeCategoryTab: number; activeCategoryDrawer: string };
-
 export type SetActiveCategoryProps = {
-  setActiveCategory: (value: React.SetStateAction<StateProps>) => void;
-};
-
-const INIT_STATE: StateProps = {
-  activeCategoryTab: 1,
-  activeCategoryDrawer: 'home',
+  setActiveCategory: React.Dispatch<React.SetStateAction<number>>;
 };
 
 export const CategoryProvider: React.FC<Props> = ({ children }) => {
-  const [activeCategory, setActiveCategory] = React.useState<StateProps>(INIT_STATE);
+  const [activeCategory, setActiveCategory] = React.useState(1);
 
-  const handleChangeTab = (event: React.SyntheticEvent, newValue: number) => {
-    setActiveCategory((prev) => ({ ...prev, activeCategoryTab: newValue }));
-  };
-
-  const handleClickDrawer = (
-    event: React.MouseEvent<HTMLDivElement, MouseEvent>,
-    category: string
+  const handleSetTab = (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent> | React.SyntheticEvent,
+    idxCategory: number
   ) => {
-    setActiveCategory((prev) => ({ ...prev, activeCategoryDrawer: category }));
+    setActiveCategory(idxCategory);
   };
 
   useCacheCategory({ setActiveCategory });
@@ -36,7 +25,7 @@ export const CategoryProvider: React.FC<Props> = ({ children }) => {
   return (
     <CategoryContext.Provider
       // eslint-disable-next-line react/jsx-no-constructed-context-values
-      value={{ ...activeCategory, handleChangeTab, handleClickDrawer }}
+      value={{ activeCategory, handleSetTab }}
     >
       {children}
     </CategoryContext.Provider>

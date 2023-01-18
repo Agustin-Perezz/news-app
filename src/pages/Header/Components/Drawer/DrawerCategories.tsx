@@ -9,7 +9,8 @@ import { HandleClickProps } from '../../../../types';
 type Props = HandleClickProps & { handleSet: () => void };
 
 export const DrawerCategories: React.FC<Props> = ({ handleClick, handleSet }) => {
-  const { activeCategoryDrawer, handleClickDrawer } = useContext(CategoryContext);
+  const { activeCategory, handleSetTab } = useContext(CategoryContext);
+
   return (
     <List>
       {listCategories.map(({ category, endpoint, url }, idx) => (
@@ -24,8 +25,9 @@ export const DrawerCategories: React.FC<Props> = ({ handleClick, handleSet }) =>
           <DrawerCategory
             icon={drawerIcons[idx].icon}
             text={category}
-            activeCategoryDrawer={activeCategoryDrawer}
-            handleClickDrawer={handleClickDrawer}
+            idxCategory={idx}
+            handleSetTab={handleSetTab}
+            activeCategory={activeCategory}
           />
         </ListItem>
       ))}
