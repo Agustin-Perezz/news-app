@@ -6,9 +6,7 @@ import { listCategories } from '../Components/CategoriesNavBar';
 import { getPreviusCategory } from '../utilities';
 import { useSearch } from './useSearch';
 
-export const useCacheCategory = ({
-  setActiveCategory,
-}: SetActiveCategoryProps) => {
+export const useCacheCategory = ({ setActiveCategory }: SetActiveCategoryProps) => {
   const { handleSubmit } = useSearch();
   const { cache } = useContext(CacheContext);
   const { pathname } = useLocation();
@@ -18,8 +16,7 @@ export const useCacheCategory = ({
       return;
     }
 
-    const { keyCategory, idxOldCategory, previusCategory } =
-      getPreviusCategory(pathname);
+    const { keyCategory, idxOldCategory, previusCategory } = getPreviusCategory(pathname);
     if (keyCategory !== undefined && cache?.key === keyCategory) {
       setActiveCategory({
         activeCategoryTab: idxOldCategory + 1,

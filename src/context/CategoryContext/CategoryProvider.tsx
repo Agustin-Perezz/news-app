@@ -18,8 +18,7 @@ const INIT_STATE: StateProps = {
 };
 
 export const CategoryProvider: React.FC<Props> = ({ children }) => {
-  const [activeCategory, setActiveCategory] =
-    React.useState<StateProps>(INIT_STATE);
+  const [activeCategory, setActiveCategory] = React.useState<StateProps>(INIT_STATE);
 
   const handleChangeTab = (event: React.SyntheticEvent, newValue: number) => {
     setActiveCategory((prev) => ({ ...prev, activeCategoryTab: newValue }));
