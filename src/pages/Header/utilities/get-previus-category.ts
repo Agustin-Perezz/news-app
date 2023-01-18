@@ -1,6 +1,6 @@
-import { listCategories } from '../pages/Header/Components/CategoriesNavBar';
+import { listCategories } from '../Components';
 
-export const getPreviusCategoryParameters = (pathname: string) => {
+export const getPreviusCategory = (pathname: string) => {
   const result = pathname.split('/');
   const keyCategory = result[1] === 'home' ? 'home' : result[2];
   const idxOldCategory = listCategories.findIndex(

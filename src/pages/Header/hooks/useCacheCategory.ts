@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import { CacheContext } from '../../../context/CacheContext';
 import { SetActiveCategoryProps } from '../../../context/CategoryContext';
-import { getPreviusCategoryParameters } from '../../../utilities';
 import { listCategories } from '../Components/CategoriesNavBar';
+import { getPreviusCategory } from '../utilities';
 import { useSearch } from './useSearch';
 
 export const useCacheCategory = ({
@@ -18,8 +18,7 @@ export const useCacheCategory = ({
       return;
     }
 
-    const { keyCategory, idxOldCategory } =
-      getPreviusCategoryParameters(pathname);
+    const { keyCategory, idxOldCategory } = getPreviusCategory(pathname);
     if (keyCategory !== undefined && cache?.key === keyCategory) {
       setActiveCategory({
         activeCategoryTab: idxOldCategory + 1,
