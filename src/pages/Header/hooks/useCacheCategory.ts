@@ -20,7 +20,7 @@ export const useCacheCategory = ({ setActiveCategory }: SetActiveCategoryProps) 
     if (keyCategory !== undefined && cache?.key === keyCategory) {
       setActiveCategory(idxOldCategory);
       handleSubmit({
-        ...previusCategory,
+        ...previusCategory!,
       });
       return;
     }

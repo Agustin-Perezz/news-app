@@ -8,10 +8,13 @@ export const getPreviusCategory = (pathname: string) => {
   return {
     keyCategory,
     idxOldCategory,
-    previusCategory: {
-      urlParameter: listCategories[idxOldCategory].category,
-      endpoint: listCategories[idxOldCategory].endpoint,
-      navigateUrl: listCategories[idxOldCategory].url,
-    },
+    previusCategory:
+      idxOldCategory !== -1
+        ? {
+            urlParameter: listCategories[idxOldCategory].category,
+            endpoint: listCategories[idxOldCategory].endpoint,
+            navigateUrl: listCategories[idxOldCategory].url,
+          }
+        : undefined,
   };
 };

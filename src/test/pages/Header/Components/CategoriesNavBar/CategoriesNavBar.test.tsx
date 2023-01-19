@@ -54,8 +54,5 @@ describe('Test in <CategoriesNavBar.test />', () => {
     fireEvent.click(sportCategory);
 
     expect(handleSetTab).toHaveBeenCalled();
-    await waitFor(() => {
-      screen.debug(screen.getByRole('tab', { name: 'sports' }));
-    });
   });
 });
