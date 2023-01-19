@@ -1,10 +1,10 @@
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { createAddaptNew } from '../../../adapters';
 import { newsApi } from '../../../api';
 import { NewsContext } from '../../../context/NewsContext';
 import { NewsResponseProps, SubmitProps } from '../../../types';
 import { useAxios } from '../../../hooks/useAxios';
+import { formatNewResponse } from '../../../adapters';
 
 export const useSearch = () => {
   const { fetchData, isLoading, isError } = useAxios();
@@ -19,7 +19,7 @@ export const useSearch = () => {
       programApi: newsApi,
       urlParameter,
     });
-    const data = createAddaptNew(response);
+    const data = formatNewResponse(response);
     setState({ data, isLoading, isError });
   };
 
