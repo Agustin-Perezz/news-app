@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { CategoriesNavBar, listCategories } from '../../../../../pages/Header/Components';
 
@@ -36,7 +36,7 @@ describe('Test in <CategoriesNavBar.test />', () => {
     const homeCategory = screen.getByRole('tab', { name: 'home' });
     expect(homeCategory).toHaveAttribute('aria-selected', 'true');
   });
-  it('should call handleClick when click any category', async () => {
+  it('should call handleClick when click any category', () => {
     setup();
     const parameters = {
       endpoint: '/top?api_token=undefined&categories=sports',
@@ -47,5 +47,15 @@ describe('Test in <CategoriesNavBar.test />', () => {
     fireEvent.click(sportCategory);
     expect(handleClick).toHaveBeenCalled();
     expect(handleClick).toHaveBeenCalledWith({ ...parameters });
+  });
+  it('should call setTab when click any category', async () => {
+    setup();
+    const sportCategory = screen.getByRole('tab', { name: 'sports' });
+    fireEvent.click(sportCategory);
+
+    expect(handleSetTab).toHaveBeenCalled();
+    await waitFor(() => {
+      screen.debug(screen.getByRole('tab', { name: 'sports' }));
+    });
   });
 });
