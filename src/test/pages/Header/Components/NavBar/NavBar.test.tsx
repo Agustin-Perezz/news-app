@@ -1,14 +1,31 @@
+import mediaQuery from 'css-mediaquery';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { NewsProvider } from '../../../../../context/NewsContext';
 import { NavBar } from '../../../../../pages/Header/Components';
+import { CategoryProvider } from '../../../../../context/CategoryContext';
 
 describe('Test in <Navbar />', () => {
+  function createMatchMedia(width: number) {
+    return (query: string): MediaQueryList => ({
+      matches: mediaQuery.match(query, { width }) as boolean,
+      media: '',
+      addListener: () => {},
+      removeListener: () => {},
+      onchange: () => {},
+      addEventListener: () => {},
+      removeEventListener: () => {},
+      dispatchEvent: () => true,
+    });
+  }
   beforeEach(() => {
+    window.matchMedia = createMatchMedia(window.innerWidth);
     render(
       <NewsProvider>
         <MemoryRouter initialEntries={['/home']}>
-          <NavBar />
+          <CategoryProvider>
+            <NavBar />
+          </CategoryProvider>
         </MemoryRouter>
       </NewsProvider>
     );

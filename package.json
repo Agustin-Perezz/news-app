@@ -59,8 +59,10 @@
     "@shinshin86/local-storage-mock": "^0.0.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
+    "@types/css-mediaquery": "^0.1.1",
     "@typescript-eslint/eslint-plugin": "^5.47.0",
     "@typescript-eslint/parser": "^5.47.0",
+    "css-mediaquery": "^0.1.2",
     "cypress": "^12.2.0",
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -85,9 +87,9 @@
     ]
   },
   "jest": {
+    "preset": "ts-jest",
     "transform": {
-      "^.+\\.tsx$": "ts-jest",
-      "^.+\\.ts$": "ts-jest"
+      "^.+\\.tsx$": "ts-jest"
     },
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/test/__mocks__/assets_mock.ts"

@@ -22,7 +22,7 @@ describe('Test in <CustomStack />', () => {
     expect(screen).toMatchSnapshot();
   });
   it('must contain past props', () => {
-    const element = globalContainer.getElementsByClassName('css-1kkugh-MuiStack-root');
+    const element = globalContainer.getElementsByClassName('css-1sa62bg-MuiStack-root');
     expect(element[0]).toHaveStyle('justify-content: space-around');
     expect(element[0]).toHaveStyle('align-items: center');
   });

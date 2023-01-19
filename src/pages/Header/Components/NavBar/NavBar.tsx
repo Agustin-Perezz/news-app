@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { ImageListItem } from '@mui/material';
-import useMediaQuery from '@mui/material/useMediaQuery/useMediaQuery';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { SearchBar } from '../SearchBar';
 import { CategoriesNavBar } from '../CategoriesNavBar';
 import { SocialMedia } from '../../../../components/ui/SocialMedia';
