@@ -2,7 +2,7 @@ import { NewsProps, NewsResponseProps } from '../types/news-props';
 import { categoriesFormat, dateFormat } from '../utilities';
 
 export const formatNewResponse = (newResponse: NewsResponseProps): NewsProps[] => {
-  const listArticles: NewsProps[] = newResponse?.data.map((data) => {
+  const listArticles: NewsProps[] = newResponse.data.map((data) => {
     const categories = categoriesFormat(data.categories);
     const dateFormated = dateFormat(data.published_at);
     return {
