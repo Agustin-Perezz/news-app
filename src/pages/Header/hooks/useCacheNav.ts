@@ -26,7 +26,7 @@ export const useCacheCategory = ({ setActiveCategory }: SetActiveCategoryProps) 
     }
 
     const { keyCategory, idxOldCategory, previusCategory } = getPreviusCategory(currenPathname);
-    if (keyCategory !== undefined && cache?.key === keyCategory) {
+    if (keyCategory !== undefined && cache[keyCategory] !== undefined) {
       setActiveCategory(idxOldCategory);
       handleSubmit({
         ...previusCategory,

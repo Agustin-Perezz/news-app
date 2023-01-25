@@ -1,27 +1,26 @@
 import React from 'react';
-import { CacheContext, CacheProps } from './CacheContext';
+import { CacheContext, CacheParameters } from './CacheContext';
 
 type Props = {
   children: JSX.Element | JSX.Element[];
 };
 
-type StateProps = { cache?: CacheProps };
+type CacheProps = { cache: Record<string, string> };
 
 export const CacheProvider: React.FC<Props> = ({ children }) => {
-  const [{ cache }, setState] = React.useState<StateProps>({
-    cache: {
-      ...JSON.parse(localStorage.getItem('NEWS_API') || '{}'),
-    },
+  const [{ cache }, setState] = React.useState<CacheProps>({
+    cache: JSON.parse(localStorage.getItem('NEWS_API') || '{}'),
   });
 
-  const setCache = (cacheData: CacheProps) => {
-    setState({ cache: cacheData });
+  const setCache = ({ key, value }: CacheParameters) => {
+    setState({ cache: Object.assign(cache, { [key]: value }) });
   };
 
+  const currentCache = JSON.stringify(cache);
   React.useEffect(() => {
     const cacheState = JSON.stringify(cache);
     localStorage.setItem('NEWS_API', cacheState);
-  }, [cache]);
+  }, [currentCache, cache]);
 
   return (
     // eslint-disable-next-line react/jsx-no-constructed-context-values

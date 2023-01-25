@@ -22,12 +22,12 @@ export const useAxios = () => {
   ParametersFetchData) => {
     try {
       setState({ isLoading: true });
-      if (cache?.key === urlParameter) {
+      if (cache[urlParameter] !== undefined) {
         setState({ isLoading: false });
-        return JSON.parse(cache.value);
+        return cache[urlParameter];
       }
       const { data: response } = await programApi.get<T>(endpoint);
-      setCache({ key: urlParameter, value: JSON.stringify(response) });
+      setCache({ key: urlParameter, value: response });
       setState({ isLoading: false });
       return response;
     } catch (error) {

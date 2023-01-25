@@ -19,7 +19,7 @@ export const useSearch = () => {
       programApi: newsApi,
       urlParameter,
     });
-    const data = formatNewResponse(response);
+    const data = formatNewResponse(response as NewsResponseProps);
     setState({ data, isLoading, isError });
   };
 
