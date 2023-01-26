@@ -70,7 +70,7 @@ describe('News app test', () => {
       nameFixture: 'sportsCategory',
     });
 
-    cy.get(':nth-child(4) > .MuiButtonBase-root').click();
+    cy.get(':nth-child(5) > .MuiButtonBase-root').click();
     cy.wait('@sportsCategorySuccess');
 
     cy.url().should('contain', 'http://localhost:3000/news-app/category/sports');
