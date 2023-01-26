@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { List, ListItem } from '@mui/material';
+import { List } from '@mui/material';
 import { DrawerCategory } from './DrawerCategory';
 import { listCategories } from '../CategoriesNavBar';
 import { drawerIcons } from './drawerIcons';

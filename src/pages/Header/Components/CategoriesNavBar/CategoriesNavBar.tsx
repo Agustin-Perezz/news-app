@@ -1,4 +1,4 @@
-import { Box, Tabs, ThemeProvider, Tab } from '@mui/material';
+import { Box, Tabs, ThemeProvider } from '@mui/material';
 import { listCategories } from './listCategories';
 import { CustomTab, tabFont } from './CustomStyleTab';
 import { HandleClickProps, HandleSetTabProps } from '../../../../types';
