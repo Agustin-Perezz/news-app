@@ -4,6 +4,8 @@ import { MemoryRouter } from 'react-router-dom';
 import { NewsProvider } from '../../../../../context/NewsContext';
 import { NavBar } from '../../../../../pages/Header/Components';
 import { CategoryProvider } from '../../../../../context/CategoryContext';
+import { CacheProvider } from '../../../../../context/CacheContext';
+import { renderWhitContext } from '../../../../utils';
 
 describe('Test in <Navbar />', () => {
   function createMatchMedia(width: number) {
@@ -20,15 +22,7 @@ describe('Test in <Navbar />', () => {
   }
   beforeEach(() => {
     window.matchMedia = createMatchMedia(window.innerWidth);
-    render(
-      <NewsProvider>
-        <MemoryRouter initialEntries={['/home']}>
-          <CategoryProvider>
-            <NavBar />
-          </CategoryProvider>
-        </MemoryRouter>
-      </NewsProvider>
-    );
+    renderWhitContext({ children: <NavBar />, pathname: '/home' });
   });
   it('should match with snapshot', () => {
     expect(screen).toMatchSnapshot();

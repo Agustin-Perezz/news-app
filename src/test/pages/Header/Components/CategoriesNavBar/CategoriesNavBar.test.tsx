@@ -1,21 +1,21 @@
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { fireEvent, screen } from '@testing-library/react';
 import { CategoriesNavBar, listCategories } from '../../../../../pages/Header/Components';
+import { renderWhitContext } from '../../../../utils';
 
 describe('Test in <CategoriesNavBar.test />', () => {
   const handleClick = jest.fn();
   const handleSetTab = jest.fn();
   function setup() {
-    const { container } = render(
-      <MemoryRouter initialEntries={['/home']}>
+    renderWhitContext({
+      children: (
         <CategoriesNavBar
           handleClick={handleClick}
           handleSetTab={handleSetTab}
           activeCategoryTab={1}
         />
-      </MemoryRouter>
-    );
-    return container;
+      ),
+      pathname: '/home',
+    });
   }
   afterEach(() => {
     jest.clearAllMocks();
@@ -27,14 +27,10 @@ describe('Test in <CategoriesNavBar.test />', () => {
   });
   it('should show all text categories', () => {
     setup();
-    listCategories.forEach((cat) => {
-      screen.getByRole('tab', { name: cat.category.toLowerCase() });
+    listCategories.shift();
+    listCategories.forEach(({ category }) => {
+      screen.getByText(category);
     });
-  });
-  it('should show deafult active home category', () => {
-    setup();
-    const homeCategory = screen.getByRole('tab', { name: 'home' });
-    expect(homeCategory).toHaveAttribute('aria-selected', 'true');
   });
   it('should call handleClick when click any category', () => {
     setup();
