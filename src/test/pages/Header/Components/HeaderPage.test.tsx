@@ -1,23 +1,22 @@
-import { render, screen } from '@testing-library/react';
-import { NewsProvider } from '../../../../context/NewsContext';
+import { screen } from '@testing-library/react';
 import { HeaderPage } from '../../../../pages';
+import { renderWhitContext } from '../../../utils';
+
+const currentRoute = 'localhost:3000/news-app/search?q=test';
 
 const mockedUsedNavigate = jest.fn();
 jest.mock('react-router-dom', () => ({
   ...(jest.requireActual('react-router-dom') as any),
   useNavigate: () => mockedUsedNavigate,
   useLocation: () => ({
-    pathname: 'localhost:3000/news-app/home',
+    pathname: currentRoute,
+    search: currentRoute,
   }),
 }));
 
 describe('Test in <HeaderPage />', () => {
   beforeEach(() => {
-    render(
-      <NewsProvider>
-        <HeaderPage />
-      </NewsProvider>
-    );
+    renderWhitContext({ children: <HeaderPage />, pathname: '/search' });
   });
   it('should match snapshot', () => {
     expect(screen).toMatchSnapshot();
