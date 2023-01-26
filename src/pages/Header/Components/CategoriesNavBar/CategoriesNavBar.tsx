@@ -28,7 +28,6 @@ export const CategoriesNavBar: React.FC<Props> = ({
             aria-label="category-tabs"
             indicatorColor="secondary"
           >
-            <Tab label="default-tab" sx={{ display: 'none' }} />
             {listCategories.map(({ category, endpoint, url }) => (
               <CustomTab
                 label={category}

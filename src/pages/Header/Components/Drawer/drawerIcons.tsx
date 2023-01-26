@@ -1,3 +1,4 @@
+import AllOutIcon from '@mui/icons-material/AllOut';
 import HomeIcon from '@mui/icons-material/Home';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import ScienceIcon from '@mui/icons-material/Science';
@@ -11,6 +12,7 @@ import IcecreamIcon from '@mui/icons-material/Icecream';
 import ConnectingAirportsIcon from '@mui/icons-material/ConnectingAirports';
 
 export const drawerIcons = [
+  { icon: <AllOutIcon /> },
   { icon: <HomeIcon /> },
   { icon: <DashboardIcon /> },
   { icon: <ScienceIcon /> },

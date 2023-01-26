@@ -1,6 +1,7 @@
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 export const listCategories = [
+  { category: 'default-tab', endpoint: ``, url: '' },
   {
     category: 'home',
     endpoint: `/top?api_token=${API_KEY}`,

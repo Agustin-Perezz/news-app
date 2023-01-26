@@ -5,6 +5,7 @@ import { listCategories } from '../CategoriesNavBar';
 import { drawerIcons } from './drawerIcons';
 import { CategoryContext } from '../../../../context/CategoryContext';
 import { HandleClickProps } from '../../../../types';
+import { CustomListItem } from './CustomStyleDrawer';
 
 type Props = HandleClickProps & { handleSet: () => void };
 
@@ -14,8 +15,7 @@ export const DrawerCategories: React.FC<Props> = ({ handleClick, handleSet }) =>
   return (
     <List>
       {listCategories.map(({ category, endpoint, url }, idx) => (
-        <ListItem
-          sx={{ padding: '3px 8px 3px 8px' }}
+        <CustomListItem
           key={category}
           onClick={() => {
             handleClick({ urlParameter: category, endpoint, navigateUrl: url });
@@ -29,7 +29,7 @@ export const DrawerCategories: React.FC<Props> = ({ handleClick, handleSet }) =>
             handleSetTab={handleSetTab}
             activeCategory={activeCategory}
           />
-        </ListItem>
+        </CustomListItem>
       ))}
     </List>
   );
