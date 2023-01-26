@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { useCacheCategory } from '../../pages/Header/hooks';
 import { CategoryContext } from './CategoryContext';
 
@@ -12,6 +13,9 @@ export type SetActiveCategoryProps = {
 
 export const CategoryProvider: React.FC<Props> = ({ children }) => {
   const [activeCategory, setActiveCategory] = React.useState(1);
+  const { pathname } = useLocation();
+
+  useCacheCategory({ setActiveCategory });
 
   const handleSetTab = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent> | React.SyntheticEvent,
@@ -20,7 +24,11 @@ export const CategoryProvider: React.FC<Props> = ({ children }) => {
     setActiveCategory(idxCategory);
   };
 
-  useCacheCategory({ setActiveCategory });
+  React.useEffect(() => {
+    if (pathname === '/search') {
+      setActiveCategory(0);
+    }
+  }, [pathname]);
 
   return (
     <CategoryContext.Provider

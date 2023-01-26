@@ -35,9 +35,9 @@ export const useCacheCategory = ({ setActiveCategory }: SetActiveCategoryProps) 
     }
 
     handleSubmit({
-      urlParameter: listCategories[0].category,
-      endpoint: listCategories[0].endpoint,
-      navigateUrl: listCategories[0].url,
+      urlParameter: listCategories[1].category,
+      endpoint: listCategories[1].endpoint,
+      navigateUrl: listCategories[1].url,
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
