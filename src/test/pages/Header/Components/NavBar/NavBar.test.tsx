@@ -1,25 +1,8 @@
-import mediaQuery from 'css-mediaquery';
-import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
-import { NewsProvider } from '../../../../../context/NewsContext';
+import { screen } from '@testing-library/react';
 import { NavBar } from '../../../../../pages/Header/Components';
-import { CategoryProvider } from '../../../../../context/CategoryContext';
-import { CacheProvider } from '../../../../../context/CacheContext';
-import { renderWhitContext } from '../../../../utils';
+import { createMatchMedia, renderWhitContext } from '../../../../utils';
 
 describe('Test in <Navbar />', () => {
-  function createMatchMedia(width: number) {
-    return (query: string): MediaQueryList => ({
-      matches: mediaQuery.match(query, { width }) as boolean,
-      media: '',
-      addListener: () => {},
-      removeListener: () => {},
-      onchange: () => {},
-      addEventListener: () => {},
-      removeEventListener: () => {},
-      dispatchEvent: () => true,
-    });
-  }
   beforeEach(() => {
     window.matchMedia = createMatchMedia(window.innerWidth);
     renderWhitContext({ children: <NavBar />, pathname: '/home' });
