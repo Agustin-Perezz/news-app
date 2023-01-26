@@ -3,30 +3,29 @@ import { MemoryRouter } from 'react-router-dom';
 import { CategoryProvider } from '../../../../../context/CategoryContext';
 import { NewsProvider } from '../../../../../context/NewsContext';
 import { DrawerCategories, NavBarDrawer } from '../../../../../pages/Header/Components';
+import { renderWhitContext } from '../../../../utils';
+
+const currentRoute = 'localhost:3000/news-app/search?q=test';
 
 const mockedUsedNavigate = jest.fn();
-
 jest.mock('react-router-dom', () => ({
   ...(jest.requireActual('react-router-dom') as any),
   useNavigate: () => mockedUsedNavigate,
   useLocation: () => ({
-    pathname: 'http://localhost:3000/news-app/home',
+    pathname: currentRoute,
+    search: currentRoute,
   }),
 }));
 
 describe('Test in <NavBarDrawer />', () => {
   const handleSubmit = jest.fn();
-  let globalContainer: HTMLElement;
   beforeEach(() => {
-    const { container } = render(
-      <NewsProvider>
-        <CategoryProvider>
-          <NavBarDrawer handleSubmit={handleSubmit} />
-        </CategoryProvider>
-      </NewsProvider>
-    );
-    globalContainer = container;
+    renderWhitContext({
+      children: <NavBarDrawer handleSubmit={handleSubmit} />,
+      pathname: '/category/home',
+    });
   });
+
   afterEach(() => {
     jest.clearAllMocks();
   });
