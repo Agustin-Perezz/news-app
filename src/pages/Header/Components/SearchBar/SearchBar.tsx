@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
-import { Search, StyledInputBase, CustomButton, CustomBox } from './customStylesSearchBar';
+import { Search, StyledInputBase, CustomButton, CustomBox } from './CustomStyleSearchBar';
 import { useForm } from '../../hooks';
 import { HandleSubmitProps } from '../../../../types';
 
