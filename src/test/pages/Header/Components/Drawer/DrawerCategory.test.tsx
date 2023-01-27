@@ -39,7 +39,6 @@ describe('Test in <DrawerCategory />', () => {
   it('should call handleSetTab', () => {
     const container = setup({ activeCategory: 0, idxCategory: 1 });
     fireEvent.click(container.firstChild!);
-    const event = {} as React.SyntheticEvent;
     expect(handleSetTab).toHaveBeenCalled();
   });
 });

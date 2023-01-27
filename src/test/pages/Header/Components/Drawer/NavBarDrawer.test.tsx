@@ -1,8 +1,5 @@
-import { fireEvent, render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
-import { CategoryProvider } from '../../../../../context/CategoryContext';
-import { NewsProvider } from '../../../../../context/NewsContext';
-import { DrawerCategories, NavBarDrawer } from '../../../../../pages/Header/Components';
+import { fireEvent, screen } from '@testing-library/react';
+import { NavBarDrawer } from '../../../../../pages/Header/Components';
 import { renderWhitContext } from '../../../../utils';
 
 const currentRoute = 'localhost:3000/news-app/search?q=test';
