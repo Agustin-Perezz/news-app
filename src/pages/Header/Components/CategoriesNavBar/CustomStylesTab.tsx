@@ -9,6 +9,9 @@ export const tabFont = createTheme({
 });
 
 export const CustomTab = styled(MuiTab)(() => ({
+  '&.MuiTab-root:nth-of-type(1)': {
+    display: 'none !important',
+  },
   '&:hover': {
     color: '#FFFFFF',
   },

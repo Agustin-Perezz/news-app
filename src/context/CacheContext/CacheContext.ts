@@ -1,16 +1,14 @@
 import { createContext } from 'react';
 
-export type CacheProps = {
+export type CacheParameters = {
   key: string;
-  value: string;
+  value: unknown;
 };
 
 export type CacheContextProps = {
-  cache?: CacheProps;
+  cache: Record<string, string>;
 
-  setCache: (cacheData: CacheProps) => void;
+  setCache: (cacheData: CacheParameters) => void;
 };
 
-export const CacheContext = createContext<CacheContextProps>(
-  {} as CacheContextProps
-);
+export const CacheContext = createContext<CacheContextProps>({} as CacheContextProps);

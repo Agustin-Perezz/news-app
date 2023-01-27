@@ -10,19 +10,12 @@ export type PropsRender = {
   data?: NewsProps[];
 };
 
-export const RenderController: React.FC<PropsRender> = ({
-  children,
-  data,
-  isLoading,
-  isError,
-}) => {
-  // console.log('controller-isloading: ', isLoading);
+export const RenderController: React.FC<PropsRender> = ({ children, data, isLoading, isError }) => {
   if (isLoading) return <LoadingSkeleton />;
 
   if (isError) return <ErrorBox errorMessage={isError} />;
 
-  if (data?.length === 0)
-    return <div>Ups, no results, try with others things.</div>;
+  if (data?.length === 0) return <div>Ups, no results, try with others things.</div>;
 
   return <div>{children}</div>;
 };

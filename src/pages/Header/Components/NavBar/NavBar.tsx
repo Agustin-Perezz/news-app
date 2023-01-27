@@ -1,42 +1,41 @@
-import Box from '@mui/material/Box';
+import { useContext } from 'react';
 import { ImageListItem } from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { SearchBar } from '../SearchBar';
 import { CategoriesNavBar } from '../CategoriesNavBar';
-import { CustomStack } from '../../../../components/ui/CustomStack';
 import { SocialMedia } from '../../../../components/ui/SocialMedia';
 import { useSearch } from '../../hooks';
+import { CategoryContext } from '../../../../context/CategoryContext';
 
 import news_logo from '../../../../assets/images/news-logo.png';
+import { NavBarDrawer } from '../Drawer';
+import { CustomBoxContainer, CustomNavBarBox } from './CustomStyleNavBar';
 
 export const NavBar: React.FC = () => {
+  const { activeCategory, handleSetTab } = useContext(CategoryContext);
   const { handleSubmit } = useSearch();
+  const matches = useMediaQuery('(max-width:1000px)');
+
   return (
-    <Box
-      sx={{
-        backgroundColor: '#292929',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: 'max-content',
-        flexWrap: 'wrap',
-        paddingTop: '20px',
-      }}
-    >
-      <CustomStack
-        stackProps={{
-          direction: 'row',
-          justifyContent: 'center',
-          alignItems: 'center',
-          width: '1000px',
-        }}
-      >
-        <ImageListItem sx={{ width: 150 }}>
-          <img src={news_logo} alt="news-logo" />
-        </ImageListItem>
+    <CustomBoxContainer>
+      <CustomNavBarBox>
+        {matches ? (
+          <NavBarDrawer handleSubmit={handleSubmit} />
+        ) : (
+          <ImageListItem sx={{ maxWidth: '130px' }}>
+            <img src={news_logo} alt="news-logo" />
+          </ImageListItem>
+        )}
         <SearchBar handleSubmit={handleSubmit} />
-        <SocialMedia />
-      </CustomStack>
-      <CategoriesNavBar handleClick={handleSubmit} />
-    </Box>
+        {!matches && <SocialMedia />}
+      </CustomNavBarBox>
+      {!matches && (
+        <CategoriesNavBar
+          handleClick={handleSubmit}
+          handleSetTab={handleSetTab}
+          activeCategoryTab={activeCategory}
+        />
+      )}
+    </CustomBoxContainer>
   );
 };

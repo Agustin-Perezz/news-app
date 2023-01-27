@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import { useContext } from 'react';
-import { ListCards } from '../../components/ui/Cards';
-import { NewsContext } from '../../context/NewsContext';
+import { ListCards } from '../../../components/ui/Cards';
+import { NewsContext } from '../../../context/NewsContext';
 
 const NewsPage: React.FC = () => {
   const { data, isLoading, isError } = useContext(NewsContext);

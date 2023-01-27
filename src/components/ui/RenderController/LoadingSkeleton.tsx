@@ -1,13 +1,5 @@
-import {
-  Box,
-  Grid,
-  Skeleton,
-  Card,
-  CardContent,
-  CardMedia,
-  Fade,
-} from '@mui/material';
-import { CustomGrid } from '../Cards';
+import { Box, Grid, Skeleton, Card, CardContent, CardMedia, Fade } from '@mui/material';
+import { CustomGrid } from '../Cards/CustomStylesCard';
 
 export const LoadingSkeleton: React.FC = () => {
   return (
@@ -67,16 +59,8 @@ export const LoadingSkeleton: React.FC = () => {
                             marginTop: '15px',
                           }}
                         >
-                          <Skeleton
-                            animation="wave"
-                            width="20%"
-                            height="18px"
-                          />
-                          <Skeleton
-                            animation="wave"
-                            width="40%"
-                            height="18px"
-                          />
+                          <Skeleton animation="wave" width="20%" height="18px" />
+                          <Skeleton animation="wave" width="40%" height="18px" />
                         </Box>
                       </CardContent>
                     </Card>

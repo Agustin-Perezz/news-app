@@ -30,6 +30,7 @@ module.exports = {
     'react/prop-types': 0,
     'no-param-reassign': 0,
     'import/no-cycle': 0,
+    'import/extensions': 0,
     'react/function-component-definition': [
       2,
       {
@@ -38,7 +39,12 @@ module.exports = {
       },
     ],
     'react/require-default-props': 0,
-    'prettier/prettier': 'error',
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
     'arrow-body-style': 'off',
     'prefer-arrow-callback': 'off',
   },

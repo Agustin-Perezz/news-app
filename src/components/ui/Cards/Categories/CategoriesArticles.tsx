@@ -16,10 +16,7 @@ export const CategoriesArticles: React.FC<Props> = ({ listCategories }) => {
         flexWrap: 'nowrap',
       }}
     >
-      <Typography
-        variant="subtitle2"
-        sx={{ display: 'inline', marginRight: '5px' }}
-      >
+      <Typography variant="subtitle2" sx={{ display: 'inline', marginRight: '5px' }}>
         Categories:
       </Typography>
       {listCategories.map((categori) => (

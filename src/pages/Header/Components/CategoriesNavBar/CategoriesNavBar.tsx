@@ -1,21 +1,17 @@
-import { Box, Tabs, ThemeProvider, Tab } from '@mui/material';
+import { Box, Tabs, ThemeProvider } from '@mui/material';
 import { listCategories } from './listCategories';
-import { SubmitProps, useTab } from '../../hooks';
-import { CustomTab, tabFont } from './customStyleTab';
+import { CustomTab, tabFont } from './CustomStylesTab';
+import { HandleClickProps, HandleSetTabProps } from '../../../../types';
 
-type Props = {
-  handleClick: ({
-    navigateUrl,
-    endpoint,
-    urlParameter,
-  }: SubmitProps) => Promise<void>;
-};
+type Props = HandleClickProps & HandleSetTabProps & { activeCategoryTab: number };
 
-export const CategoriesNavBar: React.FC<Props> = ({ handleClick }) => {
-  const { valueTab, handleChange } = useTab({ handleClick });
-
+export const CategoriesNavBar: React.FC<Props> = ({
+  handleClick,
+  handleSetTab,
+  activeCategoryTab,
+}) => {
   return (
-    <Box sx={{ width: '100%', marginTop: '15px' }}>
+    <Box sx={{ width: '100%' }}>
       <Box
         sx={{
           borderBottom: 1,
@@ -27,12 +23,11 @@ export const CategoriesNavBar: React.FC<Props> = ({ handleClick }) => {
       >
         <ThemeProvider theme={tabFont}>
           <Tabs
-            value={valueTab}
-            onChange={handleChange}
+            value={activeCategoryTab}
+            onChange={handleSetTab}
             aria-label="category-tabs"
             indicatorColor="secondary"
           >
-            <Tab label="default-tab" sx={{ display: 'none' }} />
             {listCategories.map(({ category, endpoint, url }) => (
               <CustomTab
                 label={category}

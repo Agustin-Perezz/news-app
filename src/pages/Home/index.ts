@@ -1,2 +1,2 @@
-export * from './HomePage';
+export { default as HomePage } from './components/HomePage';
 export * from './components';
