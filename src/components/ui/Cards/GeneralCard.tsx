@@ -3,7 +3,7 @@ import React from 'react';
 import { CardActionArea, CardContent, Typography, CardMedia, Box } from '@mui/material';
 import { NewsProps } from '../../../types/news-props';
 import { CategoriesArticles } from './Categories';
-import { CustomCard, CustomChip } from './CustomStyleCard';
+import { CustomCard, CustomChip } from './customStyleCard';
 import { useLoadImage } from '../../../hooks';
 
 import load_image from '../../../assets/images/load-image.jpg';

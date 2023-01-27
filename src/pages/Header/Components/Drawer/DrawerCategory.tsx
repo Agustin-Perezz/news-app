@@ -1,7 +1,7 @@
 import React from 'react';
 import { ListItemText } from '@mui/material';
 import { HandleSetTabProps } from '../../../../types';
-import { CustomListItemButton, CustomListItemIcon } from './CustomStyleDrawer';
+import { CustomListItemButton, CustomListItemIcon } from './customStyleDrawer';
 
 type Props = HandleSetTabProps & {
   text: string;

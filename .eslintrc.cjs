@@ -30,16 +30,7 @@ module.exports = {
     'react/prop-types': 0,
     'no-param-reassign': 0,
     'import/no-cycle': 0,
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        js: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
-      },
-    ],
+    'import/extensions': 0,
     'react/function-component-definition': [
       2,
       {

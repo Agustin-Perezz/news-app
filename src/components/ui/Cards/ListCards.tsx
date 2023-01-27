@@ -3,7 +3,7 @@ import { Grid } from '@mui/material';
 import { NewsProps } from '../../../types/news-props';
 import { GeneralCard } from './GeneralCard';
 import { RenderController } from '../RenderController';
-import { CustomGrid, CustomTitle } from './CustomStyleCard';
+import { CustomGrid, CustomTitle } from './customStyleCard';
 
 interface Props {
   dataArticles?: NewsProps[];

@@ -1,5 +1,5 @@
 import { Box, Grid, Skeleton, Card, CardContent, CardMedia, Fade } from '@mui/material';
-import { CustomGrid } from '../Cards/CustomStyleCard';
+import { CustomGrid } from '../Cards/customStyleCard';
 
 export const LoadingSkeleton: React.FC = () => {
   return (
