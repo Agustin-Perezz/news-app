@@ -8,13 +8,13 @@ export const useModalController = () => {
   const { cache, setCache } = useContext(CacheContext);
   const { handleSubmit } = useSearch();
 
-  const handleClickCountry = (codeCountry: string) => {
+  const handleClickCountry = (titleCountry: string) => {
     handleSubmit({
       urlParameter: listCategories[1].category,
       navigateUrl: listCategories[1].url,
-      endpoint: `${listCategories[1].endpoint}&locale=${codeCountry}`,
+      endpoint: `${listCategories[1].endpoint}&locale=${titleCountry}`,
     });
-    setCache({ key: 'country', value: codeCountry });
+    setCache({ key: 'country', value: titleCountry });
     setOpen(!open);
   };
 
