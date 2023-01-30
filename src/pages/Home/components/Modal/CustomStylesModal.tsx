@@ -11,9 +11,9 @@ export const CustomModalBox = styled(MuiBox)(() => ({
   bgcolor: '#1c232c',
   boxShadow: '24',
   borderRadius: '8px',
-  border: '1px solid #454663',
+  border: '1px solid #454663 !important',
   padding: '12px 10px',
-  backgroundColor: '#1c1c23',
+  backgroundColor: '#272727',
 }));
 
 export const CustomCloseIcon = styled(MuiCloseIcon)(() => ({

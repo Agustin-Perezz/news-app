@@ -23,7 +23,7 @@ export const ModalCountries: React.FC = () => {
           </Typography>
           <Divider sx={{ margin: '10px 9px 10px 12px' }} />
           <ListCountries handleClickCountry={handleClickCountry} />
-          <CustomCloseIcon />
+          <CustomCloseIcon onClick={onClose} />
         </CustomModalBox>
       </Fade>
     </Modal>
