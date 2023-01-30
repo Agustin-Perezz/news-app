@@ -1,5 +1,5 @@
 export const dataCountries = [
-  { code: 'ar', label: 'Argentina ⭐⭐⭐' },
+  { code: 'ar', label: 'Argentina' },
   { code: 'au', label: 'Australia' },
   { code: 'us', label: 'United States Of America' },
   { code: 'br', label: 'Brazil' },

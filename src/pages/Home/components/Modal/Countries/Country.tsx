@@ -9,7 +9,7 @@ type Props = HandleClickCountryProps & {
 
 export const Country: React.FC<Props> = ({ code, title, handleClickCountry }) => {
   return (
-    <CustomCountryBox onClick={() => handleClickCountry(title)}>
+    <CustomCountryBox onClick={() => handleClickCountry(code, title)}>
       <Tooltip title={title} arrow>
         <img
           src={`https://flagcdn.com/36x27/${code}.png`}

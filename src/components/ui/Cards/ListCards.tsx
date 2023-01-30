@@ -29,7 +29,11 @@ export const ListCards: React.FC<Props> = ({ dataArticles, isLoading, isError, t
             {dataArticles?.map((article, index) => (
               <Grid key={article.uuid} item>
                 <GeneralCard dataArticle={article} />
-                {index === 0 && <CustomTitle variant="h6"> {titleText} </CustomTitle>}
+                {index === 0 && (
+                  <CustomTitle variant="h6" noWrap>
+                    {titleText}
+                  </CustomTitle>
+                )}
               </Grid>
             ))}
           </CustomGrid>

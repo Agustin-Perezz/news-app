@@ -1,1 +1,3 @@
-export type HandleClickCountryProps = { handleClickCountry: (codeCountry: string) => void };
+export type HandleClickCountryProps = {
+  handleClickCountry: (codeCountry: string, titelCountry: string) => void;
+};
