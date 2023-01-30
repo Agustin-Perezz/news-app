@@ -1,14 +1,15 @@
 import { Tooltip } from '@mui/material';
+import { HandleClickCountryProps } from '../../../types';
 import { CustomCountryBox } from './CustomStylesCountry';
 
-interface Props {
+type Props = HandleClickCountryProps & {
   code: string;
   title: string;
-}
+};
 
-export const Country: React.FC<Props> = ({ code, title }) => {
+export const Country: React.FC<Props> = ({ code, title, handleClickCountry }) => {
   return (
-    <CustomCountryBox>
+    <CustomCountryBox onClick={() => handleClickCountry(code)}>
       <Tooltip title={title} arrow>
         <img
           src={`https://flagcdn.com/36x27/${code}.png`}

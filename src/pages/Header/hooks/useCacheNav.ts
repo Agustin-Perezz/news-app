@@ -3,7 +3,6 @@ import { useLocation } from 'react-router-dom';
 import { CacheContext } from '../../../context/CacheContext';
 import { SetActiveCategoryProps } from '../../../context/CategoryContext';
 import { formatLocation } from '../../../utilities';
-import { listCategories } from '../Components/CategoriesNavBar';
 import { getPreviusCategory } from '../utilities';
 import { useSearch } from './useSearch';
 
@@ -31,14 +30,8 @@ export const useCacheCategory = ({ setActiveCategory }: SetActiveCategoryProps) 
       handleSubmit({
         ...previusCategory,
       });
-      return;
     }
 
-    handleSubmit({
-      urlParameter: listCategories[1].category,
-      endpoint: listCategories[1].endpoint,
-      navigateUrl: listCategories[1].url,
-    });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 };

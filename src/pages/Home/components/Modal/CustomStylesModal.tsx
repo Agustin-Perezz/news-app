@@ -3,7 +3,7 @@ import MuiBox from '@mui/material/Box';
 import MuiCloseIcon from '@mui/icons-material/Close';
 
 export const CustomModalBox = styled(MuiBox)(() => ({
-  position: 'relative',
+  position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
