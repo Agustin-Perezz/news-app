@@ -6,7 +6,7 @@ export const formatLocation = (location: Location) => {
   if (pathnames[1] === 'search') {
     currenPathname = 'search';
   } else {
-    currenPathname = pathnames[1] === 'home' ? 'home' : pathnames[2];
+    currenPathname = location.key === 'default' ? 'home' : pathnames[2];
   }
   return { currenPathname, querySearch: location.search.substring(3, location.search.length) };
 };
