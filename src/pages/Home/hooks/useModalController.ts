@@ -18,15 +18,11 @@ export const useModalController = () => {
     setOpen(!open);
   };
 
-  const onClose = () => {
-    setOpen(!open);
-  };
-
   React.useEffect(() => {
     if (cache.country === undefined) {
       setOpen(true);
     }
   }, [cache.country, setOpen]);
 
-  return { open, onClose, handleClickCountry };
+  return { open, handleClickCountry };
 };
