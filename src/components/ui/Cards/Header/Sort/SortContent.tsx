@@ -27,7 +27,7 @@ export const SortContent: React.FC<Props> = ({
                 {options.map((option, index) => (
                   <MenuItem
                     key={option}
-                    selected={index === idxSelected}
+                    disabled={index === idxSelected}
                     onClick={(event) => handleMenuItemClick(event, index)}
                   >
                     {option}
