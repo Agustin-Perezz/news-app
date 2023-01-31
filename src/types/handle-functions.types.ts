@@ -22,3 +22,7 @@ export type HandleSetTabProps = {
     idxCategory: number
   ) => void;
 };
+
+export type HandleMenuItemClickProps = {
+  handleMenuItemClick: (event: React.MouseEvent<HTMLLIElement, MouseEvent>, index: number) => void;
+};

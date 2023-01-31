@@ -3,7 +3,8 @@ import { Grid } from '@mui/material';
 import { NewsProps } from '../../../types/news-props';
 import { GeneralCard } from './GeneralCard';
 import { RenderController } from '../RenderController';
-import { CustomGrid, CustomTitle } from './CustomStylesCard';
+import { CustomGrid } from './CustomStylesCard';
+import { Header } from './Header';
 
 interface Props {
   dataArticles?: NewsProps[];
@@ -26,14 +27,10 @@ export const ListCards: React.FC<Props> = ({ dataArticles, isLoading, isError, t
           }}
         >
           <CustomGrid container spacing={3}>
-            {dataArticles?.map((article, index) => (
+            <Header cardsTitle={titleText!} />
+            {dataArticles?.map((article) => (
               <Grid key={article.uuid} item>
                 <GeneralCard dataArticle={article} />
-                {index === 0 && (
-                  <CustomTitle variant="h6" noWrap>
-                    {titleText}
-                  </CustomTitle>
-                )}
               </Grid>
             ))}
           </CustomGrid>
