@@ -1,8 +1,9 @@
-export const getDateSortOptions = (index: number) => {
-  if (index === 0) {
-    return { dateOption: new Date().toISOString().slice(0, 10) };
+export const getDateSortOptions = (optionSort: string) => {
+  if (optionSort === 'Most Recent') {
+    const mostRecent = new Date().setTime(new Date().getTime() - 84600 * 1000);
+    return { dateOption: new Date(mostRecent).toISOString().slice(0, 10) };
   }
-  if (index === 1) {
+  if (optionSort === 'Last 7 days') {
     const days = new Date().setTime(new Date().getTime() - 84600 * 7 * 1000);
     return { dateOption: new Date(days).toISOString().slice(0, 10) };
   }

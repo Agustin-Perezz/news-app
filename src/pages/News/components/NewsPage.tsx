@@ -2,24 +2,22 @@ import { Box } from '@mui/material';
 import { useContext } from 'react';
 import { ListCards } from '../../../components/ui/Cards';
 import { NewsContext } from '../../../context/NewsContext';
+import { Header } from './Header';
 
 const NewsPage: React.FC = () => {
   const { data, isLoading, isError } = useContext(NewsContext);
   return (
     <Box
       sx={{
-        marginTop: '30px',
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
-        flexWrap: 'wrap',
+        alignItems: 'center',
+        marginTop: '30px',
       }}
     >
-      <ListCards
-        dataArticles={data}
-        isLoading={isLoading}
-        isError={isError}
-        titleText="Results for search."
-      />
+      <Header headerTitle="Results for search." />
+      <ListCards dataArticles={data} isLoading={isLoading} isError={isError} />
     </Box>
   );
 };

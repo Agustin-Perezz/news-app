@@ -39,5 +39,4 @@ export const CustomGrid = styled(MuiGrid)(() => ({
   },
   maxWidth: '950px',
   justifyContent: 'center',
-  marginTop: '10px',
 }));
