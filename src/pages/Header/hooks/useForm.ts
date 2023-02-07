@@ -1,20 +1,26 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { CacheContext } from '../../../context/CacheContext';
+import { HandleSubmitProps } from '../../../types';
+import { getSortParameters } from '../../../utilities';
 
-export const useForm = (initialState: string) => {
-  const [query, setQuery] = useState(initialState);
-
-  const reset = () => {
-    setQuery(initialState);
-  };
+export const useForm = ({ handleSubmit }: HandleSubmitProps) => {
+  const [query, setQuery] = useState('');
 
   const onChange = (event: string) => {
     setQuery(event);
   };
 
-  return {
-    query,
+  const { setCache } = useContext(CacheContext);
 
+  const onSubmit = (event: React.FormEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    const { sortParamaters } = getSortParameters(query, 'Most Recent');
+    setCache({ key: 'option-value', value: 'Most Recent' });
+    handleSubmit({ ...sortParamaters });
+  };
+
+  return {
+    onSubmit,
     onChange,
-    reset,
   };
 };

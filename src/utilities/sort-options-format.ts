@@ -5,10 +5,12 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 export const getSortParameters = (parameter: string, sortOption: string) => {
   const { dateOption } = getDateSortOptions(sortOption);
 
+  const init = parameter[0] === '?' ? 3 : 0;
+
   const query =
     parameter.search('&') !== -1
-      ? parameter.substring(3, parameter.search('&'))
-      : parameter.substring(3, parameter.length);
+      ? parameter.substring(init, parameter.search('&'))
+      : parameter.substring(init, parameter.length);
 
   return {
     sortParamaters: {
