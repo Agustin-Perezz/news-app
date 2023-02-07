@@ -22,7 +22,7 @@ export const useControllerSort = () => {
 
   React.useEffect(() => {
     setOptionSort(cache['option-value'] || 'Most Recent');
-  }, [cache]);
+  }, [cache, setCache]);
 
   return {
     optionSort,
