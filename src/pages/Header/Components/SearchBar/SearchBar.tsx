@@ -5,7 +5,7 @@ import { useForm } from '../../hooks';
 import { HandleSubmitProps } from '../../../../types';
 
 export const SearchBar: React.FC<HandleSubmitProps> = ({ handleSubmit }) => {
-  const { onChange, onSubmit } = useForm({ handleSubmit });
+  const { query, onChange, onSubmit } = useForm({ handleSubmit });
 
   return (
     <CustomBox component="form" onSubmit={onSubmit}>
@@ -14,6 +14,7 @@ export const SearchBar: React.FC<HandleSubmitProps> = ({ handleSubmit }) => {
         <StyledInputBase
           type="input"
           placeholder="Search any news.."
+          value={query}
           inputProps={{ inputMode: 'search' }}
           onChange={(event) => onChange(event.target.value)}
         />
