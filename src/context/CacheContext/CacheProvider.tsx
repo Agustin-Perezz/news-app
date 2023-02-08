@@ -16,6 +16,11 @@ export const CacheProvider: React.FC<Props> = ({ children }) => {
     setState({ cache: Object.assign(cache, { [key]: value }) });
   };
 
+  const removePropertyCache = (keyCache: string) => {
+    delete cache[keyCache];
+    setState({ cache: Object.assign(cache) });
+  };
+
   const currentCache = JSON.stringify(cache);
   React.useEffect(() => {
     const cacheState = JSON.stringify(cache);
@@ -24,6 +29,8 @@ export const CacheProvider: React.FC<Props> = ({ children }) => {
 
   return (
     // eslint-disable-next-line react/jsx-no-constructed-context-values
-    <CacheContext.Provider value={{ cache, setCache }}>{children}</CacheContext.Provider>
+    <CacheContext.Provider value={{ cache, setCache, removePropertyCache }}>
+      {children}
+    </CacheContext.Provider>
   );
 };
