@@ -26,7 +26,7 @@ export const Welcome: React.FC = () => {
         dataArticles={data}
         isLoading={isLoading}
         isError={isError}
-        titleText={cache.country ? `Top news from ${cache.country}.` : `Most recent top news.`}
+        headerTitle={cache.country ? `Top news from ${cache.country}.` : `Most recent top news.`}
       />
     </Box>
   );

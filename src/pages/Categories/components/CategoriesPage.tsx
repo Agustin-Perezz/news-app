@@ -18,7 +18,7 @@ export const CategoriesPage: React.FC = () => {
         dataArticles={data}
         isLoading={isLoading}
         isError={isError}
-        titleText="Results from the category."
+        headerTitle="Results from the category."
       />
     </Box>
   );
