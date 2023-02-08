@@ -16,8 +16,6 @@ export const useCacheCategory = ({ setActiveCategory }: SetActiveCategoryProps) 
   React.useEffect(() => {
     const { currenPathname, querySearch } = formatLocation(locationPath);
     if (currenPathname === 'search') {
-      console.log('double-call');
-
       handleSubmit({
         urlParameter: querySearch,
         endpoint: `/all?api_token=${API_KEY}&search=${querySearch}`,
