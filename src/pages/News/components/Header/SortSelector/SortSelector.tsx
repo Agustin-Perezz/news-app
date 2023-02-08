@@ -6,7 +6,7 @@ export const SortSelector: React.FC = () => {
   const { optionSort, onChange } = useControllerSort();
 
   return (
-    <FormControl size="small" sx={{ m: 1, minWidth: 80 }}>
+    <FormControl size="small" sx={{ minWidth: 80 }}>
       <InputLabel>Sort by</InputLabel>
       <Select
         sx={{ padding: '5px 0px' }}

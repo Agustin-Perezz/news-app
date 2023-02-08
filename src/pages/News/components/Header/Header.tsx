@@ -9,7 +9,7 @@ interface Props {
 export const Header: React.FC<Props> = ({ headerTitle }) => {
   return (
     <CustomBoxHeader>
-      <Typography variant="h6">{headerTitle}</Typography>
+      <Typography sx={{ fontSize: '18px' }}>{headerTitle}</Typography>
       <SortSelector />
     </CustomBoxHeader>
   );

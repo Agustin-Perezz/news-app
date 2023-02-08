@@ -5,16 +5,16 @@ export const CustomBoxHeader = styled(MuiBox)(() => ({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  paddingLeft: '10px',
-  marginTop: '30px',
-  width: '295px',
+  marginTop: '20px',
+  marginBottom: '-15px',
+  width: '275px',
   '.MuiFormControl-root': { display: 'none' },
   '@media (min-width: 576px)': {
-    width: '600px',
+    width: '582px',
     '.MuiFormControl-root': { display: 'flex' },
   },
   '@media (min-width: 881px)': {
-    width: '898px',
+    width: '880px',
     '.MuiFormControl-root': { display: 'flex' },
   },
 }));
