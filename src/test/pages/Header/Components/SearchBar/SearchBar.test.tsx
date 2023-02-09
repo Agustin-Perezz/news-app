@@ -1,19 +1,25 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, screen } from '@testing-library/react';
 import { SearchBar } from '../../../../../pages/Header/Components';
+import { renderWithCache } from '../../../../utils';
 
 describe('Test in <SearchBar.test />', () => {
   const handleSubmit = jest.fn();
-  function setup() {
-    const { container } = render(<SearchBar handleSubmit={handleSubmit} />);
-    return container;
+  function setup(query?: string) {
+    renderWithCache({
+      cacheValue: { 'query-value': query || '' },
+      route: '/search',
+      children: <SearchBar handleSubmit={handleSubmit} />,
+    });
   }
-  afterEach(() => {
-    jest.clearAllMocks();
-  });
 
   it('should match snapshot', () => {
     setup();
     expect(screen).toMatchSnapshot();
+  });
+  it('should set value input from cache', () => {
+    setup('queryTest');
+    const input = screen.getByPlaceholderText('Search any news..');
+    expect(input).toHaveValue('queryTest');
   });
   it('should type in search input', () => {
     setup();
@@ -24,9 +30,9 @@ describe('Test in <SearchBar.test />', () => {
   it('should calll handleSubmit with correct arguments', async () => {
     setup();
     const parameters = {
-      endpoint: '/all?api_token=undefined&search=test',
-      navigateUrl: 'search?q=test',
-      urlParameter: 'test',
+      endpoint: '/all?api_token=undefined&search=test&published_after=2023-02-08',
+      navigateUrl: 'search?q=test&published_after=2023-02-08',
+      urlParameter: 'test&published_after=2023-02-08',
     };
 
     const input = screen.getByPlaceholderText('Search any news..');
