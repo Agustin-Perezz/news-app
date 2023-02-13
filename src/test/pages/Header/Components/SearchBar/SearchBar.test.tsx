@@ -1,5 +1,6 @@
 import { fireEvent, screen } from '@testing-library/react';
 import { SearchBar } from '../../../../../pages/Header/Components';
+import { getSortParameters } from '../../../../../utilities';
 import { renderWithCache } from '../../../../utils';
 
 describe('Test in <SearchBar.test />', () => {
@@ -29,17 +30,14 @@ describe('Test in <SearchBar.test />', () => {
   });
   it('should calll handleSubmit with correct arguments', async () => {
     setup();
-    const parameters = {
-      endpoint: '/all?api_token=undefined&search=test&published_after=2023-02-08',
-      navigateUrl: 'search?q=test&published_after=2023-02-08',
-      urlParameter: 'test&published_after=2023-02-08',
-    };
+
+    const { sortParamaters } = getSortParameters('test', 'Most Recent');
 
     const input = screen.getByPlaceholderText('Search any news..');
     fireEvent.change(input, { target: { value: 'test' } });
     fireEvent.submit(input);
 
     expect(handleSubmit).toHaveBeenCalled();
-    expect(handleSubmit).toHaveBeenCalledWith({ ...parameters });
+    expect(handleSubmit).toHaveBeenCalledWith({ ...sortParamaters });
   });
 });
