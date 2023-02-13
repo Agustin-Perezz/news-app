@@ -30,4 +30,8 @@ describe('Test in <ListCards/>', () => {
     screen.getByText('description test');
     screen.getByText('sports');
   });
+  it('should show message when the dataArticles is empty', () => {
+    setup({ dataArticles: [], isLoading: false });
+    screen.getByText('Ups, no results, try with others things.');
+  });
 });
