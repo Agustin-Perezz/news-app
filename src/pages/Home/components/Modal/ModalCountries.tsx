@@ -8,7 +8,7 @@ export const ModalCountries: React.FC = () => {
 
   return (
     <Modal open={open} closeAfterTransition sx={{ backgroundColor: 'rgb(0 0 0 / 35%)' }}>
-      <Fade in={open}>
+      <Fade in={open} data-test-id="modal">
         <CustomModalBox>
           <Typography variant="h6" component="h2" pl={2}>
             Select your country.
