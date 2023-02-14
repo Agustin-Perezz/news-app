@@ -4,7 +4,7 @@ import { renderWhitContext } from '../../../utils';
 
 describe('Test in <HeaderPage />', () => {
   beforeEach(() => {
-    renderWhitContext({ children: <HeaderPage />, pathname: '/search' });
+    renderWhitContext({ children: <HeaderPage />, pathname: '/search', cache: {} });
   });
   it('should match snapshot', () => {
     expect(screen).toMatchSnapshot();

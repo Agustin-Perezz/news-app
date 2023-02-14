@@ -15,6 +15,7 @@ describe('Test in <CategoriesNavBar.test />', () => {
         />
       ),
       pathname: '/home',
+      cache: {},
     });
   }
   afterEach(() => {

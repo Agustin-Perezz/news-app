@@ -20,6 +20,7 @@ describe('Test in <NavBarDrawer />', () => {
     renderWhitContext({
       children: <NavBarDrawer handleSubmit={handleSubmit} />,
       pathname: '/category/home',
+      cache: {},
     });
   });
 
