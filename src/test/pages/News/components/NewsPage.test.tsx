@@ -1,5 +1,4 @@
-import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { screen } from '@testing-library/react';
 import { NewsContext } from '../../../../context/NewsContext';
 import { NewsPage } from '../../../../pages';
 import { mockArticles } from '../../../components/ui/Cards/mockArticles';

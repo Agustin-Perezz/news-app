@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import { ModalCountries } from '../../../../../pages/Home/components/Modal';
 import { renderWithCache } from '../../../../utils';
 
