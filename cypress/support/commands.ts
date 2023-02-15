@@ -15,12 +15,13 @@ const searchNew = (value: string) => {
 };
 
 const awaitInitialData = () => {
-  const url = `${Cypress.env('API_URL')}/top?api_token=${Cypress.env('API_KEY')}`;
+  const url = `${Cypress.env('API_URL')}/top?api_token=${Cypress.env('API_KEY')}&locale=ar`;
 
   cy.intercept('GET', url, {
     fixture: 'home',
   }).as('homeSuccess');
 
+  cy.get('.css-1dlcyqs > :nth-child(1)').click();
   cy.wait('@homeSuccess');
 };
 

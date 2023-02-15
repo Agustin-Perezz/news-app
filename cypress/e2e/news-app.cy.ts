@@ -1,4 +1,4 @@
-describe('News app test', () => {
+describe('News App tests', () => {
   beforeEach(() => {
     cy.visit('/');
     cy.awaitInitialData();
@@ -18,22 +18,16 @@ describe('News app test', () => {
 
   it('should show default data', () => {
     cy.get('.MuiPaper-root > .MuiButtonBase-root').should('have.length', 5);
-    cy.get('[data-testid=card-title]')
-      .first()
-      .should('be.visible')
-      .and('have.text', 'Mon: Harel, Isracard lead TASE gains');
+    cy.get('[data-testid=card-title]').first().should('be.visible').and('have.text', 'Title test');
     cy.get('[data-testid=card-description]')
       .first()
       .should('be.visible')
-      .and(
-        'have.text',
-        'Harel and Isracard rose strongly on the bid by the former to buy the latter.'
-      );
+      .and('have.text', 'De acuerdo con el portavoz del Gobierno nacional, la iniciativa...');
   });
 
   it('should show results when user search anything', () => {
     cy.interceptFetch({
-      url: `/all?api_token=${Cypress.env('API_KEY')}&search=messi`,
+      url: `/all?api_token=${Cypress.env('API_KEY')}&search=messi&published_after=2023-02-15`,
       nameFixture: 'articles',
     });
 
@@ -48,11 +42,11 @@ describe('News app test', () => {
   it('should show results when the user click in the sports category', () => {
     cy.interceptFetch({
       url: `/top?api_token=${Cypress.env('API_KEY')}&categories=sports`,
-      nameFixture: 'sportsCategory',
+      nameFixture: 'sportsMostRecent',
     });
 
     cy.get('.MuiTabs-flexContainer > :nth-child(5)').click();
-    cy.wait('@sportsCategorySuccess');
+    cy.wait('@sportsMostRecentSuccess');
 
     cy.url().should('contain', 'http://localhost:3000/news-app/category/sports');
     cy.get('.Mui-selected').should('be.visible').and('have.css', 'color', 'rgb(255, 255, 255)');
@@ -67,11 +61,11 @@ describe('News app test', () => {
     cy.get('.MuiIconButton-root').click();
     cy.interceptFetch({
       url: `/top?api_token=${Cypress.env('API_KEY')}&categories=sports`,
-      nameFixture: 'sportsCategory',
+      nameFixture: 'sportsMostRecent',
     });
 
     cy.get(':nth-child(5) > .MuiButtonBase-root').click();
-    cy.wait('@sportsCategorySuccess');
+    cy.wait('@sportsMostRecentSuccess');
 
     cy.url().should('contain', 'http://localhost:3000/news-app/category/sports');
     cy.get('[data-testid=card-title]')
