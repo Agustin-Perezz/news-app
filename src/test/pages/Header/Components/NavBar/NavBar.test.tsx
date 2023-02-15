@@ -5,7 +5,11 @@ import { createMatchMedia, renderWhitContext } from '../../../../utils';
 describe('Test in <Navbar />', () => {
   beforeEach(() => {
     window.matchMedia = createMatchMedia(window.innerWidth);
-    renderWhitContext({ children: <NavBar />, pathname: '/home', cache: {} });
+    renderWhitContext({
+      children: <NavBar />,
+      pathname: '/category/science',
+      cache: {},
+    });
   });
   it('should match with snapshot', () => {
     expect(screen).toMatchSnapshot();
