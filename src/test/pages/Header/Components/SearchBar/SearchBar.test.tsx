@@ -3,7 +3,7 @@ import { SearchBar } from '../../../../../pages/Header/Components';
 import { getSortParameters } from '../../../../../utilities';
 import { renderWithCache } from '../../../../utils';
 
-describe('Test in <SearchBar.test />', () => {
+describe('Test in <SearchBar />', () => {
   const handleSubmit = jest.fn();
   function setup(query?: string) {
     renderWithCache({
@@ -28,7 +28,7 @@ describe('Test in <SearchBar.test />', () => {
     fireEvent.change(input, { target: { value: 'test' } });
     expect(input).toHaveValue('test');
   });
-  it('should calll handleSubmit with correct arguments', async () => {
+  it('should call handleSubmit with correct arguments', async () => {
     setup();
 
     const { sortParamaters } = getSortParameters('test', 'Most Recent');

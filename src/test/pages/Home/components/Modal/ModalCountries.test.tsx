@@ -4,7 +4,7 @@ import { renderWithCache } from '../../../../utils';
 
 type Props = { cacheValue: Record<string, string> };
 
-describe('Test in <ModalCountries.test />', () => {
+describe('Test in <ModalCountries />', () => {
   function setup({ cacheValue }: Props) {
     renderWithCache({ cacheValue, route: '/home', children: <ModalCountries /> });
   }

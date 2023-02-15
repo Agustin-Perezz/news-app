@@ -2,18 +2,6 @@ import { fireEvent, screen } from '@testing-library/react';
 import { NavBarDrawer } from '../../../../../pages/Header/Components';
 import { renderWhitContext } from '../../../../utils';
 
-const currentRoute = 'localhost:3000/news-app/search?q=test';
-
-const mockedUsedNavigate = jest.fn();
-jest.mock('react-router-dom', () => ({
-  ...(jest.requireActual('react-router-dom') as any),
-  useNavigate: () => mockedUsedNavigate,
-  useLocation: () => ({
-    pathname: currentRoute,
-    search: currentRoute,
-  }),
-}));
-
 describe('Test in <NavBarDrawer />', () => {
   const handleSubmit = jest.fn();
   beforeEach(() => {

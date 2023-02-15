@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test in <CategoriesNavBar.test /> should match snapshot 1`] = `
+exports[`Test in <CategoriesNavBar /> should match snapshot 1`] = `
 {
   "debug": [Function],
   "findAllByAltText": [Function],

@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { Country } from '../../../../../../pages/Home/components/Modal/Countries/Country';
 
-describe('Test in <Country.test />', () => {
+describe('Test in <Country />', () => {
   const handleClickCountry = jest.fn();
   function setup() {
     return render(<Country code="ar" title="Argentina" handleClickCountry={handleClickCountry} />);

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test in <ModalCountries.test /> should match snapshot 1`] = `
+exports[`Test in <ModalCountries /> should match snapshot 1`] = `
 {
   "debug": [Function],
   "findAllByAltText": [Function],

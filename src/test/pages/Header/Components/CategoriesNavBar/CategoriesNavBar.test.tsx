@@ -2,11 +2,13 @@ import { fireEvent, screen } from '@testing-library/react';
 import { CategoriesNavBar, listCategories } from '../../../../../pages/Header/Components';
 import { renderWhitContext } from '../../../../utils';
 
-describe('Test in <CategoriesNavBar.test />', () => {
+describe('Test in <CategoriesNavBar />', () => {
   const handleClick = jest.fn();
   const handleSetTab = jest.fn();
   function setup() {
     renderWhitContext({
+      cache: {},
+      pathname: '/home',
       children: (
         <CategoriesNavBar
           handleClick={handleClick}
@@ -14,8 +16,6 @@ describe('Test in <CategoriesNavBar.test />', () => {
           activeCategoryTab={1}
         />
       ),
-      pathname: '/home',
-      cache: {},
     });
   }
   afterEach(() => {
@@ -40,8 +40,10 @@ describe('Test in <CategoriesNavBar.test />', () => {
       navigateUrl: 'category/sports',
       urlParameter: 'sports',
     };
+
     const sportCategory = screen.getByRole('tab', { name: 'sports' });
     fireEvent.click(sportCategory);
+
     expect(handleClick).toHaveBeenCalled();
     expect(handleClick).toHaveBeenCalledWith({ ...parameters });
   });
