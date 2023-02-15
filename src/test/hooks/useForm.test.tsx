@@ -1,26 +1,19 @@
-import { ReactNode } from 'react';
+import { PropsWithChildren, ReactNode } from 'react';
 import { renderHook, act } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
 import { useForm } from '../../pages/Header/hooks';
-import { CacheContext } from '../../context/CacheContext';
+import { createWrapperEnvironment } from '../utils';
 
 describe('Test in useForm', () => {
   const handleSubmit = jest.fn();
-  const removePropertyCache = jest.fn();
-  const setCache = jest.fn();
   function setup() {
-    const wrapper = ({ children }: { children: ReactNode }) => (
-      <MemoryRouter initialEntries={['/search']}>
-        <CacheContext.Provider
-          // eslint-disable-next-line react/jsx-no-constructed-context-values
-          value={{ cache: { 'query-value': 'test' }, removePropertyCache, setCache }}
-        >
-          {children}
-        </CacheContext.Provider>
-      </MemoryRouter>
-    );
-    const result = renderHook(() => useForm({ handleSubmit }), { wrapper });
-    return result;
+    const wrapper = ({ children }: PropsWithChildren) => {
+      return createWrapperEnvironment({
+        cache: { 'query-value': 'test' },
+        route: '/search',
+        children,
+      });
+    };
+    return renderHook(() => useForm({ handleSubmit }), { wrapper });
   }
 
   it('should initializer correctly', () => {

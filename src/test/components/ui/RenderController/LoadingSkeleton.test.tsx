@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { LoadingSkeleton } from '../../../../components/ui/RenderController';
 
-describe('Test in <LoadingSkeleton/>', () => {
+describe('Test in <LoadingSkeleton />', () => {
   it('should match snapshot', () => {
     render(<LoadingSkeleton />);
     expect(screen).toMatchSnapshot();

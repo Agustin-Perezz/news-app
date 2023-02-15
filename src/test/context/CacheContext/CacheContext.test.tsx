@@ -1,36 +1,14 @@
-import { useContext } from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
-import { CacheContext, CacheProvider } from '../../../context/CacheContext';
+import { CacheProvider } from '../../../context/CacheContext';
+import { TestCacheComponent } from './TestCacheComponent';
 
-describe('Test in <CacheContext.test />', () => {
-  const TestComponent = () => {
-    const { setCache, removePropertyCache, cache } = useContext(CacheContext);
-    return (
-      <div>
-        <button type="button" onClick={() => setCache({ key: 'test', value: 'test-value' })}>
-          setCache
-        </button>
-        <button
-          type="button"
-          onClick={() => {
-            removePropertyCache('test');
-          }}
-        >
-          removeCache
-        </button>
-        <span data-testid="cache-value">
-          {cache.test === 'test-value' ? cache.test : 'empity-cache'}
-        </span>
-      </div>
-    );
-  };
+describe('Test in <CacheContext />', () => {
   function setup() {
-    const wrapper = render(
+    render(
       <CacheProvider>
-        <TestComponent />
+        <TestCacheComponent />
       </CacheProvider>
     );
-    return wrapper;
   }
 
   it('cache span not should show nothing', () => {

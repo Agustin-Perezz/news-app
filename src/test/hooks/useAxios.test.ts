@@ -14,8 +14,7 @@ describe('Test in useAxios', () => {
     const wrapper = ({ children }: PropsWithChildren) => {
       return createWrapperEnvironment({ ...props, children });
     };
-    const results = renderHook(() => useAxios(), { wrapper });
-    return results;
+    return renderHook(() => useAxios(), { wrapper });
   }
 
   const parameters = {
