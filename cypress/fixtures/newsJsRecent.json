@@ -1,0 +1,75 @@
+{
+  "meta": { "found": 355, "returned": 5, "limit": 5, "page": 1 },
+  "data": [
+    {
+      "uuid": "40ca70a4-b43f-4235-9896-74892cf3a609",
+      "title": "Roll your own JavaScript runtime, pt. 2",
+      "description": "We'll implement `fetch`, read command line arguments, and add native support for TypeScript and TSX.",
+      "keywords": "",
+      "snippet": "This post is a continuation of Roll your own JavaScript runtime.\n\nThere are many reasons you may want to roll your own JavaScript runtime, such as building an i...",
+      "url": "https://deno.com/blog/roll-your-own-javascript-runtime-pt2",
+      "image_url": "https://deno.com/blog/roll-your-own-javascript-runtime-pt2/og-image.png",
+      "language": "ja",
+      "published_at": "2023-02-16T02:02:28.000000Z",
+      "source": "menthas.com",
+      "categories": ["tech", "general"],
+      "relevance_score": 22.008926
+    },
+    {
+      "uuid": "26e3a072-0e1e-4cb8-ab68-bdfc8f6d9953",
+      "title": "How To Check If A Variable Is An Array In JavaScript?",
+      "description": "In this tutorial, we'll take a look at various ways we can determine if an object is an array in JavaScript",
+      "keywords": "",
+      "snippet": "In JavaScript, an array is a special kind of object that holds an ordered collection of values. Sometimes, when working with JavaScript code, you may need to de...",
+      "url": "https://www.c-sharpcorner.com/article/how-to-check-if-a-variable-is-an-array-in-javascript2/",
+      "image_url": "https://www.c-sharpcorner.com/images/csharp-corner.png",
+      "language": "en",
+      "published_at": "2023-02-16T00:00:00.000000Z",
+      "source": "c-sharpcorner.com",
+      "categories": ["tech"],
+      "relevance_score": 20.455997
+    },
+    {
+      "uuid": "ecf97d46-232b-4642-a1ba-fe39da85af5b",
+      "title": "Test title javascript",
+      "description": "Front-end web development refers to the practice of creating the parts of a website that users can see and interact with. This includes everything from the layo...",
+      "keywords": "",
+      "snippet": "Complete Front-End Development Roadmap 2023- HTML5 , CSS4 and JavaScript — Fact Tech Solution\n\nFront-End Development\n\nFront-end web development refers to the ...",
+      "url": "https://medium.com/@facttechsolution/complete-front-end-development-roadmap-2023-html5-css4-and-javascript-fact-tech-solution-a43dd709a0ba",
+      "image_url": "https://miro.medium.com/max/960/0*z9UvscNs4AKD0dAw.jpg",
+      "language": "en",
+      "published_at": "2023-02-16T09:12:35.000000Z",
+      "source": "medium.com",
+      "categories": ["tech", "science", "business"],
+      "relevance_score": 19.851183
+    },
+    {
+      "uuid": "b26e511e-d46e-4bcc-b9c0-cf31560c74bc",
+      "title": "JavaScript 声明函数的 5 种方法",
+      "description": "在编写JavaScript代码中，函数是我们经常会写到的。但是在不同的工程师写到代码中，函数的声明方式却都是不尽相同的，...",
+      "keywords": "掘金·日新计划, JavaScript, 前端",
+      "snippet": "在编写JavaScript代码中，函数是我们经常会写到的。但是在不同的工程师写到代码中，函数的声明方式却都是不尽相同的，...",
+      "url": "https://juejin.cn/post/7200417924640931900",
+      "image_url": "https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web//static/favicons/apple-touch-icon.png",
+      "language": "zh",
+      "published_at": "2023-02-16T01:38:06.000000Z",
+      "source": "juejin.im",
+      "categories": ["tech"],
+      "relevance_score": 18.2956
+    },
+    {
+      "uuid": "a80e15d7-248b-495c-b685-7c5d3fc770b5",
+      "title": "【週刊ドットインストール】 『JavaScriptでメモ帳を作ろう』まもなくリリース、256times 『特訓p5.js 乱数編』をちらっとご紹介｜ドットインストール｜note",
+      "description": "2月も半ばとなりました。ふとカレンダーを見ると二週間後はもう3月！はやい…！いやはや、このようなことばかり書?...",
+      "keywords": "",
+      "snippet": "2月も半ばとなりました。ふとカレンダーを見ると二週間後はもう3月！はやい…！いやはや、このようなことばかり書?...",
+      "url": "https://note.com/dotinstall/n/n80926ecfaee1",
+      "image_url": "https://assets.st-note.com/production/uploads/images/98095165/rectangle_large_type_2_6903c50ba619b662196f48b20dc93222.png?fit=bounds&quality=85&width=1280",
+      "language": "ja",
+      "published_at": "2023-02-16T01:30:00.000000Z",
+      "source": "note.com",
+      "categories": ["tech"],
+      "relevance_score": 14.704294
+    }
+  ]
+}
