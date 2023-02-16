@@ -1,6 +1,4 @@
-// eslint-disabled import/first
-import React from 'react';
-import { CardActionArea, CardContent, Typography, CardMedia, Box } from '@mui/material';
+import { CardActionArea, CardContent, Typography, Box } from '@mui/material';
 import { NewsProps } from '../../../types/news-props';
 import { CategoriesArticles } from './Categories';
 import { CustomCard, CustomChip } from './CustomStylesCard';
@@ -21,12 +19,10 @@ export const GeneralCard: React.FC<Props> = ({ dataArticle }) => {
         <Box sx={{ position: 'relative' }}>
           <img
             style={{ height: '185px' }}
-            src={loaded ? dataArticle.image_url : load_image}
+            onLoad={onLoad}
             alt={dataArticle.nameSource}
+            src={loaded ? dataArticle.image_url : load_image}
             onError={({ currentTarget }) => onError({ currentTarget })}
-            onLoad={() => {
-              onLoad();
-            }}
           />
           <CustomChip label={dataArticle.published_at} />
         </Box>
