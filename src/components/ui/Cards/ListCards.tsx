@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material';
+import { Grid, Fade } from '@mui/material';
 import { NewsProps } from '../../../types/news-props';
 import { GeneralCard } from './GeneralCard';
 import { RenderController } from '../RenderController';
@@ -25,11 +25,13 @@ export const ListCards: React.FC<Props> = ({ dataArticles, isLoading, isError, h
             display: 'flex',
           }}
         >
-          <CustomGrid container spacing={3}>
-            {dataArticles?.map((article) => (
-              <GeneralCard dataArticle={article} key={article.uuid} />
-            ))}
-          </CustomGrid>
+          <Fade timeout={1500} in>
+            <CustomGrid container spacing={3}>
+              {dataArticles?.map((article) => (
+                <GeneralCard dataArticle={article} key={article.uuid} />
+              ))}
+            </CustomGrid>
+          </Fade>
         </Grid>
       </Grid>
     </RenderController>
