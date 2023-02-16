@@ -26,14 +26,7 @@ describe('News App tests', () => {
       .and('have.text', 'De acuerdo con el portavoz del Gobierno nacional, la iniciativa...');
   });
   it('should show results when user search anything', () => {
-    cy.interceptFetch({
-      url: `/all?api_token=${Cypress.env('API_KEY')}&search=javascript&published_after=2023-02-15`,
-      nameFixture: 'newsJsRecent',
-    });
-
-    cy.searchNew('javascript');
-    cy.get('form').submit();
-    cy.wait('@newsJsRecentSuccess');
+    cy.searchInForm();
 
     cy.get('.MuiPaper-root > .MuiButtonBase-root').should('have.length', 5);
     cy.get('[data-testid=card-title]')
@@ -75,14 +68,7 @@ describe('News App tests', () => {
       .and('have.text', 'Dembele delights but frustrates in pivotal Barcelona win');
   });
   it('should get data from cache when user reload page', () => {
-    cy.interceptFetch({
-      url: `/all?api_token=${Cypress.env('API_KEY')}&search=javascript&published_after=2023-02-15`,
-      nameFixture: 'newsJsRecent',
-    });
-
-    cy.searchNew('javascript');
-    cy.get('form').submit();
-    cy.wait('@newsJsRecentSuccess');
+    cy.searchInForm();
 
     cy.get('[data-testid=card-title]')
       .first()
