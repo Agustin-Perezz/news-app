@@ -19,9 +19,8 @@ export const GeneralCard: React.FC<Props> = ({ dataArticle }) => {
     <CustomCard>
       <CardActionArea target="_blank" href={dataArticle.url} sx={{ height: '470px' }}>
         <Box sx={{ position: 'relative' }}>
-          <CardMedia
-            component="img"
-            height="185px"
+          <img
+            style={{ height: '185px' }}
             src={loaded ? dataArticle.image_url : load_image}
             alt={dataArticle.nameSource}
             onError={({ currentTarget }) => onError({ currentTarget })}
