@@ -82,4 +82,27 @@ describe('News App tests', () => {
       .should('be.visible')
       .and('have.text', 'Roll your own JavaScript runtime, pt. 2');
   });
+  it.only('should filter by the last month', () => {
+    cy.searchInForm();
+
+    cy.get('[data-testid=card-title]')
+      .first()
+      .should('be.visible')
+      .and('have.text', 'Roll your own JavaScript runtime, pt. 2');
+
+    cy.interceptFetch({
+      url: `/all?api_token=${Cypress.env('API_KEY')}&search=javascript&published_after=2023-01-18`,
+      nameFixture: 'newsJsLastMonth',
+    });
+
+    cy.get('.MuiFormControl-root > .MuiInputBase-root').click();
+    cy.get('[data-value="Last Month"]').click();
+    cy.wait('@newsJsLastMonthSuccess');
+
+    cy.get('.MuiSelect-select').should('have.text', 'Last Month');
+    cy.get('[data-testid=card-title]')
+      .first()
+      .should('be.visible')
+      .and('have.text', 'Javascript last month title');
+  });
 });
