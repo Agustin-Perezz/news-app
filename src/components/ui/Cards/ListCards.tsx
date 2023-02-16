@@ -27,9 +27,7 @@ export const ListCards: React.FC<Props> = ({ dataArticles, isLoading, isError, h
         >
           <CustomGrid container spacing={3}>
             {dataArticles?.map((article) => (
-              <Grid key={article.uuid} item>
-                <GeneralCard dataArticle={article} />
-              </Grid>
+              <GeneralCard dataArticle={article} key={article.uuid} />
             ))}
           </CustomGrid>
         </Grid>

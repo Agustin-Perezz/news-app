@@ -1,4 +1,3 @@
-import React from 'react';
 import { Drawer, IconButton } from '@mui/material';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import { DrawerCategories } from './DrawerCategories';
