@@ -1,14 +1,13 @@
 import { Suspense } from 'react';
-
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
-import { HeaderPage } from '../pages/Header';
+import { NavBar } from '../components/NavBar';
 import { routes } from './router';
 
 const AppRouter: React.FC = () => {
   return (
     <Suspense>
       <BrowserRouter basename="/news-app">
-        <HeaderPage />
+        <NavBar />
         <Routes>
           {routes.map(({ path, Component }) => (
             <Route key={path} path={path} element={<Component />} />

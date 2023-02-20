@@ -1,15 +1,12 @@
+import { useContext } from 'react';
 import { Box, Tabs, ThemeProvider } from '@mui/material';
 import { listCategories } from './listCategories';
 import { CustomTab, tabFont } from './CustomStylesTab';
-import { HandleClickProps, HandleSetTabProps } from '../../../../types';
+import { HandleClickProps } from '../../../types';
+import { CategoryContext } from '../../../context/CategoryContext';
 
-type Props = HandleClickProps & HandleSetTabProps & { activeCategoryTab: number };
-
-export const CategoriesNavBar: React.FC<Props> = ({
-  handleClick,
-  handleSetTab,
-  activeCategoryTab,
-}) => {
+export const CategoriesNavBar: React.FC<HandleClickProps> = ({ handleClick }) => {
+  const { activeCategory, handleSetTab } = useContext(CategoryContext);
   return (
     <Box sx={{ width: '100%' }}>
       <Box
@@ -23,7 +20,7 @@ export const CategoriesNavBar: React.FC<Props> = ({
       >
         <ThemeProvider theme={tabFont}>
           <Tabs
-            value={activeCategoryTab}
+            value={activeCategory}
             onChange={handleSetTab}
             aria-label="category-tabs"
             indicatorColor="secondary"

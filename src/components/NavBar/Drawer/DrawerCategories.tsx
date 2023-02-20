@@ -3,8 +3,8 @@ import { List } from '@mui/material';
 import { DrawerCategory } from './DrawerCategory';
 import { listCategories } from '../CategoriesNavBar';
 import { drawerIcons } from './drawerIcons';
-import { CategoryContext } from '../../../../context/CategoryContext';
-import { HandleClickProps } from '../../../../types';
+import { CategoryContext } from '../../../context/CategoryContext';
+import { HandleClickProps } from '../../../types';
 import { CustomListItem } from './CustomStylesDrawer';
 
 type Props = HandleClickProps & { handleSet: () => void };

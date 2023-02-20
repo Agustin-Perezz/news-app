@@ -1,4 +1,4 @@
-import { listCategories } from '../Components/CategoriesNavBar';
+import { listCategories } from '../components/NavBar/CategoriesNavBar';
 
 export const getPreviusCategory = (pathname: string) => {
   const idxOldCategory = listCategories.findIndex((cat) => cat.category === pathname);

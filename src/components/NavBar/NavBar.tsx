@@ -1,18 +1,16 @@
-import { useContext } from 'react';
 import { ImageListItem } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { SearchBar } from '../SearchBar';
-import { CategoriesNavBar } from '../CategoriesNavBar';
-import { SocialMedia } from '../../../../components/ui/SocialMedia';
-import { useSearch } from '../../hooks';
-import { CategoryContext } from '../../../../context/CategoryContext';
-
-import news_logo from '../../../../assets/images/news-logo.png';
-import { NavBarDrawer } from '../Drawer';
+import { SearchBar } from './SearchBar';
+import { SocialMedia } from '../ui/SocialMedia';
+import { CategoriesNavBar } from './CategoriesNavBar';
+import { NavBarDrawer } from './Drawer';
 import { CustomBoxContainer, CustomNavBarBox } from './CustomStyleNavBar';
+import { CategoryProvider } from '../../context/CategoryContext';
+import { useSearch } from '../../hooks';
+
+import news_logo from '../../assets/images/news-logo.png';
 
 export const NavBar: React.FC = () => {
-  const { activeCategory, handleSetTab } = useContext(CategoryContext);
   const { handleSubmit } = useSearch();
   const matches = useMediaQuery('(max-width:1000px)');
 
@@ -30,11 +28,9 @@ export const NavBar: React.FC = () => {
         {!matches && <SocialMedia />}
       </CustomNavBarBox>
       {!matches && (
-        <CategoriesNavBar
-          handleClick={handleSubmit}
-          handleSetTab={handleSetTab}
-          activeCategoryTab={activeCategory}
-        />
+        <CategoryProvider>
+          <CategoriesNavBar handleClick={handleSubmit} />
+        </CategoryProvider>
       )}
     </CustomBoxContainer>
   );

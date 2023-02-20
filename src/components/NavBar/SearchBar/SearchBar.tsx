@@ -1,8 +1,8 @@
 import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import { Search, StyledInputBase, CustomButton, CustomBox } from './CustomStyleSearchBar';
-import { useForm } from '../../hooks';
-import { HandleSubmitProps } from '../../../../types';
+import { useForm } from '../../../hooks';
+import { HandleSubmitProps } from '../../../types';
 
 export const SearchBar: React.FC<HandleSubmitProps> = ({ handleSubmit }) => {
   const { query, onChange, onSubmit } = useForm({ handleSubmit });

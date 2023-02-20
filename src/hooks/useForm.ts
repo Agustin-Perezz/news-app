@@ -1,8 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { useLocation } from 'react-router-dom';
-import { CacheContext } from '../../../context/CacheContext';
-import { HandleSubmitProps } from '../../../types';
-import { getSortParameters } from '../../../utilities';
+import { CacheContext } from '../context/CacheContext';
+import { HandleSubmitProps } from '../types';
+import { getSortParameters } from '../utilities';
 
 export const useForm = ({ handleSubmit }: HandleSubmitProps) => {
   const { cache, setCache, removePropertyCache } = useContext(CacheContext);

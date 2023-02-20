@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import { SelectChangeEvent } from '@mui/material';
-import { useSearch } from '../../Header/hooks';
 import { CacheContext } from '../../../context/CacheContext';
 import { getSortParameters } from '../../../utilities';
+import { useSearch } from '../../../hooks';
 
 export const useControllerSort = () => {
   const [optionSort, setOptionSort] = React.useState('Most Recent');

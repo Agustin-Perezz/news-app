@@ -1,10 +1,10 @@
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { newsApi } from '../../../api';
-import { NewsContext } from '../../../context/NewsContext';
-import { NewsResponseProps, SubmitProps } from '../../../types';
-import { useAxios } from '../../../hooks/useAxios';
-import { formatNewResponse } from '../../../adapters';
+import { useAxios } from './useAxios';
+import { newsApi } from '../api';
+import { formatNewResponse } from '../adapters';
+import { NewsResponseProps, SubmitProps } from '../types';
+import { NewsContext } from '../context/NewsContext';
 
 export const useSearch = () => {
   const { fetchData, isLoading, isError } = useAxios();

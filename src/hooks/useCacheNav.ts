@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
-import { CacheContext } from '../../../context/CacheContext';
-import { SetActiveCategoryProps } from '../../../context/CategoryContext';
-import { formatLocation } from '../../../utilities';
-import { getPreviusCategory } from '../utilities';
+import { CacheContext } from '../context/CacheContext';
+import { SetActiveCategoryProps } from '../context/CategoryContext';
+import { formatLocation, getPreviusCategory } from '../utilities';
 import { useSearch } from './useSearch';
 
 const API_KEY = process.env.REACT_APP_API_KEY;

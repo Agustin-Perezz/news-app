@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
+import { listCategories } from '../../../components/NavBar/CategoriesNavBar';
 import { CacheContext } from '../../../context/CacheContext';
-import { listCategories } from '../../Header/Components';
-import { useSearch } from '../../Header/hooks';
+import { useSearch } from '../../../hooks';
 
 export const useModalController = () => {
   const [open, setOpen] = React.useState(false);
