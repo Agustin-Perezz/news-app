@@ -1,7 +1,7 @@
 import { fireEvent, screen } from '@testing-library/react';
-import { SearchBar } from '../../../../../pages/Header/Components';
-import { getSortParameters } from '../../../../../utilities';
-import { renderWithCache } from '../../../../utils';
+import { SearchBar } from '../../../../components/NavBar/SearchBar';
+import { getSortParameters } from '../../../../utilities';
+import { renderWithCache } from '../../../utils';
 
 describe('Test in <SearchBar />', () => {
   const handleSubmit = jest.fn();

@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react';
-import { NavBar } from '../../../../../pages/Header/Components';
-import { createMatchMedia, renderWhitContext } from '../../../../utils';
+import { NavBar } from '../../../components/NavBar';
+import { createMatchMedia, renderWhitContext } from '../../utils';
 
 describe('Test in <Navbar />', () => {
   function setup() {

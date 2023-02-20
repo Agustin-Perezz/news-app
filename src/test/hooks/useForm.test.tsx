@@ -1,7 +1,7 @@
 import { PropsWithChildren, ReactNode } from 'react';
 import { renderHook, act } from '@testing-library/react';
-import { useForm } from '../../pages/Header/hooks';
 import { createWrapperEnvironment } from '../utils';
+import { useForm } from '../../hooks';
 
 describe('Test in useForm', () => {
   const handleSubmit = jest.fn();

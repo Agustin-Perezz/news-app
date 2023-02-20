@@ -1,6 +1,6 @@
 import { fireEvent, screen } from '@testing-library/react';
-import { NavBarDrawer } from '../../../../../pages/Header/Components';
-import { renderWhitContext } from '../../../../utils';
+import { NavBarDrawer } from '../../../../components/NavBar/Drawer';
+import { renderWhitContext } from '../../../utils';
 
 describe('Test in <NavBarDrawer />', () => {
   const handleSubmit = jest.fn();

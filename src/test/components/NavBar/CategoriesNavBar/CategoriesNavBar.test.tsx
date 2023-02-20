@@ -1,21 +1,14 @@
 import { fireEvent, screen } from '@testing-library/react';
-import { CategoriesNavBar, listCategories } from '../../../../../pages/Header/Components';
-import { renderWhitContext } from '../../../../utils';
+import { CategoriesNavBar, listCategories } from '../../../../components/NavBar/CategoriesNavBar';
+import { renderWhitContext } from '../../../utils';
 
 describe('Test in <CategoriesNavBar />', () => {
   const handleClick = jest.fn();
-  const handleSetTab = jest.fn();
   function setup() {
     return renderWhitContext({
       cache: {},
       pathname: '/home',
-      children: (
-        <CategoriesNavBar
-          handleClick={handleClick}
-          handleSetTab={handleSetTab}
-          activeCategoryTab={1}
-        />
-      ),
+      children: <CategoriesNavBar handleClick={handleClick} />,
     });
   }
   afterEach(() => {
@@ -46,12 +39,5 @@ describe('Test in <CategoriesNavBar />', () => {
 
     expect(handleClick).toHaveBeenCalled();
     expect(handleClick).toHaveBeenCalledWith({ ...parameters });
-  });
-  it('should call setTab when click any category', async () => {
-    setup();
-    const sportCategory = screen.getByRole('tab', { name: 'sports' });
-    fireEvent.click(sportCategory);
-
-    expect(handleSetTab).toHaveBeenCalled();
   });
 });

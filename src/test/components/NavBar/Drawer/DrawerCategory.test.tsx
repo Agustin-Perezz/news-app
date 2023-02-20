@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { DrawerCategory } from '../../../../../pages/Header/Components';
+import { DrawerCategory } from '../../../../components/NavBar/Drawer';
 
 type Props = { activeCategory: number; idxCategory: number };
 describe('Test in <DrawerCategory />', () => {
