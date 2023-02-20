@@ -3,23 +3,27 @@ import { NavBar } from '../../../../../pages/Header/Components';
 import { createMatchMedia, renderWhitContext } from '../../../../utils';
 
 describe('Test in <Navbar />', () => {
-  beforeEach(() => {
+  function setup() {
     window.matchMedia = createMatchMedia(window.innerWidth);
-    renderWhitContext({
+    return renderWhitContext({
       children: <NavBar />,
       pathname: '/category/science',
       cache: {},
     });
-  });
-  it('should match with snapshot', () => {
-    expect(screen).toMatchSnapshot();
+  }
+
+  it('should match snapshot', () => {
+    const { container } = setup();
+    expect(container).toMatchSnapshot();
   });
   it('should contain main icons', () => {
+    setup();
     expect(screen.getByTestId('GitHubIcon')).toBeInTheDocument();
     expect(screen.getByTestId('LinkedInIcon')).toBeInTheDocument();
     expect(screen.getByTestId('TwitterIcon')).toBeInTheDocument();
   });
   it('should contain news logo and search-bar', () => {
+    setup();
     expect(screen.getByAltText('news-logo')).toBeInTheDocument();
     expect(screen.getByPlaceholderText('Search any news..')).toBeInTheDocument();
   });

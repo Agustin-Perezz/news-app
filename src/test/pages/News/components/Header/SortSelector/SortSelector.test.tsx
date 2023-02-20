@@ -13,8 +13,8 @@ describe('Test in <SortSelector />', () => {
   }
 
   it('should match snapshot', () => {
-    setup({ cacheValue: {}, route: '' });
-    expect(screen).toMatchSnapshot();
+    const { container } = setup({ cacheValue: {}, route: '' });
+    expect(container).toMatchSnapshot();
   });
   it('should show the sort title and the default sort option', async () => {
     setup({ cacheValue: {}, route: '' });

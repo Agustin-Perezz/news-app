@@ -11,8 +11,8 @@ describe('Test in <ListCountries />', () => {
   }
 
   it('should match snapshot', () => {
-    setup();
-    expect(screen).toMatchSnapshot();
+    const { container } = setup();
+    expect(container).toMatchSnapshot();
   });
   it('should render countries correctly', () => {
     setup();

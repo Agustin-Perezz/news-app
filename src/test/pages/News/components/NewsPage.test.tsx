@@ -19,8 +19,8 @@ describe('Test in <CategoriesPage />', () => {
     });
   }
   it('should match snapshot', () => {
-    setup({ isLoading: false });
-    expect(screen).toMatchSnapshot();
+    const { container } = setup({ isLoading: false });
+    expect(container).toMatchSnapshot();
   });
   it('should show header content', () => {
     setup({ isLoading: false });

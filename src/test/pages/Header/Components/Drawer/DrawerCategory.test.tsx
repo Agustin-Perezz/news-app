@@ -21,8 +21,8 @@ describe('Test in <DrawerCategory />', () => {
   });
 
   it('should match snapshot', () => {
-    setup({ activeCategory: 0, idxCategory: 1 });
-    expect(screen).toMatchSnapshot();
+    const { container } = setup({ activeCategory: 0, idxCategory: 1 });
+    expect(container).toMatchSnapshot();
   });
   it('should show correctly props', () => {
     setup({ activeCategory: 0, idxCategory: 1 });

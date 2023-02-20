@@ -9,7 +9,7 @@ describe('Test in <SocialMedia />', () => {
   });
 
   it('should match snapshot', () => {
-    expect(screen).toMatchSnapshot();
+    expect(globalContainer).toMatchSnapshot();
   });
   it('should have 3 html elements <a/> whit respectives href url', () => {
     const aTags = globalContainer.querySelectorAll('a');

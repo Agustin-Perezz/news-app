@@ -6,12 +6,12 @@ type Props = { cacheValue: Record<string, string> };
 
 describe('Test in <ModalCountries />', () => {
   function setup({ cacheValue }: Props) {
-    renderWithCache({ cacheValue, route: '/home', children: <ModalCountries /> });
+    return renderWithCache({ cacheValue, route: '/home', children: <ModalCountries /> });
   }
 
   it('should match snapshot', () => {
-    setup({ cacheValue: {} });
-    expect(screen).toMatchSnapshot();
+    const { container } = setup({ cacheValue: {} });
+    expect(container).toMatchSnapshot();
   });
   it('should show header title', () => {
     setup({ cacheValue: {} });

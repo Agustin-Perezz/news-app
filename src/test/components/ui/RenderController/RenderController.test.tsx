@@ -6,15 +6,15 @@ type Props = Omit<PropsRender, 'children'>;
 
 describe('Test in <RenderController />', () => {
   function setup(params: Props) {
-    render(
+    return render(
       <RenderController {...params}>
         <span>test</span>
       </RenderController>
     );
   }
   it('should match snapshot', () => {
-    setup({ isLoading: false });
-    expect(screen).toMatchSnapshot();
+    const { container } = setup({ isLoading: false });
+    expect(container).toMatchSnapshot();
   });
   it('should render children', () => {
     setup({ isLoading: false });

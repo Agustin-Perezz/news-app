@@ -14,8 +14,8 @@ describe('Test in <CategoriesPage />', () => {
     );
   }
   it('should match snapshot', () => {
-    setup({ isLoading: false });
-    expect(screen).toMatchSnapshot();
+    const { container } = setup({ isLoading: false });
+    expect(container).toMatchSnapshot();
   });
   it('should show skeleton components when isLoading is true', () => {
     const { container } = setup({ isLoading: true });

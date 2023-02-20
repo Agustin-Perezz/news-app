@@ -1,56 +1,267 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test in <CategoriesPage /> should match snapshot 1`] = `
-{
-  "debug": [Function],
-  "findAllByAltText": [Function],
-  "findAllByDisplayValue": [Function],
-  "findAllByLabelText": [Function],
-  "findAllByPlaceholderText": [Function],
-  "findAllByRole": [Function],
-  "findAllByTestId": [Function],
-  "findAllByText": [Function],
-  "findAllByTitle": [Function],
-  "findByAltText": [Function],
-  "findByDisplayValue": [Function],
-  "findByLabelText": [Function],
-  "findByPlaceholderText": [Function],
-  "findByRole": [Function],
-  "findByTestId": [Function],
-  "findByText": [Function],
-  "findByTitle": [Function],
-  "getAllByAltText": [Function],
-  "getAllByDisplayValue": [Function],
-  "getAllByLabelText": [Function],
-  "getAllByPlaceholderText": [Function],
-  "getAllByRole": [Function],
-  "getAllByTestId": [Function],
-  "getAllByText": [Function],
-  "getAllByTitle": [Function],
-  "getByAltText": [Function],
-  "getByDisplayValue": [Function],
-  "getByLabelText": [Function],
-  "getByPlaceholderText": [Function],
-  "getByRole": [Function],
-  "getByTestId": [Function],
-  "getByText": [Function],
-  "getByTitle": [Function],
-  "logTestingPlaygroundURL": [Function],
-  "queryAllByAltText": [Function],
-  "queryAllByDisplayValue": [Function],
-  "queryAllByLabelText": [Function],
-  "queryAllByPlaceholderText": [Function],
-  "queryAllByRole": [Function],
-  "queryAllByTestId": [Function],
-  "queryAllByText": [Function],
-  "queryAllByTitle": [Function],
-  "queryByAltText": [Function],
-  "queryByDisplayValue": [Function],
-  "queryByLabelText": [Function],
-  "queryByPlaceholderText": [Function],
-  "queryByRole": [Function],
-  "queryByTestId": [Function],
-  "queryByText": [Function],
-  "queryByTitle": [Function],
-}
+<div>
+  <div
+    class="MuiBox-root css-p0u270"
+  >
+    <div
+      class="MuiBox-root css-1fs63sy"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body1 css-qscxtw-MuiTypography-root"
+      >
+        Results for search.
+      </p>
+      <div
+        class="MuiFormControl-root css-os7j8m-MuiFormControl-root"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
+        >
+          Sort by
+        </label>
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall  css-1lvwyej-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-jedpe8-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            role="button"
+            tabindex="0"
+          >
+            Most Recent
+          </div>
+          <input
+            aria-hidden="true"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            tabindex="-1"
+            value="Most Recent"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-14lo706"
+            >
+              <span>
+                Sort by
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="MuiGrid-root css-87ggms-MuiGrid-root"
+      >
+        <div
+          class="MuiBox-root css-1b9hrwo"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-qscxtw-MuiTypography-root"
+          />
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-z7x17r-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-bzgqu1-MuiGrid-root"
+            style="opacity: 1; webkit-transition: opacity 1500ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; transition: opacity 1500ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            >
+              <div
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nkszem-MuiPaper-root-MuiCard-root"
+              >
+                <a
+                  class="MuiButtonBase-root MuiCardActionArea-root css-y29lt3-MuiButtonBase-root-MuiCardActionArea-root"
+                  href="https://google.com"
+                  tabindex="0"
+                  target="_blank"
+                >
+                  <div
+                    class="MuiBox-root css-79elbk"
+                  >
+                    <img
+                      alt="calcionapoli24.it"
+                      src="[object Object]"
+                      style="height: 185px; min-width: 100%;"
+                    />
+                    <div
+                      class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-c8zb3x-MuiChip-root"
+                    >
+                      <span
+                        class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                      >
+                        11/25/2022
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle1 css-10wpov9-MuiTypography-root"
+                      data-testid="card-title"
+                    >
+                      Omaggio Maradona a Fuorigrotta, c'è anche Maradona junior | FOTO
+                    </h6>
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+                      data-testid="card-description"
+                    >
+                      Anche il figlio del Pibe presente stasera a Fuorigrotte
+                    </p>
+                    <div
+                      class="MuiBox-root css-3yoo1r"
+                    >
+                      <h6
+                        class="MuiTypography-root MuiTypography-subtitle2 css-1ij1w03-MuiTypography-root"
+                      >
+                        Categories:
+                      </h6>
+                      <div
+                        class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-s89mk0-MuiChip-root"
+                      >
+                        <span
+                          class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                        >
+                          tech
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="MuiBox-root css-1hprwxc"
+                    >
+                      <h6
+                        class="MuiTypography-root MuiTypography-subtitle2 css-1od5i09-MuiTypography-root"
+                      >
+                        Source:
+                      </h6>
+                      <p
+                        class="MuiTypography-root MuiTypography-body2 css-bssea4-MuiTypography-root"
+                      >
+                        calcionapoli24.it
+                      </p>
+                    </div>
+                  </div>
+                  <span
+                    class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+                  />
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </a>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            >
+              <div
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nkszem-MuiPaper-root-MuiCard-root"
+              >
+                <a
+                  class="MuiButtonBase-root MuiCardActionArea-root css-y29lt3-MuiButtonBase-root-MuiCardActionArea-root"
+                  href="https://google.com"
+                  tabindex="0"
+                  target="_blank"
+                >
+                  <div
+                    class="MuiBox-root css-79elbk"
+                  >
+                    <img
+                      alt="calcionapoli24.it"
+                      src="[object Object]"
+                      style="height: 185px; min-width: 100%;"
+                    />
+                    <div
+                      class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-c8zb3x-MuiChip-root"
+                    >
+                      <span
+                        class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                      >
+                        11/25/2022
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle1 css-10wpov9-MuiTypography-root"
+                      data-testid="card-title"
+                    >
+                      Title test
+                    </h6>
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+                      data-testid="card-description"
+                    >
+                      description test
+                    </p>
+                    <div
+                      class="MuiBox-root css-3yoo1r"
+                    >
+                      <h6
+                        class="MuiTypography-root MuiTypography-subtitle2 css-1ij1w03-MuiTypography-root"
+                      >
+                        Categories:
+                      </h6>
+                      <div
+                        class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-s89mk0-MuiChip-root"
+                      >
+                        <span
+                          class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                        >
+                          sports
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="MuiBox-root css-1hprwxc"
+                    >
+                      <h6
+                        class="MuiTypography-root MuiTypography-subtitle2 css-1od5i09-MuiTypography-root"
+                      >
+                        Source:
+                      </h6>
+                      <p
+                        class="MuiTypography-root MuiTypography-body2 css-bssea4-MuiTypography-root"
+                      >
+                        calcionapoli24.it
+                      </p>
+                    </div>
+                  </div>
+                  <span
+                    class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+                  />
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;

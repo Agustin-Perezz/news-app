@@ -6,7 +6,7 @@ import { renderWithCache } from '../../../../utils';
 describe('Test in <SearchBar />', () => {
   const handleSubmit = jest.fn();
   function setup(query?: string) {
-    renderWithCache({
+    return renderWithCache({
       cacheValue: { 'query-value': query || '' },
       route: '/search',
       children: <SearchBar handleSubmit={handleSubmit} />,
@@ -14,8 +14,8 @@ describe('Test in <SearchBar />', () => {
   }
 
   it('should match snapshot', () => {
-    setup();
-    expect(screen).toMatchSnapshot();
+    const { container } = setup();
+    expect(container).toMatchSnapshot();
   });
   it('should set value input from cache', () => {
     setup('queryTest');

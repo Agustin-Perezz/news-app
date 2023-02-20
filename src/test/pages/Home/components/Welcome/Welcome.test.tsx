@@ -6,7 +6,7 @@ type Props = { cache: Record<string, string> };
 
 describe('Test in <Welcome />', () => {
   function setup({ cache }: Props) {
-    renderWhitContext({
+    return renderWhitContext({
       children: <Welcome />,
       pathname: '/home',
       cache,
@@ -14,8 +14,8 @@ describe('Test in <Welcome />', () => {
   }
 
   it('should match snapshot', () => {
-    setup({ cache: {} });
-    expect(screen).toMatchSnapshot();
+    const { container } = setup({ cache: {} });
+    expect(container).toMatchSnapshot();
   });
   it('should render main content', () => {
     setup({ cache: {} });

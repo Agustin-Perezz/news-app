@@ -8,8 +8,8 @@ describe('Test in <Country />', () => {
   }
 
   it('should match snapshot', () => {
-    setup();
-    expect(screen).toMatchSnapshot();
+    const { container } = setup();
+    expect(container).toMatchSnapshot();
   });
   it('should render props correctly', () => {
     setup();

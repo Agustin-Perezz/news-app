@@ -6,7 +6,7 @@ describe('Test in <CategoriesNavBar />', () => {
   const handleClick = jest.fn();
   const handleSetTab = jest.fn();
   function setup() {
-    renderWhitContext({
+    return renderWhitContext({
       cache: {},
       pathname: '/home',
       children: (
@@ -23,8 +23,8 @@ describe('Test in <CategoriesNavBar />', () => {
   });
 
   it('should match snapshot', () => {
-    setup();
-    expect(screen).toMatchSnapshot();
+    const { container } = setup();
+    expect(container).toMatchSnapshot();
   });
   it('should show all text categories', () => {
     setup();

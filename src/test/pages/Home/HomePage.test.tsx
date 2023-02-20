@@ -21,8 +21,8 @@ describe('Test in <HomePage />', () => {
   }
 
   it('should match snapshot', () => {
-    setup();
-    expect(screen).toMatchSnapshot();
+    const container = setup();
+    expect(container).toMatchSnapshot();
   });
   it('should show initial messages', () => {
     setup();
