@@ -15,23 +15,21 @@ export const NavBar: React.FC = () => {
   const matches = useMediaQuery('(max-width:1000px)');
 
   return (
-    <CustomBoxContainer>
-      <CustomNavBarBox>
-        {matches ? (
-          <NavBarDrawer handleSubmit={handleSubmit} />
-        ) : (
-          <ImageListItem sx={{ maxWidth: '130px' }}>
-            <img src={news_logo} alt="news-logo" />
-          </ImageListItem>
-        )}
-        <SearchBar handleSubmit={handleSubmit} />
-        {!matches && <SocialMedia />}
-      </CustomNavBarBox>
-      {!matches && (
-        <CategoryProvider>
-          <CategoriesNavBar handleClick={handleSubmit} />
-        </CategoryProvider>
-      )}
-    </CustomBoxContainer>
+    <CategoryProvider>
+      <CustomBoxContainer>
+        <CustomNavBarBox>
+          {matches ? (
+            <NavBarDrawer handleSubmit={handleSubmit} />
+          ) : (
+            <ImageListItem sx={{ maxWidth: '130px' }}>
+              <img src={news_logo} alt="news-logo" />
+            </ImageListItem>
+          )}
+          <SearchBar handleSubmit={handleSubmit} />
+          {!matches && <SocialMedia />}
+        </CustomNavBarBox>
+        {!matches && <CategoriesNavBar handleClick={handleSubmit} />}
+      </CustomBoxContainer>
+    </CategoryProvider>
   );
 };
