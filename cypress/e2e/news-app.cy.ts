@@ -82,7 +82,7 @@ describe('News App tests', () => {
       .should('be.visible')
       .and('have.text', 'Roll your own JavaScript runtime, pt. 2');
   });
-  it.only('should filter by the last month', () => {
+  it('should filter by the last month', () => {
     cy.searchInForm();
 
     cy.get('[data-testid=card-title]')
@@ -91,7 +91,7 @@ describe('News App tests', () => {
       .and('have.text', 'Roll your own JavaScript runtime, pt. 2');
 
     cy.interceptFetch({
-      url: `/all?api_token=${Cypress.env('API_KEY')}&search=javascript&published_after=2023-01-18`,
+      url: `/all?api_token=${Cypress.env('API_KEY')}&search=javascript&published_after=*`,
       nameFixture: 'newsJsLastMonth',
     });
 

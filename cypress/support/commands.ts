@@ -35,7 +35,7 @@ const interceptFetch = ({ url, nameFixture }: Props) => {
 
 const searchInForm = () => {
   cy.interceptFetch({
-    url: `/all?api_token=${Cypress.env('API_KEY')}&search=javascript&published_after=2023-02-15`,
+    url: `/all?api_token=${Cypress.env('API_KEY')}&search=javascript&published_after=*`,
     nameFixture: 'newsJsRecent',
   });
 
