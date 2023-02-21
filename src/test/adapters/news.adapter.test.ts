@@ -1,10 +1,10 @@
 import { formatNewsResponse } from '../../adapters';
 import { mockResponseArticles } from './mockResponseArticles';
 
-const firstNewFormated = {
+const firstNewsFormatted = {
   categories: [
     {
-      color: '#27998D ',
+      color: '#27998D',
       type: 'general',
     },
   ],
@@ -22,6 +22,6 @@ const firstNewFormated = {
 describe('Test in newsAdapter', () => {
   it('should adapt information', () => {
     const results = formatNewsResponse(mockResponseArticles);
-    expect(results[0]).toEqual(firstNewFormated);
+    expect(results[0]).toEqual(firstNewsFormatted);
   });
 });
