@@ -1,4 +1,4 @@
-import { formatNewResponse } from '../../adapters';
+import { formatNewsResponse } from '../../adapters';
 import { mockResponseArticles } from './mockResponseArticles';
 
 const firstNewFormated = {
@@ -21,7 +21,7 @@ const firstNewFormated = {
 
 describe('Test in newsAdapter', () => {
   it('should adapt information', () => {
-    const results = formatNewResponse(mockResponseArticles);
+    const results = formatNewsResponse(mockResponseArticles);
     expect(results[0]).toEqual(firstNewFormated);
   });
 });

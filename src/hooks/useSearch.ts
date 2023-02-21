@@ -2,9 +2,9 @@ import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAxios } from './useAxios';
 import { newsApi } from '../api';
-import { formatNewResponse } from '../adapters';
 import { NewsResponseProps, SubmitProps } from '../types';
 import { NewsContext } from '../context/NewsContext';
+import { formatNewsResponse } from '../adapters';
 
 export const useSearch = () => {
   const { fetchData, isLoading, isError } = useAxios();
@@ -19,7 +19,7 @@ export const useSearch = () => {
       programApi: newsApi,
       urlParameter,
     });
-    const data = formatNewResponse(response as NewsResponseProps);
+    const data = formatNewsResponse(response as NewsResponseProps);
     setState({ data, isLoading, isError });
   };
 

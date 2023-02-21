@@ -1,19 +1,23 @@
 import { NewsProps, NewsResponseProps } from '../types/news-props';
-import { categoriesFormat, dateFormat } from '../utilities';
+import { formatCategories, formatDate } from '../utilities';
 
-export const formatNewResponse = (newResponse: NewsResponseProps): NewsProps[] => {
-  return newResponse?.data.map((data) => {
-    const categories = categoriesFormat(data.categories);
-    const dateFormated = dateFormat(data.published_at);
+export const formatNewsResponse = (newsResponse: NewsResponseProps): NewsProps[] => {
+  const formattedNews = newsResponse?.data.map((information) => {
+    const formattedCategories = formatCategories(information.categories);
+    const formattedDate = formatDate(information.published_at);
     return {
-      uuid: data.uuid,
-      title: data.title.length >= 80 ? `${data.title.substring(0, 80)}...` : data.title,
-      description: data.description,
-      image_url: data.image_url,
-      published_at: dateFormated,
-      nameSource: data.source,
-      url: data.url,
-      categories: categories.length > 0 ? categories : undefined,
+      uuid: information.uuid,
+      title:
+        information.title.length >= 80
+          ? `${information.title.substring(0, 80)}...`
+          : information.title,
+      description: information.description,
+      image_url: information.image_url,
+      published_at: formattedDate,
+      nameSource: information.source,
+      url: information.url,
+      categories: formattedCategories,
     };
   });
+  return formattedNews;
 };

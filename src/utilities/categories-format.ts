@@ -1,8 +1,9 @@
-import { dataCategories } from '../components/ui/Cards/Categories';
+import { categoryColorsAccordingToType } from '../components/ui/Cards/Categories';
+import { CategoriesProps } from '../types';
 
-export const categoriesFormat = (categories: string[]) => {
-  return categories.map((type_categori) => {
-    const indexCategory = dataCategories.findIndex(({ type }) => type === type_categori);
-    return dataCategories[indexCategory];
-  });
+export const formatCategories = (categories: string[]): CategoriesProps[] => {
+  return categories.map((typeCategori) => ({
+    color: categoryColorsAccordingToType[typeCategori],
+    type: typeCategori,
+  }));
 };
