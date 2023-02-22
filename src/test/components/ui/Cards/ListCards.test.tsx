@@ -11,16 +11,15 @@ type Props = {
 
 describe('Test in <ListCards/>', () => {
   function setup(props: Props) {
-    const { container } = render(<ListCards {...props} />);
-    return container;
+    return render(<ListCards {...props} />);
   }
 
   it('should match snapshot', () => {
-    setup({ dataArticles: data, isLoading: true });
-    expect(screen).toMatchSnapshot();
+    const { container } = setup({ dataArticles: data, isLoading: true });
+    expect(container).toMatchSnapshot();
   });
   it('should render loading skeleton component when isLoading is true', () => {
-    const container = setup({ dataArticles: data, isLoading: true });
+    const { container } = setup({ dataArticles: data, isLoading: true });
     const loadingComponent = container.getElementsByClassName('MuiSkeleton-root');
     expect(loadingComponent[0]).toBeInTheDocument();
   });
@@ -29,5 +28,9 @@ describe('Test in <ListCards/>', () => {
     screen.getByText('Title test');
     screen.getByText('description test');
     screen.getByText('sports');
+  });
+  it('should show message when the dataArticles is empty', () => {
+    setup({ dataArticles: [], isLoading: false });
+    screen.getByText('Ups, no results, try with others things.');
   });
 });

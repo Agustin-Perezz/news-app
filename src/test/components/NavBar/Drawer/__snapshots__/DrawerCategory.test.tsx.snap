@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in <DrawerCategory /> should match snapshot 1`] = `
+<div>
+  <div
+    class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1ahq8ay-MuiButtonBase-root-MuiListItemButton-root"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="MuiListItemIcon-root css-wg4rhx-MuiListItemIcon-root"
+    >
+      <span>
+        TestIcon
+      </span>
+    </div>
+    <div
+      class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-10hburv-MuiTypography-root"
+      >
+        General
+      </span>
+    </div>
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </div>
+</div>
+`;

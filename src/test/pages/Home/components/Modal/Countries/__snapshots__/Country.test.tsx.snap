@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in <Country /> should match snapshot 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-1aqkl79"
+  >
+    <img
+      alt="Argentina"
+      aria-label="Argentina"
+      class=""
+      data-mui-internal-clone-element="true"
+      src="https://flagcdn.com/36x27/ar.png"
+      style="vertical-align: middle;"
+    />
+  </div>
+</div>
+`;

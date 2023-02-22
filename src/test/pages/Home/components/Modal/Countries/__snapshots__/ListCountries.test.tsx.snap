@@ -1,0 +1,322 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in <ListCountries /> should match snapshot 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-1dlcyqs"
+  >
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="Argentina"
+        aria-label="Argentina"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/ar.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="Australia"
+        aria-label="Australia"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/au.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="United States Of America"
+        aria-label="United States Of America"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/us.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="Brazil"
+        aria-label="Brazil"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/br.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="Bolivia"
+        aria-label="Bolivia"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/bo.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="Canada"
+        aria-label="Canada"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/ca.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="Austria"
+        aria-label="Austria"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/at.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="Chile"
+        aria-label="Chile"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/cl.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="China"
+        aria-label="China"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/cn.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="España"
+        aria-label="España"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/es.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="Ukraine"
+        aria-label="Ukraine"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/ua.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="Colombia"
+        aria-label="Colombia"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/co.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="Croatia"
+        aria-label="Croatia"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/hr.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="Ecuador"
+        aria-label="Ecuador"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/ec.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="France"
+        aria-label="France"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/fr.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="Germany"
+        aria-label="Germany"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/de.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="Honduras"
+        aria-label="Honduras"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/hn.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="India"
+        aria-label="India"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/in.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="Iran"
+        aria-label="Iran"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/ir.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="Italy"
+        aria-label="Italy"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/it.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="Japan"
+        aria-label="Japan"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/jp.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="Mexico"
+        aria-label="Mexico"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/mx.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="Korea"
+        aria-label="Korea"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/kr.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="Peru"
+        aria-label="Peru"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/pe.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="Portugal"
+        aria-label="Portugal"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/pt.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1aqkl79"
+    >
+      <img
+        alt="Uruguay"
+        aria-label="Uruguay"
+        class=""
+        data-mui-internal-clone-element="true"
+        src="https://flagcdn.com/36x27/uy.png"
+        style="vertical-align: middle;"
+      />
+    </div>
+  </div>
+</div>
+`;

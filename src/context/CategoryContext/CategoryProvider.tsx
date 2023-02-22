@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { useCacheCategory } from '../../pages/Header/hooks';
+import { useCacheCategory } from '../../hooks';
 import { CategoryContext } from './CategoryContext';
 
 type Props = {

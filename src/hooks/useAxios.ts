@@ -14,12 +14,7 @@ export const useAxios = () => {
 
   const { setCache, cache } = useContext(CacheContext);
 
-  const fetchData = async <T>({
-    programApi,
-    endpoint,
-    urlParameter,
-  }: // eslint-disable-next-line consistent-return
-  ParametersFetchData) => {
+  const fetchData = async <T>({ programApi, endpoint, urlParameter }: ParametersFetchData) => {
     try {
       setState({ isLoading: true });
       if (cache[urlParameter] !== undefined) {
@@ -35,6 +30,7 @@ export const useAxios = () => {
         setState({ isLoading: false, isError: error.message });
       }
       setState({ isLoading: false, isError: 'Something work bad :(' });
+      return undefined;
     }
   };
 

@@ -4,8 +4,8 @@ import { listCategories } from './categoriesMock';
 
 describe('Test in <Categori.test />', () => {
   it('should match snapshot', () => {
-    render(<Categori categori={listCategories[0]} />);
-    expect(screen).toMatchSnapshot();
+    const { container } = render(<Categori categori={listCategories[0]} />);
+    expect(container).toMatchSnapshot();
   });
   it('should display correctly information', () => {
     const { container } = render(<Categori categori={listCategories[0]} />);

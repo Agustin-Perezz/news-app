@@ -3,14 +3,16 @@ import { GeneralCard } from '../../../../components/ui/Cards/GeneralCard';
 import { mockArticle } from './mockArticles';
 
 describe('Test in <GeneralCard />', () => {
-  beforeEach(() => {
-    render(<GeneralCard dataArticle={mockArticle} />);
-  });
+  function setup() {
+    return render(<GeneralCard dataArticle={mockArticle} />);
+  }
 
-  it('shuold match snapshot', () => {
-    expect(screen).toMatchSnapshot();
+  it('should match snapshot', () => {
+    const { container } = setup();
+    expect(container).toMatchSnapshot();
   });
   it('shuold render props correctly', () => {
+    setup();
     screen.getByText(mockArticle.nameSource);
     screen.getByText(mockArticle.title);
     screen.getByText(mockArticle.description);

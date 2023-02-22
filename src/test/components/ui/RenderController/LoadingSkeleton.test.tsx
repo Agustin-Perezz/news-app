@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import { LoadingSkeleton } from '../../../../components/ui/RenderController';
 
-describe('Test in <LoadingSkeleton/>', () => {
+describe('Test in <LoadingSkeleton />', () => {
   it('should match snapshot', () => {
-    render(<LoadingSkeleton />);
-    expect(screen).toMatchSnapshot();
+    const { container } = render(<LoadingSkeleton />);
+    expect(container).toMatchSnapshot();
   });
   it('should contain material ui classes for skeleton components ', () => {
     const { container } = render(<LoadingSkeleton />);

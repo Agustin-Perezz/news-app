@@ -2,7 +2,6 @@ import { styled, createTheme } from '@mui/material/styles';
 import MuiCard from '@mui/material/Card';
 import MuiChip from '@mui/material/Chip';
 import MuiGrid from '@mui/material/Grid';
-import MuiTypography from '@mui/material/Typography';
 
 export const tabFont = createTheme({
   typography: {
@@ -40,11 +39,4 @@ export const CustomGrid = styled(MuiGrid)(() => ({
   },
   maxWidth: '950px',
   justifyContent: 'center',
-  marginTop: '10px',
-}));
-
-export const CustomTitle = styled(MuiTypography)(() => ({
-  position: 'absolute',
-  top: '-20px',
-  left: '25px',
 }));

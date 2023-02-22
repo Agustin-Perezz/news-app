@@ -1,28 +1,14 @@
-import { useContext } from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
-import { CacheContext, CacheProvider } from '../../../context/CacheContext';
+import { CacheProvider } from '../../../context/CacheContext';
+import { TestCacheComponent } from './TestCacheComponent';
 
-describe('Test in <CacheContext.test />', () => {
-  const TestComponent = () => {
-    const { setCache, cache } = useContext(CacheContext);
-    return (
-      <div>
-        <button onClick={() => setCache({ key: 'test', value: 'test-value' })} type="button">
-          setCache
-        </button>
-        <span data-testid="cache-value">
-          {cache.test === 'test-value' ? cache.test : 'empity-cache'}
-        </span>
-      </div>
-    );
-  };
+describe('Test in <CacheContext />', () => {
   function setup() {
-    const wrapper = render(
+    render(
       <CacheProvider>
-        <TestComponent />
+        <TestCacheComponent />
       </CacheProvider>
     );
-    return wrapper;
   }
 
   it('cache span not should show nothing', () => {
@@ -31,7 +17,12 @@ describe('Test in <CacheContext.test />', () => {
   });
   it('should set key and value in context at call function onClick', async () => {
     setup();
-    fireEvent.click(screen.getByRole('button'));
+    fireEvent.click(screen.getByText('setCache'));
     expect(screen.getByTestId('cache-value').textContent).toBe('test-value');
+  });
+  it('should clean cache', () => {
+    setup();
+    fireEvent.click(screen.getByText('removeCache'));
+    expect(screen.getByTestId('cache-value').textContent).toBe('empity-cache');
   });
 });

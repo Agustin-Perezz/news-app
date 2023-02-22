@@ -6,6 +6,7 @@ declare global {
       searchNew: typeof searchNew;
       awaitInitialData: typeof awaitInitialData;
       interceptFetch: typeof interceptFetch;
+      searchInForm: typeof searchInForm;
     }
   }
 }
@@ -15,12 +16,13 @@ const searchNew = (value: string) => {
 };
 
 const awaitInitialData = () => {
-  const url = `${Cypress.env('API_URL')}/top?api_token=${Cypress.env('API_KEY')}`;
+  const url = `${Cypress.env('API_URL')}/top?api_token=${Cypress.env('API_KEY')}&locale=ar`;
 
   cy.intercept('GET', url, {
     fixture: 'home',
   }).as('homeSuccess');
 
+  cy.get('.css-1dlcyqs > :nth-child(1)').click();
   cy.wait('@homeSuccess');
 };
 
@@ -31,6 +33,18 @@ const interceptFetch = ({ url, nameFixture }: Props) => {
   }).as(`${nameFixture}Success`);
 };
 
+const searchInForm = () => {
+  cy.interceptFetch({
+    url: `/all?api_token=${Cypress.env('API_KEY')}&search=javascript&published_after=*`,
+    nameFixture: 'newsJsRecent',
+  });
+
+  cy.searchNew('javascript');
+  cy.get('form').submit();
+  cy.wait('@newsJsRecentSuccess');
+};
+
 Cypress.Commands.add('searchNew', searchNew);
 Cypress.Commands.add('awaitInitialData', awaitInitialData);
 Cypress.Commands.add('interceptFetch', interceptFetch);
+Cypress.Commands.add('searchInForm', searchInForm);

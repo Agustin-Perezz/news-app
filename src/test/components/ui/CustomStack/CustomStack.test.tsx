@@ -19,7 +19,7 @@ describe('Test in <CustomStack />', () => {
   });
 
   it('should match snapshot', () => {
-    expect(screen).toMatchSnapshot();
+    expect(globalContainer).toMatchSnapshot();
   });
   it('must contain past props', () => {
     const element = globalContainer.getElementsByClassName('css-1sa62bg-MuiStack-root');

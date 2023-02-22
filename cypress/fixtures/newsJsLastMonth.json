@@ -1,0 +1,75 @@
+{
+  "meta": { "found": 20604, "returned": 5, "limit": 5, "page": 1 },
+  "data": [
+    {
+      "uuid": "a776a9a6-e93e-46f4-9617-bbda891653f1",
+      "title": "Javascript last month title",
+      "description": "Welcome to the first lesson of our JavaScript course! Today we’re going to be talking about the history and evolution of the language. JavaScript was first cr...",
+      "keywords": "",
+      "snippet": "JAVASCRIPT SERIES\n\nJS Evolution\n\nLesson 1: History and evolution of Javascript\n\nWelcome to the first lesson of our JavaScript course! Today we’re going to be ...",
+      "url": "https://medium.com/@rranjan306/javascript-series-943a77045fe6",
+      "image_url": "https://miro.medium.com/max/1200/1*uZ094Kxwv_qLih3tn9AZ6Q.jpeg",
+      "language": "en",
+      "published_at": "2023-01-26T05:21:38.000000Z",
+      "source": "medium.com",
+      "categories": ["tech"],
+      "relevance_score": 25.659351
+    },
+    {
+      "uuid": "7048ffb6-b52e-47cf-9a9f-12f52edd90a9",
+      "title": "JAVASCRIPT SERIES: Basic JavaScript Syntax (Lesson 3)",
+      "description": "Introduction. “JAVASCRIPT SERIES: Basic JavaScript Syntax (Lesson 3)” is published by Deepak Ranjan.",
+      "keywords": "",
+      "snippet": "JAVASCRIPT SERIES: Basic JavaScript Syntax (Lesson 3)\n\nIntroduction\n\nJavaScript is a programming language that is commonly used to add interactivity and other d...",
+      "url": "https://medium.com/@rranjan306/javascript-series-lesson-3-428d15ef756a",
+      "image_url": "https://miro.medium.com/max/1200/1*uZ094Kxwv_qLih3tn9AZ6Q.jpeg",
+      "language": "en",
+      "published_at": "2023-01-27T03:04:17.000000Z",
+      "source": "medium.com",
+      "categories": ["tech"],
+      "relevance_score": 25.552011
+    },
+    {
+      "uuid": "cba7ddd8-125b-40fc-9544-33f399645a1d",
+      "title": "JavaScript Variables",
+      "description": "A Computer Science portal for geeks. It contains well written, well thought and well explained computer science and programming articles, quizzes and practice/c...",
+      "keywords": "Data Structures, Algorithms, Python, Java, C, C++, JavaScript, Android Development, SQL, Data Science, Machine Learning, PHP, Web Development, System Design, Tutorial, Technical Blogs, Interview Experience, Interview Preparation, Programming, Competitive Programming, SDE Sheet, Job-a-thon, Coding Contests, GATE CSE, HTML, CSS, React, NodeJS, Placement, Aptitude, Quiz, Computer Science, Programming Examples, GeeksforGeeks Courses, Puzzles",
+      "snippet": "Variables are the building blocks of any programming language. In JavaScript, a variable can be used to store reusable values. These values can be anything from...",
+      "url": "https://www.geeksforgeeks.org/javascript-variables/",
+      "image_url": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200x200-min.png",
+      "language": "en",
+      "published_at": "2023-01-27T12:52:39.000000Z",
+      "source": "geeksforgeeks.org",
+      "categories": ["tech"],
+      "relevance_score": 25.380573
+    },
+    {
+      "uuid": "b4ba33c1-13c0-4466-870d-5354c6d8aa27",
+      "title": "Guida Javascript",
+      "description": "Una guida di base a Javascript che guida il lettore attraverso le caratteristiche principali del linguaggio di scripting client side, descrivendo gli eventi, i ...",
+      "keywords": "",
+      "snippet": "Una guida di base a Javascript che guida il lettore attraverso le caratteristiche principali del linguaggio di scripting client side, descrivendo gli eventi, i ...",
+      "url": "https://www.mrw.it/javascript/guida-javascript/",
+      "image_url": "https://www.mrw.it/img/cope/5dbe67_1665779067.jpg",
+      "language": "it",
+      "published_at": "2023-02-14T21:08:09.000000Z",
+      "source": "mrw.it",
+      "categories": ["tech"],
+      "relevance_score": 25.123909
+    },
+    {
+      "uuid": "52d3f295-3bc2-4743-999b-16cb3a0b96b2",
+      "title": "JavaScript var",
+      "description": "A Computer Science portal for geeks. It contains well written, well thought and well explained computer science and programming articles, quizzes and practice/c...",
+      "keywords": "Data Structures, Algorithms, Python, Java, C, C++, JavaScript, Android Development, SQL, Data Science, Machine Learning, PHP, Web Development, System Design, Tutorial, Technical Blogs, Interview Experience, Interview Preparation, Programming, Competitive Programming, SDE Sheet, Job-a-thon, Coding Contests, GATE CSE, HTML, CSS, React, NodeJS, Placement, Aptitude, Quiz, Computer Science, Programming Examples, GeeksforGeeks Courses, Puzzles",
+      "snippet": "JavaScript var is a keyword used to declare variables in JavaScript that are function scoped. Before the introduction of ES6 all the keywords in JavaScript were...",
+      "url": "https://www.geeksforgeeks.org/javascript-var/",
+      "image_url": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200x200-min.png",
+      "language": "en",
+      "published_at": "2023-01-31T12:33:45.000000Z",
+      "source": "geeksforgeeks.org",
+      "categories": ["tech"],
+      "relevance_score": 25.062717
+    }
+  ]
+}
